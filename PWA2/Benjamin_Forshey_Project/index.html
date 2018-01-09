@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:700|Quattrocento+Sans:400,400italic,700' rel='stylesheet'>
+  <title>Board Better | Keep Your Board Meetings Productive</title>
+  <!-- Viewport Settings -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/author-styles.css" charset="utf-8">
+</head>
+<body>
+
+  <header class="clearfix">
+    <a href="index.html"><img src="images/logo.png" alt="Board Better Logo"></a>
+    <h1>Board Better</h1>
+    <div class="login">
+      <form id="loginForm">
+        <div class="formBlock">
+          <label for="loginUserName">Member Login</label>
+          <input type="text" name="topYenoh-1" id="topYenoh-1" class="removed">
+          <input type="text" name="loginUserName" id="loginUserName" required placeholder="username" title="Please enter your user name.">
+        </div>
+        <div class="formBlock">
+          <input type="password" name="loginPassword" id="loginPassword" required placeholder="password" title="Please enter your password.">
+        </div>
+        <div class="formBlock">
+          <button type="submit" form="loginForm" class="primary" id="loginSubmit" title="Press to Log In">Log In</button>
+        </div>
+      </form>
+    </div>
+    <!-- end login -->
+  </header>
+
+  <div class="warning" id="jSCheck">
+    <h4>JavaSript is not Enabled</h4>
+    <p>You do not have JavaScript enabled. This is a web application that requres JavaScript. Please <a href="http://www.enable-javascript.com/">enable JavaScript</a> in your web browser so that this web application will function.</p>
+  </div>
+  <!-- end warning -->
+  <script charset="utf-8">
+    document.getElementById("jSCheck").classList.add("removed");
+  </script>
+  <!-- inline JavaScript to prevent flash of warning that sometimes happens when page renders before jQuery is called -->
+
+  <main class="clearfix">
+    <div class="cta">
+      <h2>Keep Your Board Meetings Productive</h2>
+      <div class="call">
+        <h3>You have an important mission.</h3>
+        <p>Keep your board meetings focused on that mission. Use Board Better to create and manage projects for your team of volunteers so they can stay in sync with what's happening at your nonprofit. Don't let the little things stop you from making the world a better place.</p>
+        <p>Board Better is designed for your nonprofit.</p>
+        <ul>
+          <li>sign up for an account, then create accounts for your team</li>
+          <li>create projects for your team that they can access from anywhere</li>
+          <li>communicate with collaborative notes</li>
+        </ul>
+      </div>
+      <div class="action">
+        <h3>Create an Admin Account:</h3>
+        <form id="signupForm">
+          <div class="formBlock">
+            <label for="signupEmail">Your Email Address</label>
+            <span class="statusMessage">required for password recovery</span>
+            <input type="email" name="signupEmail" id="signupEmail" title="Please enter your email address." required>
+          </div>
+          <div class="formBlock">
+            <label for="signupUserName">Create a Username</label>
+            <span class="statusMessage">required</span>
+            <input type="text" name="topYenoh-2" id="topYenoh-2" class="removed">
+            <input type="text" name="signupUserName" id="signupUserName" title="Please create a username." required>
+          </div>
+          <div class="formBlock">
+            <label for="signupPassword">Create a Password</label>
+            <span class="statusMessage">required</span>
+            <input type="password" name="signupPassword" id="signupPassword" title="Please create a password." required>
+          </div>
+          <div class="formBlock">
+            <label for="signupConfirmPassword">Confirm Your Password</label>
+            <span class="statusMessage" id="statusConfirmPassword">required</span>
+            <input type="password" name="signupConfirmPassword" id="signupConfirmPassword" title="Please confirm your password." required>
+          </div>
+          <div class="formBlock">
+            <button type="submit" form="signupForm" class="secondary" id="signupSubmit" title="Press to create an account.">Create an Account</button>
+            <span class="statusMessage"></span>
+          </div>
+        </form>
+      </div>
+      <!-- end action -->
+    </div>
+    <!-- end cta -->
+  </main>
+
+  <footer>
+    <div>
+      <p>Icons made by Freepik, Icons8 from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></p>
+    </div>
+  </footer>
+
+  <!-- Loads jQuery from Google CDN -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- Provides local fallback file for jQuery -->
+  <script charset="utf-8">window.jQuery || document.write('<script src="js\/jquery-1.11.1.min.js"><\/script>')</script>
+  <!-- jQuery Ui -->
+  <script src="js/jquery-ui.min.js"></script>
+  <!-- Load my Script -->
+  <script charset="utf-8" src="js/main.js"></script>
+</body>
+</html>

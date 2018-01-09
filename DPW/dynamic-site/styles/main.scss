@@ -1,0 +1,144 @@
+/*
+Ben Forshey
+DWP Online
+19 Feb 2015
+Dynamic Site
+*/
+
+@import "vendor/_normalize";
+@import "modules/_utility";
+@import "partials/_buttons";
+
+html {
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, .5),
+      rgba(255, 255, 255, .5)
+    ),
+    url(../img/concrete_seamless.png);
+  box-sizing: border-box;
+  font: 400 1em / 1.6 "Roboto", sans-serif;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  max-width: 44em;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+// perfect fourth @ 1:1.33
+h1,
+h2,
+h3,
+h4 {
+  color: #3E423A;
+  font: 700 3.157em / 1.5 "Roboto Condensed", sans-serif;
+  text-decoration: underline;
+}
+
+h2 {
+  font-size: 2.369em;
+}
+
+h3 {
+  font-size: 1.777em;
+}
+
+h4 {
+  font-size: 1.333em;
+}
+
+header {
+  background: #F4F7D9;
+  border: 1em solid #F4F7D9;
+  margin-bottom: 1em;
+  max-width: 44em;
+}
+
+header > h1 {
+  margin: .5em 0;
+}
+
+.nav {
+  border-bottom: double #417378;
+  color: #A4CFBE;
+  display: inline-block;
+  font-size: 1.25em;
+  margin-right: 2em;
+  text-decoration: none;
+
+  &:hover {
+    border-bottom: 2px solid #3E423A;
+    color: #417378;
+  }
+
+  &.nav--current-selection {
+    border-bottom: 2px solid #417378;
+    color: #417378;
+  }
+}
+
+.content-container {
+  margin: 0 auto;
+  max-width: 40em;
+}
+
+.view-link {
+  background: #3E423A;
+  color: #FFFFFF;
+  display: inline-block;
+  margin: .25em .5em;
+  padding: .25em .5em;
+  text-decoration: none;
+}
+
+.view-link--active {
+  background: #417378;
+}
+
+figure > img {
+  width: 100%;
+}
+
+figcaption {
+  font-size: .75em;
+}
+
+#rope-specs {
+  list-style: none;
+}
+
+.view-rope_title {
+  float: left;
+  margin-right: 2em;
+  text-align: right;
+  width: 12em;
+}
+
+footer {
+  background: #F4F7D9;
+  margin-top: 2em;
+  padding: .25em;
+  border: 1em solid #F4F7D9;
+  max-width: 44em;
+}
+
+// 400px @ 16
+@media screen and (min-width: 25em){
+  html {
+    font: 400 1.125em / 1.6 "Roboto", sans-serif;
+  }
+}
+
+// 716px @16
+@media screen and (min-width: 44.75em){
+  html {
+    font: 400 1.25em / 1.6 "Roboto", sans-serif;
+  }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <title>Save Canvas As Image</title>
+  </head>
+  <body>
+  <canvas id="myCanvas" width="578" height="200"></canvas>
+ 
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var ctx = canvas.getContext('2d');
+
+      //Closed Path
+	  	ctx.strokeStyle ="blue";
+		ctx.fillStyle= "red";
+		ctx.lineWidth = 5;
+		ctx.beginPath();
+		ctx.moveTo(425,175);
+		ctx.lineTo(450,25);
+		ctx.lineTo(525,50);
+		ctx.lineTo(575, 175);
+		ctx.closePath();
+		ctx.fill();
+		ctx.stroke();
+
+	
+
+    </script>
+  </body>
+  </html>

@@ -1,0 +1,497 @@
+/*
+    Project:        Better Board
+    Author:         Ben Forshey
+*/
+/***************************************************
+****************************************************
+TABLE OF CONTENTS
+    1) Modified Normalize (normalize.css v3.0.1 | MIT License | git.io/normalize)
+    2) Good Defaults, Site Styles (Typography, Color)
+    3) Header
+    4) Main and Aside
+    5) Projects / Administration
+    6) Interactions
+    7) Footer
+
+TYPOGRAPHY
+    Headings    'Lato', Arial, sans-serif;
+    Body            'Quattrocento Sans', Verdana, sans-serif;
+
+COLOR GUIDE
+    Dark Blue:        #436D80        rgb(67, 109, 128)
+    Light Blue:       #50AFDA        rgb(80, 175, 218)
+    Brown:            #805C43        rgb(128, 92, 67)
+    Orange:           #FFA05D        rgb(255, 160, 93)
+    Dark Grey:        #514E4B        rgb(81, 78, 75)
+    Off-White:        #FFFCF0        rgb(255, 252, 240)
+    Error State:     red
+    Valid State:    green
+
+
+
+***************************************************
+***************************************************/
+
+/*--------------------------------------------------
+----------------------------------------------------
+1) Normalize (normalize.css v3.0.1 | MIT License | git.io/normalize)
+I partially minified and modified this; expanded version with comments available at source.
+Avoiding @import and combining a file reduces overall HTTP requests.
+----------------------------------------------------
+--------------------------------------------------*/
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{margin:0}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
+audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
+audio:not([controls]){display:none;height:0}
+[hidden],template{display:none}
+a{background:transparent}
+a:active,a:hover{outline:0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:700}
+dfn{font-style:italic}
+h1{font-size:2em;margin:.67em 0}
+mark{background:#ff0;color:#000}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:1em 40px}
+hr{box-sizing:content-box;height:0}
+pre{overflow:auto}
+code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}
+button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}
+button{overflow:visible}
+button,select{text-transform:none}
+button,html input[type="button"],/* 1 */
+input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+input{line-height:normal}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}
+input[type="search"]{-webkit-appearance:textfield;box-sizing:content-box}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+textarea{overflow:auto}
+optgroup{font-weight:700}
+table{border-collapse:collapse;border-spacing:0}
+td,th{padding:0}
+
+
+/*--------------------------------------------------
+----------------------------------------------------
+2) Good Defaults, Site Styles (Typography, Color)
+A collection of my coding preferences and site-wide styles.
+----------------------------------------------------
+--------------------------------------------------*/
+/*clearfix, by Nicolas Gallagher*/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+*, *:before, *:after {
+    /*CSS Tricks goodness for using border-box, yet allowing elements to inherit parent box-sizing*/
+    box-sizing: inherit;
+}
+
+html {
+    /*border box*/
+    box-sizing: border-box;
+
+    /*wrap words to prevent breaking layout*/
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    /*font*/
+    font: 400 1.125em/1.5 'Quattrocento Sans', Verdana, sans-serif;
+}
+
+body {
+    /*tinted background texture with color fallback*/
+    background-color: #FFFCF0;
+    background: -webkit-linear-gradient(rgba(255, 252, 240, 0.8), rgba(255, 252, 240, 0.5)), url("../images/paper.png") repeat top left;
+    background: linear-gradient(rgba(255, 252, 240, 0.8), rgba(255, 252, 240, 0.5)), url("../images/paper.png") repeat top left;
+    color: #000;
+    /*margin: 0 auto;*/
+    position: relative;
+    /*width: 960px;*/
+}
+
+h1, h2 ,h3, h4, button, label {
+    font-family: 'Lato', Arial, sans-serif;
+    font-weight: 700;
+}
+h1 {
+    color: #514E4B;
+    font-size: 4.23583333333333em;
+}
+h2 {
+    color: #514E4B;
+    font-size: 2.62472222222222em;
+}
+h3 {
+    color: #514E4B;
+    font-size: 1.618em;
+}
+h4 {
+    color: #000;
+    font-size: 1em;
+}
+a, button, label {
+    font-weight: 700;
+}
+
+/*--------------------------------------------------
+----------------------------------------------------
+3) Header
+----------------------------------------------------
+---------------------------------------------------*/
+#jSCheck {
+    padding: 0.25em 1em;
+    margin: 1em;
+}
+#jSCheck h1 {
+    text-align: center;
+}
+header {
+    background: url("../images/wood.jpg") repeat bottom right;
+    margin: 0 auto;
+    width: 960px;
+}
+header img[src*='logo'] {
+    float: left;
+    padding: 0.25em;
+    width: 20%;
+}
+header h1 {
+    display: inline;
+    float: left;
+    margin: 0;
+    padding-top: 0.5em;
+    text-align: center;
+    width: 60%;
+}
+header div.login {
+    float: right;
+    padding-top: 1em;
+    width: 20%;
+}
+#loginForm .formBlock {
+    padding: 0.25em;
+}
+#loginForm input, #loginForm label{
+    display: block;
+    width: 100%;
+}
+#loginForm label {
+    background: #FFFCF0;
+}
+header div.menu {
+    float: right;
+    padding: 2em 0 0 2em;
+    width: 20%;
+}
+
+/*--------------------------------------------------
+----------------------------------------------------
+4) Main and Aside
+----------------------------------------------------
+---------------------------------------------------*/
+main {
+    margin: 0 auto;
+    padding: 0 0.5em;
+    width: 960px;
+}
+div.call {
+    float: left;
+    padding-right: 1em;
+    width: 50%;
+}
+div.action {
+    float: right;
+    padding-left: 1em;
+    width: 50%;
+}
+#signupForm input, #signupForm label {
+    display: block;
+    width: 50%;
+}
+input, textarea {
+    border: 2px solid #805C43;
+    border-radius: 4px;
+    box-shadow: inset 0px -1px 2px 0px rgba(81, 78, 75, 0.5);
+    padding: 0.25em;
+}
+div.formBlock {
+    position: relative;
+    padding-bottom: 1em;
+}
+#signupForm .statusMessage {
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    width: 45%;
+}
+
+/*--------------------------------------------------
+----------------------------------------------------
+5) Dashboard / Projects / Administration
+----------------------------------------------------
+---------------------------------------------------*/
+/*tabbed navigation*/
+#panelWrapper {
+    border: 3px solid #514E4B;
+}
+#tabNav ul {
+    list-style: none;
+    padding-left: 0.5em;;
+}
+#tabNav li {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.618em;
+    padding-right: 2em;
+}
+#tabNav a {
+    color: #436D80;
+}
+#tabNav a.active {
+    border-bottom: 3px solid #50AFDA;
+    color: #50AFDA;
+}
+div.panel {
+    border-top: 3px solid #514E4B;
+    display: none;
+    padding: 0.5em;
+}
+
+/* add and remove functionality menu */
+#appMenu {
+    margin-bottom: 2em;
+}
+
+/*modal styling*/
+div.modalContainer {
+    background: rgba(81, 78, 75, 0.7);
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+div.modal {
+    background: #FFFCF0;
+    outline: 3px solid #805C43;
+    height: 600px;
+    left: 50%;
+    margin-left: -300px;
+    margin-top: -300px;
+    position: fixed;
+    top: 50%;
+    width: 580px;
+    z-index: 2;
+}
+div.modal h3 {
+    border-bottom: 3px solid #514E4B;
+    text-align: center;
+}
+/*project styling*/
+div.projectContainer, div.noteContainer, div.userContainer {
+    min-height: 200px;
+}
+div.project, div.note, div.user {
+    background: #FFFCF0;
+    border: 3px solid #514E4B;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+h3.projectTitle, h3.noteName, h3.userName {
+    margin-top: 0;
+}
+#addProjectForm, #addNoteForm, #addUserForm {
+    width: 100%;
+    padding: 1em;
+}
+#addProjectForm input:not([type="radio"]), #addNoteForm input, #addUserForm input, #addProjectForm textarea, #addNoteForm textarea, #addProjectForm label:not([for^="status"]), #addNoteForm label, #addUserForm label, #addNoteForm select {
+    display: block;
+    width: 100%;
+}
+#addNoteForm textarea {
+    height: 200px;
+}
+#addProjectForm input[type="radio"] {
+    display: none;
+}
+#addProjectForm input[type="radio"] + label span {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.77777777777778em;
+    height: 64px;
+    margin-right: 3em;
+    width: 64px;
+}
+#addProjectForm input[type="radio"]:checked + label span {
+    outline: 3px solid #805C43;
+}
+
+/*--------------------------------------------------
+----------------------------------------------------
+6) Interactions
+----------------------------------------------------
+---------------------------------------------------*/
+/*utility classes*/
+/*This utility class is an essential part of several page functions; it must have the most specificity in all cases.*/
+.removed {
+    display: none !important;
+}
+.hidden {
+    visibility: hidden !important;
+}
+.displayed {
+    display: inherit !important;
+}
+.warning {
+    background-color: #FFA05D;
+    background: rgba(255, 160, 93, 0.8);
+    border: 3px solid red;
+    padding: 0.25em;
+}
+.formError {
+    color: red;
+}
+.formSuccess {
+    color: green;
+}
+.toolTip {
+    background: #514E4B;
+    border: 3px solid #50AFDA;
+    color: #FFFCF0;
+    display: none;
+    padding: 1em;
+    position: absolute;
+    text-align: center;
+    width: 10em;
+    z-index: 4;
+}
+
+/*icon classes*/
+.viral {
+    background: url(../images/icons/viral.png) no-repeat left center;
+    padding-left: 1.5em;
+}
+.grounds {
+    background: url(../images/icons/grounds.png) no-repeat left center;
+    padding-left: 1.5em;
+}
+.finance {
+    background: url(../images/icons/finance.png) no-repeat left center;
+    padding-left: 1.5em;
+}
+.ethics {
+    background: url(../images/icons/ethics.png) no-repeat left center;
+    padding-left: 1.5em;
+}
+
+/*buttons (primary)*/
+button.primary {
+    background: #436D80;
+    border-radius: 4px;
+    border: 2px solid #805C43;
+    box-shadow: 0px 3px 1px 1px #514E4B;
+    color: #FFFCF0;
+    margin: 0.5em 0;
+    padding: 0.25em 1em;
+}
+button.primary:focus, button.primary:hover, input:focus, textarea:focus, input:hover, textarea:hover, input:active, textarea:active {
+    border: 2px solid #FFA05D;
+    outline: none;
+}
+button.primary:active {
+    border: 2px solid #FFA05D;
+    box-shadow: inset 0px -2px 2px 2px #514E4B;
+    outline: none;
+}
+button.projectEdit, button.noteEdit, button.userEdit {
+    margin-right: 1em;
+}
+
+/*buttons (secondary and closeModal)*/
+button.secondary {
+    background: #FFA05D;
+    border-radius: 4px;
+    border: 2px solid #805C43;
+    box-shadow: 0px 3px 1px 1px #514E4B;
+    color: #000;
+    margin: 0.5em 0;
+    padding: 0.25em 1em;
+}
+button.secondary:focus, button.closeModal:focus, button.secondary:hover, button.closeModal:hover {
+    border: 2px solid #50AFDA;
+    outline: none;
+}
+button.secondary:active, button.closeModal:active {
+    border: 2px solid #50AFDA;
+    box-shadow: inset 0px -2px 2px 2px #514E4B;
+    outline: none;
+}
+button.closeModal {
+    background: #FFA05D;
+    border-radius: 4px;
+    border: 2px solid #805C43;
+    box-shadow: 0px 3px 1px 1px #514E4B;
+    color: #000;
+    padding: 0 0.25em;
+    font-size: 1.5em;
+    position: absolute;
+    top: -0.75em;
+    right: -0.5em;
+    z-index: 3;
+}
+
+/*Transitions and Transformations*/
+input, button, img {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+img[src*='logo']:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/*links LVFHA*/
+a:link {
+    color: #50AFDA;
+    text-decoration: none;
+}
+a:visited {
+    color: #436D80;
+}
+a:focus, a:hover, a:active {
+    border-bottom: 1px solid #50AFDA;
+    color: #50AFDA;
+}
+
+/*--------------------------------------------------
+----------------------------------------------------
+7) Footer
+----------------------------------------------------
+---------------------------------------------------*/
+footer {
+    background-color: #514E4B;
+    color: #FFFCF0;
+    /*margin equals the h2 margin that leads the page*/
+    margin: 2.1785em auto 0 auto;
+    padding: 1em 0.5em;
+    width: 960px;
+}

@@ -1,0 +1,75 @@
+header {
+  background: #686C69;
+  font-size: .75em;
+  margin-bottom: .25em;
+  padding: .25em .5em;
+  position: relative;
+}
+
+body.bodyTheme-one header {
+  background: #C97B42;
+}
+
+body.bodyTheme-two header {
+  background: #7DAB5E;
+}
+
+body.bodyTheme-three header {
+  background: #5FCDD9;
+}
+
+.header-logoContainer {
+  float: left;
+  height: 0;
+  margin-right: .5em;
+  padding-bottom: 5em;
+  position: relative;
+  width: 5em;
+}
+
+.header-logo {
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.headerBlock--left {
+  h1 {
+    color: #FFFFEE;
+    margin: .125em 0;
+    padding-top: .80em;
+  }
+}
+
+.headerBlock--right {
+  text-align: right;
+  .h2 {
+    color: #FFFFEE;
+  }
+  .h3 {
+    display: block;
+    margin-bottom: 1em;
+    padding-right: .20em;
+  }
+}
+
+.bodyTheme-one .headerBlock--right {
+  .h3 {
+    color: #C97B42;
+  }
+}
+
+.bodyTheme-two .headerBlock--right {
+  .h3 {
+    color: #7DAB5E;
+  }
+}
+
+.bodyTheme-three .headerBlock--right {
+  .h3 {
+    color: #5FCDD9;
+  }
+}

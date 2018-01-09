@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg" version="1.1" >
+	
+	<!-- 
+		Commands Available
+		
+		M= moveto
+		L= lineto
+		H= horizontal lineto
+		V= Vertical lineto
+		C= curveto
+		S= smooth curveto
+		Q= quadratic Bezier CurveTo
+		T= Smooth quadratic bezier curveto
+		A= Elliptical Arc
+		Z= Close Path
+		
+		Captial Letters - absolute positioned
+		lower case letters - relatively positioned
+	
+	
+	<path d="drawing Commands"  style="style" />
+	
+	-->
+	 
+	
+</svg>
+	        

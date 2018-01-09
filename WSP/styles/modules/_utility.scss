@@ -1,0 +1,47 @@
+// @extend for links on a dark background
+%links-darkBackground {
+  color: $light;
+  border-bottom: 1px solid $light;
+  text-decoration: none;
+  transition: color .5s ease, transform .5s ease;
+
+  &:link,
+  &:visited {
+    color: $light;
+  }
+
+  &:hover,
+  &:active {
+    color: $orange;
+  }
+}
+
+// @extend for links on a dark background
+%links-lightBackground {
+  color: $dark;
+  border-bottom: 1px solid $dark;
+  text-decoration: none;
+  transition: color .5s ease, transform .5s ease;
+
+  &:link,
+  &:visited {
+    color: $lighter-dark;
+  }
+
+  &:hover,
+  &:active {
+    color: $orange;
+  }
+}
+
+// HTML5 Boilerplate accessible hidden style
+%visuallyHidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}

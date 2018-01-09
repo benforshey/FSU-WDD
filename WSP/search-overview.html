@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <title>Search Overview - Search Results Overview | Home Folio</title>
+    <meta name="description" content="Find trustworty Home Inspectors and Home Inspection services with Home Folio.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="favicon-192x192.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Home Folio">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="mstile-144x144.png">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Home Folio">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://www.homefol.io/img/logo.png">
+    <meta property="og:url" content="http://www.homefol.io">
+    <meta property="og:description" content="You finally found your dream home. Let Home Folio make your next Home Inspection easy. Let us find the perfect Home Inspector.">
+</head>
+<body>
+    <nav class="offCanvasNav">
+        <span class="offCanvasNav-js-close">&#215;</span>
+        <h2 class="offCanvasNav-title">Site Nav</h2>
+        <ul class="offCanvasNav-linkList">
+            <li><a class="offCanvasNav-links" href="index.html">Home Page</a></li>
+            <li><a class="offCanvasNav-links" href="index-loggedin.html">Home Page (Logged In)</a></li>
+            <li><a class="offCanvasNav-links" href="search-overview.html">Search Overview</a></li>
+            <li><a class="offCanvasNav-links" href="search-details.html">Search Details</a></li>
+            <li><a class="offCanvasNav-links" href="saved-cards.html">Your Saved Cards</a></li>
+            <li><a class="offCanvasNav-links" href="login.html">Log In</a></li>
+            <li><a class="offCanvasNav-links" href="signup.html">Sign Up</a></li>
+        </ul>
+    </nav>
+    <header class="header-wrap">
+        <a class="offCanvasNav-js-open" href="#"><img class="header-logo" src="img/logo.svg" alt='Blue circular background with tan "HF" as a logo.' onerror='this.src="img/logo.png"; this.onerror="null";'></a>
+        <h1 class="header-masthead">Home Folio</h1>
+        <span class="header-userAccess"><a class="userAccess-links" href="login.html">Log In</a> | <a class="userAccess-links" href="signup.html">Sign Up</a></span>
+        <span class="header-breadcrumbs"><a class="header-breadcrumb" href="index.html">Search</a> &gt; <a class="header-breadcrumb" href="search-overview.html">Search Results</a></span>
+    </header>
+    <main class="main-wrap">
+        <section>
+            <h2>Refine Results or Search Again</h2>
+            <div class="search-filter">
+                <div class="filter-block">
+                    <label class="filter-label" for="filter-distance">Within <span id="distance-miles" class="distance-miles">30</span> Miles:</label>
+                    <input id="filter-distance" class="filter-input" type="range" min="5" max="75" value="30" step="5" list="distance-list">
+                    <datalist id="distance-list">
+                        <option>10</option>
+                        <option>20</option>
+                        <option>30</option>
+                        <option>40</option>
+                        <option>50</option>
+                        <option>60</option>
+                        <option>70</option>
+                    </datalist>
+                </div>
+                <div class="filter-block">
+                    <span class="filter-label">Minimum Rating:</span>
+                    <div class="filter-input">
+                        <span class="js-filter-star">&#9734;</span>
+                        <span class="js-filter-star">&#9734;</span>
+                        <span class="js-filter-star">&#9734;</span>
+                        <span class="js-filter-star">&#9734;</span>
+                        <span class="js-filter-star">&#9734;</span>
+                    </div>
+                </div>
+                <div class="filter-block">
+                    <label class="filter-label" for="saved-filter">Saved by Others:</label>
+                    <input class="filter-input" id="saved-filter" type="checkbox">
+                </div>
+                <div class="filter-block">
+                    <label class="filter-label" for="specialty-filter">Inspector Specialty:</label>
+                    <select class="filter-input" name="specialty-filter" id="specialty-filter">
+                        <option value="general" selected>General / All</option>
+                        <option value="historic">Historic Buildings</option>
+                        <option value="new">New Construction</option>
+                        <option value="structural">Structural Specialists</option>
+                    </select>
+                </div>
+            </div>
+            <form class="searchAgain-form" id="searchForm" action="#">
+                <div class="form-block">
+                    <input class="search-input" type="search" placeholder="street address, zip code, or county">
+                </div>
+                <div class="form-block">
+                    <button class="button primary-button search-button" type="submit" form="searchForm">Find Inspectors</button>
+                </div>
+            </form>
+        </section>
+        <section class="card-wrap">
+            <h2>Your Search Results</h2>
+            <div itemscope itemtype="http://schema.org/LocalBusiness" class="card">
+                <div class="card-header">
+                    <h3 itemprop="name" class="card-title">Pillar to Post</h3>
+                    <a class="card-actionLink saveCard" href="login.html">Save this Card</a>
+                </div>
+                <img itemprop="image" class="card-image" src="img/house--contemporary.jpg" alt="Picture of a home.">
+                <div class="card-description">
+                    <span itemprop="description" class="card-jobTitle">General Home Inspector</span>
+                    <p>Home inspection services offered throughout the US and Canada. Professional and detailed home inspection done by your local home inspector at your convenience. Tips on home or property inspection.</p>
+                    <div class="card-footer">
+                        <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" class="card-rating">
+                        <!-- Each span should have this class IOT programmatically add ratings later. In the mean time, some will not have the class IOT give the appearance of an varied rating.-->
+                            <span class="rating-star">&#9734;</span>
+                            <span class="rating-star">&#9734;</span>
+                            <span class="rating-star">&#9734;</span>
+                            <span class="rating-star">&#9734;</span>
+                            <span>&#9734;</span>
+                            <!-- This would be where I would add a hidden (via CSS) numerical value for the microdata markup -->
+                            <span itemprop="ratingValue" class="totalRating"></span>
+                        </div>
+                        <a class="card-detailLink" href="search-details.html">More Details</a>
+                    </div>
+                </div>
+            </div>
+            <div itemscope itemtype="http://schema.org/LocalBusiness" class="card">
+                <div class="card-header">
+                    <h3 itemprop="name" class="card-title">At Your Service Home Inspection</h3>
+                    <a class="card-actionLink saveCard" href="login.html">Save this Card</a>
+                </div>
+                <img itemprop="image" class="card-image" src="img/placeholder--businessNoImages.svg" alt="Picture of a home." onerror='this.src="img/placeholder--businessNoImages.png"; this.onerror="null";'>
+                <div class="card-description">
+                    <span itemprop="description" class="card-jobTitle">General Home Inspector</span>
+                    <p>Unsurpassed Quality Mold Inspections and mold Testing by Mold Detection Experts.</p>
+                    <div class="card-footer">
+                        <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" class="card-rating">
+                        <!-- Each span should have this class IOT programmatically add ratings later. In the mean time, some will not have the class IOT give the appearance of an varied rating.-->
+                            <span class="rating-star">&#9734;</span>
+                            <span class="rating-star">&#9734;</span>
+                            <span class="rating-star">&#9734;</span>
+                            <span>&#9734;</span>
+                            <span>&#9734;</span>
+                            <!-- This would be where I would add a hidden (via CSS) numerical value for the microdata markup -->
+                            <span itemprop="ratingValue" class="totalRating"></span>
+                        </div>
+                        <a class="card-detailLink" href="search-details.html">More Details</a>
+                    </div>
+                </div>
+            </div>
+            <div itemscope itemtype="http://schema.org/LocalBusiness" class="card">
+                <div class="card-header">
+                    <h3 itemprop="name" class="card-title">A+ Mold Detectives</h3>
+                    <a class="card-actionLink saveCard" href="login.html">Save this Card</a>
+                </div>
+                <img itemprop="image" class="card-image" src="img/mold--dryRot.jpg" alt="Picture of a home.">
+                <div class="card-description">
+                    <span itemprop="description" class="card-jobTitle">Mold Inspection Specialists</span>
+                    <p>Unsurpassed Quality Mold Inspections and mold Testing by Mold Detection Experts.</p>
+                    <div class="card-footer">
+                        <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" class="card-rating">
+                        <!-- Each span should have this class IOT programmatically add ratings later. In the mean time, some will not have the class IOT give the appearance of an varied rating.-->
+                            <span class="rating-star">&#9734;</span>
+                            <span class="rating-star">&#9734;</span>
+                            <span class="rating-star">&#9734;</span>
+                            <span class="rating-star">&#9734;</span>
+                            <span>&#9734;</span>
+                            <!-- This would be where I would add a hidden (via CSS) numerical value for the microdata markup -->
+                            <span itemprop="ratingValue" class="totalRating"></span>
+                        </div>
+                        <a class="card-detailLink" href="search-details.html">More Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="ad-wrap">
+            <h2 class="ad-placeholder">Ad Space: 300px(w) x 250px(h)</h2>
+        </div>
+    </main>
+    <footer class="footer-wrap">
+        <section class="footer-linkCategory">
+            <h4 class="linkCategory-header">&copy; ACME Corporation</h4>
+            <ul class="footer-linkList">
+                <li><a href="#" class="footer-link">About ACME</a></li>
+                <li><a href="#" class="footer-link">Contact Us</a></li>
+                <li><a href="#" class="footer-link">Job Openings</a></li>
+            </ul>
+        </section>
+        <section class="footer-linkCategory">
+            <h4 class="linkCategory-header">Developers</h4>
+            <ul class="footer-linkList">
+                <li><a href="#" class="footer-link">Documentation</a></li>
+                <li><a href="#" class="footer-link">API</a></li>
+                <li><a href="#" class="footer-link">Bug Report</a></li>
+            </ul>
+        </section>
+        <section class="footer-linkCategory">
+            <h4 class="linkCategory-header">Account Services</h4>
+            <ul class="footer-linkList">
+                <li><a href="#" class="footer-link">Technical Support</a></li>
+                <li><a href="#" class="footer-link">Contact Us</a></li>
+                <li><a href="#" class="footer-link">Account Recovery</a></li>
+            </ul>
+        </section>
+    </footer>
+    <!-- jQuery from CDN with local fallback -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+    <!-- My JavaScript -->
+    <script src="js/main-min.js"></script>
+</body>
+</html>

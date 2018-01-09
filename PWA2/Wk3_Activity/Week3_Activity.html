@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery.getJSON demo</title>
+    <style>
+        img {
+        height: 100px;
+        float: left;
+        }
+    </style>
+    <!--  jQuery from CDN  -->
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <div id="images"></div>
+    <script>
+        (function () {
+//            sets variable to URL of Flickr public photo feed
+            var flickerAPI = 'http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?';
+//            calls jQuery getJSON method, passing URL in variable
+            $.getJSON(flickerAPI, {
+//                using object notation (technically not valid JSON, due to lack of string literal in key), pass key : value pair to get photos tagged with Mt. Rainier
+                tags: "mount rainier",
+//                using object notation, pass key : value pair to get any tagmode
+                tagmode: "any",
+//                using object notation, pass key : value pair to set format to JSON
+                format: "json"
+//            using sucess callback of getJSON method, execute function with argument of data
+            }).done(function (data) {
+                console.log(data);
+//                iterate over each jQuery object, running function; data.items is array in object returned from Flickr; i is iterator; item is the object in the items array
+                $.each(data.items, function (i, item) {
+//                    that grabs the image element and sets the src attribute to the applicable URL (found at item.media.m), appending all of that to the element with the id of images
+                    $("<img>").attr("src", item.media.m).appendTo("#images");
+//                    if i equals three (this is why we get 4 photos)
+                    if (i === 3) {
+//                        return false to prevent the successful completion callback
+                        return false;
+                    }
+                });
+            });
+        })();
+
+    </script>
+</body>
+</html>

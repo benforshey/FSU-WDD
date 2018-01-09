@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+
+        <title>HTML5 Video Example</title>
+
+    </head>
+
+    <body>
+
+        <!--
+        	Video attributes
+
+            width - controls how wide it is - also scales
+            height - how tall
+
+            controls - display the play/stop buttons
+
+            autoplay - immediately plays the video when the page is loaded.
+
+            poster - path to an image that will show before the video.
+        -->
+        <video controls poster="images/posterImage.jpg" src="video/video.mp4" width="400" height="225"></video>
+
+        <video controls width="400" height="225">
+            <source src="video/video.mp4" type="video/mp4">
+            <source src="video/video.ogv" type="video/ogg">
+            Video is not supported.
+        </video>
+
+    </body>
+
+</html>
+
+

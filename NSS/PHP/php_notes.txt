@@ -1,0 +1,66 @@
+# kinds of errors
+syntax
+	program crashed because you asked it to operate outside of the rules
+logical / semantic
+	program operates within rules, but not how you desire
+
+# error reporting
+notice
+	nonfatal, but needs improvement
+warning
+	nonfatal, but something is wrong
+error
+	fatal, the program is terminated "white screen of death"
+
+# when errors occur
+compile time
+	when script is interpreted by its parser (no execution)
+run time
+	during execution
+
+# common error levels
+E_ERROR
+	fatal run-time error (crash)
+E_WARNING
+	run-time warning (doesn't halt)
+E_PARSE
+	compile-time error (does not execute)
+E_NOTICE
+	run-time notice (does not halt, but probably a logical error in the script)
+E_STRICT
+	compile-time notice (does not halt; reinforces best practices)
+E_DEPRECATED
+	run-time notice (doesn't halt, but won't work in future PHP versions)
+E_ALL
+	combines all errors, warnings, and notices
+	excludes E_STRICT until PHP 5.4
+
+# configure error reporting
+error_reporting
+	sets level
+display_errors
+	displays error to users (only turn on in dev environment!)
+	1 for on
+	0 for off
+php.ini
+	sets config for every site using PHP on web server
+	optimal to config this file for dev
+	located: platform dependent (just sudo find / -name php.ini) 
+
+# error logging options
+log_errors
+	toggles error logging
+	default: off (0)
+log_errors_max_len
+	length of error messages in bytes (defaults to 1024)
+	0 is unlimted
+error_log
+	path and filename of error log file
+	default NULL (Apache error log)
+
+# error log best practices
+should not blend PHP errors with Apache errors
+set log file outside web root (/var/log/)
+
+# restart Apache2
+I usually use sudo service apache2 restart, but /etc/init.d/apache2 restart also works.

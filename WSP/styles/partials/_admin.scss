@@ -1,0 +1,75 @@
+.accountContent {
+  @include span-columns(8);
+}
+
+// Login
+.login-wrap {
+  @include span-columns(6);
+  @include shift(3);
+}
+
+.passwordRecovery-wrap {
+  @include span-columns(6);
+  @include shift(3);
+}
+
+// Signup
+.signup-wrap {
+  @include span-columns(6);
+  @include shift(3);
+}
+
+@media screen and (max-width: 61.25em) {
+  .accountContent {
+    @include span-columns(7);
+  }
+
+}
+
+@media screen and (max-width: 50em) {
+  .accountContent {
+    @include span-columns(12);
+    @include shift(0);
+  }
+
+    // Login
+  .login-wrap {
+    @include span-columns(8);
+    @include shift(2);
+  }
+
+  .passwordRecovery-wrap {
+    @include span-columns(8);
+    @include shift(2);
+  }
+
+  // Signup
+  .signup-wrap {
+    @include span-columns(8);
+    @include shift(2);
+  }
+}
+
+@media screen and (max-width: 34.375em) {
+  .accountContent {
+    @include span-columns(12);
+    @include shift(0);
+  }
+
+    // Login
+  .login-wrap {
+    @include span-columns(12);
+    @include shift(0);
+  }
+
+  .passwordRecovery-wrap {
+    @include span-columns(12);
+    @include shift(0);
+  }
+
+  // Signup
+  .signup-wrap {
+    @include span-columns(12);
+    @include shift(0);
+  }
+}

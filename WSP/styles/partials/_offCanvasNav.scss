@@ -1,0 +1,51 @@
+.offCanvasNav {
+  background: $dark;
+  border-right: 2px solid $tan;
+  bottom: 0;
+  height: 100%;
+  left: -20em;
+  padding: .5em;
+  position: fixed;
+  top: 0;
+  transition: transform .5s ease;
+  width: 20em;
+  z-index: 1;
+
+  &.is-opening {
+    transform: translate3d(20em, 0, 0);
+  }
+
+  &.is-closing {
+    transform: translate3d(-20em, 0, 0);
+  }
+}
+
+.offCanvasNav-js-close {
+  color: $light;
+  font-size: 3.5em;
+  margin-left: 1em;
+  position: absolute;
+  right: .5em;
+  top: 0;
+  transition: color .5s ease, transform .5s ease;
+
+  &:hover {
+    color: $orange;
+    cursor: pointer;
+    transform: scale3d(1.25, 1.25, 1);
+  }
+}
+
+.offCanvasNav-title {
+  color: $light;
+}
+
+.offCanvasNav-linkList {
+  list-style: none;
+}
+
+.offCanvasNav-links {
+  @extend %links-darkBackground;
+  font-size: 1.5em;
+  border-bottom: none;
+}

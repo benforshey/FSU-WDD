@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{self.title}</title>
+    <meta name="description" content="{self.description}">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{self.web_fonts}">
+    <link rel="stylesheet" href="{self.css}">
+</head>
+<body>
+<a href="?milspec">Milspec</a>
+<a href="?kelty">Kelty</a>
+<a href="?spectra">Spectra</a>
+<a href="?tether">Tether</a>
+<a href="?aircore">Aircore</a>
+
+    <script src="{self.script}"></script>
+</body>
+</html>
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, adipisci assumenda dolor earum ex iste laboriosam minima odit provident qui quidem sint soluta voluptatibus! Earum enim error quae sit vel!
+
+milspec.cost = 0.07
+milspec.name = "MilSpec"
+milspec.strength = 550
+milspec.weight = 0.07
+milspec.unit_price = util.cost_per_unit(milspec.cost, 'ft')
+milspec.ratio = util.cost_to_strength(milspec.cost, milspec.strength)
+<ul>
+    <li>Name: </li>
+    <li>Cost:</li>
+    <li>Strength: </li>
+    <li>Weight: </li>
+    <li>Strength to Cost Quotient: </li>
+</ul>
+
+
+
+<figure>
+    <img src="img/all_ropes.jpg" alt="many climbing ropes in a pile"/>
+    <figcaption>Our Rope Storage System</figcaption>
+</figure>
+<figure>
+    <img src="img/milspec.jpg" alt="Milspec 500 Paracord"/>
+    <figcaption>By David J. Fred [<a href="http://creativecommons.org/licenses/by-sa/2.5">CC BY-SA 2.5</a> or <a href="http://creativecommons.org/licenses/by-sa/2.5">CC BY-SA 2.5</a>], <a href="http://commons.wikimedia.org/wiki/File%3AParacord-Commercial-Type-III-Coil.jpg">via Wikimedia Commons</a></figcaption>
+</figure>
+<figure>
+    <img src="img/kelty.jpg" alt="Kelty climbing rope"/>
+    <figcaption>Kelty Climbing Rope</figcaption>
+</figure>
+<figure>
+    <img src="img/spectra.jpg" alt="Spectra climbing rope"/>
+    <figcaption>Spectra Climbing Rope</figcaption>
+</figure>
+<figure>
+    <img src="img/tether.jpg" alt="Tether climbing rope"/>
+    <figcaption>Tether Climbing Rope</figcaption>
+</figure>
+<figure>
+    <img src="img/aircore.jpg" alt="Aircore climbing rope"/>
+    <figcaption>Aircore Climbing Rope</figcaption>
+</figure>
+
+<h3>About Our Ropes</h3>
+<p>Our ropes are of the finest quality<sup>1</sup> and are available at an unbeatable price<sup>2</sup>! To help you make a selection, we offer you this rope library.</p>
+<p><sub>(1) Actual ropes may be slightly frayed or used.</sub></p>
+<p><sub>(2) For competitor's regulary-priced items only.</sub></p>
+
+<header>
+    <h1>Ropes, Inc.</h1>
+    <nav>
+        <a href="#">Home Page</a><a href="#">Rope Store</a><a href="#" class="nav--current-selection">Rope Guide</a>
+    </nav>
+</header>
+<h2>Our Quality Promise</h2>
+<p>Ropes, Inc is dedicated to bringing you the highest quality lightly-used / once-used climbing ropes from the finest manufacturers at unbeatable prices. We're so confident in our ropes that we stand behind them as we sell them to you.</p>
+
+<footer>
+    <p>&copy; Ropes, Inc 2015</p>
+</footer>
+
+<li><span class="view-rope_title">Name | </span>''' + rope[1] + '''</li>
+<li><span class="view-rope_title">Cost | </span>''' + rope[3] + '''</li>
+<li><span class="view-rope_title">Tensile Strength | </span>''' + str(rope[2]) + '''lbs</li>
+<li><span class="view-rope_title">Weight | </span>''' + lu.weight_per_unit(rope[4], 'ft') + '''</li>
+<li><span class="view-rope_title">Strength to Cost Quotient | </span>''' + rope[5] + '''</li>

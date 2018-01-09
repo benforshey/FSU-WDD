@@ -1,0 +1,24 @@
+		body {
+			margin:0; 
+			padding:0; 
+			background:#efefef;
+			text-align:center; 
+			for ie div centering, reset in wrapper  */
+		}
+		#wrapper {
+			width:600px; 
+			margin:0 auto; 
+			border-radius:0 0 5px 5px;
+			-moz-border-radius:0 0 5px 5px;
+			-webkit-border-radius: 0 0 5px 5px;
+			background:#fff; 
+			border:1px solid #ccc; 
+			padding:25px; 
+			border-top:none; 
+			box-shadow:0 0 5px #ccc;
+			-moz-box-shadow:0 0 5px #ccc;
+			-webkit-box-shadow:0 0 5px #ccc;
+			text-align:center;
+		}
+		
+		

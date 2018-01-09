@@ -1,0 +1,41 @@
+.header-wrap {
+  @include outer-container();
+  @include linear-gradient($dark, $lighter-dark, $darker-dark);
+  padding: .5em;
+}
+
+.header-logo {
+  float: left;
+  max-width: 4em;
+}
+
+.header-masthead {
+  color: $light;
+  float: left;
+  font-size: 2em;
+  margin: .25em .25em 0 .25em;
+}
+
+.header-userAccess {
+  float: right;
+  margin: 1.25em 0 .75em;
+}
+
+.header-breadcrumbs {
+  float: left;
+  margin: .75em 0;
+  width: 100%;
+}
+
+.userAccess-links,
+.header-breadcrumb {
+  @extend %links-darkBackground;
+}
+
+@media screen and (max-width: 34.375em) {
+ .header-userAccess {
+    margin-top: .75em;
+    text-align: right;
+    width: 100%;
+  }
+}

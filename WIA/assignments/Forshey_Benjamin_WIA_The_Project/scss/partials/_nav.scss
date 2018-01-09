@@ -1,0 +1,137 @@
+a:link {
+
+}
+
+a:visited {
+    color: $light-blue;
+}
+
+a:focus,
+a:hover,
+a:active {
+    border-bottom: 2px solid $light-orange;
+    color: $base-blue;
+    outline: none;
+    &:not(.nav-in-text) {
+        transform: scale(1.02);
+    }
+}
+
+.main-nav {
+    background: $mid-dark-neutral;
+    border-bottom: 6px solid $base-blue;
+    clear: both;
+    float: left;
+    width: 100%;
+}
+
+.nav-internal {
+    border-bottom: 2px solid $light-gold;
+    color: $light-blue;
+    float: left;
+    margin: .125em 0 6px 0;
+    padding: 0 1em;
+    text-align: center;
+    text-decoration: none;
+    transition: .2s ease-out border, 2s ease-out transform;
+    width: 20%;
+}
+
+.js-nav-close {
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    left: 5em;
+    position: absolute;
+    top: 1em;
+    z-index: 2;
+}
+
+.js-nav-open {
+    background: $mid-dark-neutral;
+    border: 2px solid $light-gold;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    padding: .125em .25em;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.nav-in-text {
+    border-bottom: 2px solid $light-gold;
+    color: $light-blue;
+    text-decoration: none;
+    transition: .2s ease-out all;
+}
+
+.nav-to-top {
+    border-bottom: 2px solid $light-gold;
+    bottom: 16px;
+    color: $light-blue;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-decoration: none;
+    transition: .2s ease-out all;
+    width: 6em;
+}
+
+@media screen and (max-width: 42.1875em) {
+    .nav-internal {
+        font-size: .75em;
+    }
+}
+@media screen and (max-width: 32.8125em) {
+//    off-canvas nav designed to overwrite, not supplement (ie, future self, don't remove other classes outside of media query)
+    .js-nav-open {
+        display: inline;
+    }
+
+    .js-nav-close {
+        display: inline;
+    }
+
+    .js-close-nav {
+        margin-left: -10em;
+    }
+
+    .js-open-nav {
+        margin-left: 0em;
+    }
+
+    .off-canvas-container {
+        background: $mid-dark-neutral;
+        border-right: 2px solid $base-blue;
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+    }
+
+    .main-nav {
+        border-bottom: none;
+        position: relative;
+        transition: .2s ease-out all;
+        width: 10em;
+    }
+
+    .nav-internal:first-of-type {
+        margin-top: 4em;
+    }
+
+    .nav-internal {
+        background: $light-neutral;
+        border: 2px solid $light-gold;
+        font-size: 1em;
+        float: left;
+        padding: .5em 0;
+        width: 100%;
+    }
+
+
+
+}

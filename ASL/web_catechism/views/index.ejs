@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Catechism | Ben Forshey</title>
+    <script>
+        /*!
+         loadCSS: load a CSS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. Licensed MIT
+         */
+        function loadCSS(e,n,o,t){"use strict";var d=window.document.createElement("link"),i=n||window.document.getElementsByTagName("script")[0],r=window.document.styleSheets;return d.rel="stylesheet",d.href=e,d.media="only x",t&&(d.onload=t),i.parentNode.insertBefore(d,i),d.onloadcssdefined=function(e){for(var n,o=0;o<r.length;o++)r[o].href&&r[o].href===d.href&&(n=!0);n?e():setTimeout(function(){d.onloadcssdefined(e)})},d.onloadcssdefined(function(){d.media=o||"all"}),d}
+        loadCSS("styles/main.css");
+    </script>
+    <noscript>
+        <link rel="stylesheet" href="styles/main.css"/>
+    </noscript>
+    <script>
+        /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on http://goo.gl/REQGQ by Paul Irish). Licensed MIT */
+        function loadJS(e,t){"use strict";var n=window.document.getElementsByTagName("script")[0],o=window.document.createElement("script");return o.src=e,o.async=!0,n.parentNode.insertBefore(o,n),t&&"function"==typeof t&&(o.onload=t),o}
+        loadJS("scripts/main.js");
+    </script>
+    <link rel="prefetch" href="/<%= nextPosition %>">
+</head>
+<body class="<%= section.class %>" data-session="<%= user ? true : false %>">
+<svg display="none" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <symbol id="icon-arrow-right" viewBox="0 0 1024 1024">
+            <title>arrow-right</title>
+            <path class="path1" d="M992 512l-480-480v288h-512v384h512v288z"></path>
+        </symbol>
+        <symbol id="icon-arrow-left" viewBox="0 0 1024 1024">
+            <title>arrow-left</title>
+            <path class="path1" d="M32 512l480 480v-288h512v-384h-512v-288z"></path>
+        </symbol>
+    </defs>
+</svg>
+<header id="top">
+    <nav class="clearfix" role="navigation" aria-label="Primary">
+        <a href="/account">Settings</a>
+        <a href="#bottom">See All Questions</a>
+    </nav>
+
+    <div class="headerBlock--left">
+        <div class="header-logoContainer">
+            <svg class="header-logo" width="100%" height="100%" viewBox="0 0 800 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><g id="Layer1"><path d="M50,137.5l1.42109e-14,525c0,0 137.198,0 210,0c0,-0.656049 0.0026891,-1.31212 0.00267586,-1.96819c-0.0020791,-103.033 23.3132,-208.032 139.997,-208.032c117.42,0 128.333,105 128.333,210c62.3083,0 221.667,0 221.667,0l0,-525l-151.667,0l0,105l-116.667,0l0,-105l-163.333,0l0,105l-116.667,0l0,-105l-151.667,0Z" style="fill:#ffe;"/></g></svg>
+        </div>
+        <h1>New City Catechism</h1>
+    </div>
+    <div class="headerBlock--right">
+        <span class="spanHeader h2">Part <%= section.part %></span>
+    </div>
+</header>
+<div class="headerBlock--right">
+    <span class="spanHeader h3"><%= section.tag %></span>
+</div>
+<main>
+    <%- messages() %>
+    <div id="js-saveProgress"  class="clearfix" role="navigation" aria-label="Secondary">
+        <span class="incrementalNavContainer prev"><a href="/<%= prevPosition %>" id="prevNav" class="incrementalNav link"><svg class="icon icon-arrow-left"><use xlink:href="#icon-arrow-left"></use></svg>Prev</a></span>
+        <span class="incrementalNavContainer next"><a href="/<%= nextPosition %>" id="nextNav" class="incrementalNav link">Next<svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg></a></span>
+    </div>
+
+    <h2>Question <%= position %></h2>
+    <div>
+        <%- content.segments[arrayIndex].q %>
+    </div>
+
+
+    <h2>Answer</h2>
+    <div>
+        <%- content.segments[arrayIndex].a %>
+    </div>
+
+    <h2>Scripture</h2>
+    <div>
+        <%- content.segments[arrayIndex].s %>
+    </div>
+
+    <h2 id="accordionHeaderV">Video</h2>
+    <div id="accordionContentV" class='embedContainer' aria-hidden="true">
+        <div class="JSVideoLoad">
+        </div>
+        <iframe id="js-deferLoad" src="" data-deferSrc='<%- content.segments[arrayIndex].v %>' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+        </iframe>
+        <div id="noJSVideo" class="noJSVideo">
+            <a href="<%- content.segments[arrayIndex].v %>" rel="external" target="_blank" class="noJSVideoLink">Watch this Video</a>
+        </div>
+    </div>
+</main>
+<footer id="bottom">
+    <a class="toTop" href="#top">Go to the Top</a>
+    <section class="footerSection full">
+        <h1>All Questions</h1>
+        <div id="js-allQuestions" class="questionList">
+            <a href="/1">Q 01</a>
+            <a href="/2">Q 02</a>
+            <a href="/3">Q 03</a>
+            <a href="/4">Q 04</a>
+            <a href="/5">Q 05</a>
+            <a href="/6">Q 06</a>
+            <a href="/7">Q 07</a>
+            <a href="/8">Q 08</a>
+            <a href="/9">Q 09</a>
+            <a href="/10">Q 10</a>
+            <a href="/11">Q 11</a>
+            <a href="/12">Q 12</a>
+            <a href="/13">Q 13</a>
+            <a href="/14">Q 14</a>
+            <a href="/15">Q 15</a>
+            <a href="/16">Q 16</a>
+            <a href="/17">Q 17</a>
+            <a href="/18">Q 18</a>
+            <a href="/19">Q 19</a>
+            <a href="/20">Q 20</a>
+            <a href="/21">Q 21</a>
+            <a href="/22">Q 22</a>
+            <a href="/23">Q 23</a>
+            <a href="/24">Q 24</a>
+            <a href="/25">Q 25</a>
+            <a href="/26">Q 26</a>
+            <a href="/27">Q 27</a>
+            <a href="/28">Q 28</a>
+            <a href="/29">Q 29</a>
+            <a href="/30">Q 30</a>
+            <a href="/31">Q 31</a>
+            <a href="/32">Q 32</a>
+            <a href="/33">Q 33</a>
+            <a href="/34">Q 34</a>
+            <a href="/35">Q 35</a>
+            <a href="/36">Q 36</a>
+            <a href="/37">Q 37</a>
+            <a href="/38">Q 38</a>
+            <a href="/39">Q 39</a>
+            <a href="/40">Q 40</a>
+            <a href="/41">Q 41</a>
+            <a href="/42">Q 42</a>
+            <a href="/43">Q 43</a>
+            <a href="/44">Q 44</a>
+            <a href="/45">Q 45</a>
+            <a href="/46">Q 46</a>
+            <a href="/47">Q 47</a>
+            <a href="/48">Q 48</a>
+            <a href="/49">Q 49</a>
+            <a href="/50">Q 50</a>
+            <a href="/51">Q 51</a>
+            <a href="/52">Q 52</a>
+        </div>
+    </section>
+    <section class="footerSection half">
+        <h1>Copyright Information</h1>
+        <p>
+            All New City Catechism content is &copy; 2012 Redeemer Presbyterian Church.
+        </p>
+        <p>
+            Scripture taken from The Holy Bible, English Standard Version. Copyright &copy;2001 by Crossway Bibles.
+        </p>
+        <p>
+            Site design and development is &copy; 2015 Ben Forshey.
+        </p>
+    </section>
+    <section class="footerSection half">
+        <h1>Contact Me</h1>
+        <dl>
+            <dt>email</dt>
+            <dd><a href="mailto:hello@benforshey.com">hello@benforshey.com</a></dd>
+            <dt>my website</dt>
+            <dd><a href="//www.benforshey.com">www.benforshey.com</a></dd>
+        </dl>
+    </section>
+    <section class="footerSection full">
+        <h1>Linked Content</h1>
+            <p>
+                In order to offset the cost of running this site, the text contains links to related products that, at no additional cost to you, may allow me to earn a portion of the sale price from the vendor.
+            </p>
+            <p>
+                Ben Forshey is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.
+            </p>
+    </section>
+</footer>
+</body>
+</html>

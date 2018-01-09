@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Catechism | Ben Forshey</title>
+    <script>
+        /*!
+         loadCSS: load a CSS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. Licensed MIT
+         */
+        function loadCSS(e,n,o,t){"use strict";var d=window.document.createElement("link"),i=n||window.document.getElementsByTagName("script")[0],r=window.document.styleSheets;return d.rel="stylesheet",d.href=e,d.media="only x",t&&(d.onload=t),i.parentNode.insertBefore(d,i),d.onloadcssdefined=function(e){for(var n,o=0;o<r.length;o++)r[o].href&&r[o].href===d.href&&(n=!0);n?e():setTimeout(function(){d.onloadcssdefined(e)})},d.onloadcssdefined(function(){d.media=o||"all"}),d}
+        loadCSS("../styles/main.css");
+    </script>
+    <noscript>
+        <link rel="stylesheet" href="../styles/main.css"/>
+    </noscript>
+
+</head>
+<body>
+<header id="top">
+    <nav class="clearfix" role="navigation" aria-label="Primary">
+        <a href="/account/logout">Log Out</a>
+        <a href="/<%= sessionProgress || 1 %>">Go Back to Catechism</a>
+    </nav>
+
+    <div class="headerBlock--left">
+        <div class="header-logoContainer">
+            <svg class="header-logo" width="100%" height="100%" viewBox="0 0 800 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><g id="Layer1"><path d="M50,137.5l1.42109e-14,525c0,0 137.198,0 210,0c0,-0.656049 0.0026891,-1.31212 0.00267586,-1.96819c-0.0020791,-103.033 23.3132,-208.032 139.997,-208.032c117.42,0 128.333,105 128.333,210c62.3083,0 221.667,0 221.667,0l0,-525l-151.667,0l0,105l-116.667,0l0,-105l-163.333,0l0,105l-116.667,0l0,-105l-151.667,0Z" style="fill:#ffe;"/></g></svg>
+        </div>
+        <h1>New City Catechism</h1>
+    </div>
+    <div class="headerBlock--right">
+        <span class="spanHeader h2">Settings</span>
+    </div>
+</header>
+<main>
+    <%- messages() %>
+    <h2>Your Progress</h2>
+    <p>Pick up where you left off! Your progress is automatically saved when you are logged in.</p>
+    <a href="/<%= sessionProgress || 1 %>">Resume at Question <%= sessionProgress || 1 %></a>
+    <h2>Account Management</h2>
+    <p>Deleting your account is not reversable, but you are always welcome to make another!</p>
+    <a href="/account/delete">Delete Your Account</a>
+
+</main>
+<footer id="bottom" class="clearfix">
+    <a class="toTop" href="#top">Go to the Top</a>
+    <section class="footerSection half">
+        <h1>Copyright Information</h1>
+        <p>
+            All New City Catechism content is &copy; 2012 Redeemer Presbyterian Church.
+        </p>
+        <p>
+            Scripture taken from The Holy Bible, English Standard Version. Copyright &copy;2001 by Crossway Bibles.
+        </p>
+        <p>
+            Site design and development is &copy; 2015 Ben Forshey.
+        </p>
+    </section>
+    <section class="footerSection half">
+        <h1>Contact Me</h1>
+        <dl>
+            <dt>email</dt>
+            <dd><a href="mailto:hello@benforshey.com">hello@benforshey.com</a></dd>
+            <dt>my website</dt>
+            <dd><a href="//www.benforshey.com">www.benforshey.com</a></dd>
+        </dl>
+    </section>
+</footer>
+</body>
+</html>

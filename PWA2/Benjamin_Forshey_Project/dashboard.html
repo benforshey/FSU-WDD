@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:700|Quattrocento+Sans:400,400italic,700' rel='stylesheet'>
+  <title>Board Better | Dashboard</title>
+  <!-- Viewport Settings -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/author-styles.css" charset="utf-8">
+</head>
+<body>
+
+  <header class="clearfix">
+    <a href="dashboard.html"><img src="images/logo.png" alt="Board Better Logo"></a>
+    <h1>Dashboard Page</h1>
+    <div class="menu">
+      <button class="secondary" id="logoutSubmit">Log Out</button>
+    </div>
+    <!-- end login     -->
+  </header>
+
+  <div class="warning" id="jSCheck">
+      <h4>JavaSript is not Enabled</h4>
+      <p>You do not have JavaScript enabled. This is a web application that requres JavaScript. Please <a href="http://www.enable-javascript.com/">enable JavaScript</a> in your web browser so that this web application will function.</p>
+  </div>
+  <!-- end warning -->
+  <script charset="utf-8">
+    document.getElementById("jSCheck").classList.add("removed");
+  </script>
+  <!-- inline JavaScript to prevent flash of warning that sometimes happens when page renders before jQuery is called -->
+
+  <main>
+    <h2>Welcome, <span id="userName"></span></h2>
+    <div id="panelWrapper">
+      <div id="tabNav">
+        <ul>
+          <li><a href="#projects" class="active">Projects</a></li>
+          <li><a href="#notes">Notes</a></li>
+          <li><a href="#admin">Admin</a></li>
+        </ul>
+      </div>
+      <div id="projects" class="panel displayed">
+        <h3>Manage Projects</h3>
+        <p>Keep your nonprofit running between meetings. Use projects to assign responsibility for the upcoming deadlines.</p>
+        <button id="projectsButton" class="primary">Go To Projects</button>
+      </div>
+      <div id="notes" class="panel">
+        <h3>Write Collaborative Notes</h3>
+        <p>Don't play catch-up at board meetings. Keep everyone up to date on the essentials your projects. </p>
+        <button id="notesButton" class="primary">Go To Notes</button>
+      </div>
+      <div id="admin" class="panel">
+        <h3>Manage your Users</h3>
+        <p>Give your volunteers access to Board Better. Add the key players in your nonprofit.</p>
+        <button id="adminButton" class="primary">Go To Admin</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div>
+      <p>Icons made by Freepik, Icons8 from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></p>
+      </div>
+  </footer>
+  <!-- Loads jQuery from Google CDN -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- Provides local fallback file for jQuery -->
+  <script charset="utf-8">window.jQuery || document.write('<script src="js\/jquery-1.11.1.min.js"><\/script>')</script>
+  <!-- jQuery Ui -->
+  <script src="js/jquery-ui.min.js"></script>
+  <!-- Load my Script -->
+  <script charset="utf-8" src="js/main.js"></script>
+</body>
+</html>

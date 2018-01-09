@@ -1,0 +1,5 @@
+ben@lamp:~$ sudo apt-get check
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+ben@lamp:~$ 

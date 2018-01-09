@@ -1,0 +1,162 @@
+// overview of card
+.card-wrap {
+  @include span-columns(8);
+}
+
+.card {
+  @include clearfix;
+  background: #fff;
+  border: 2px solid $dark;
+  border-radius: 4px;
+  margin-bottom: 1em;
+  padding: .25em;
+}
+
+.card-header {
+  @include clearfix;
+}
+
+.card-title {
+  display: inline;
+  float: left;
+  margin-top: 0;
+}
+
+.card-jobTitle {
+  font-weight: 700;
+}
+
+.card-actionLink {
+  float: right;
+  margin: .4em .5em 1.5em;
+}
+
+.card-image {
+  @include span-columns(3 of 8);
+  border: 2px solid $dark;
+}
+
+.card-description {
+  @include span-columns(5 of 8);
+  @include omega;
+}
+
+.card-rating {
+  float: left;
+  margin: .5em;
+}
+
+.card-detailLink {
+  float: right;
+  margin: .5em;
+}
+
+// detailed view of card
+.detailCard-wrap {
+  @include clearfix;
+  @include span-columns(12);
+}
+
+.detailCard-header {
+  @include clearfix;
+  @include span-columns(12);
+
+}
+
+.detailCard-title {
+  float: left;
+}
+
+.detailCard-actionLink {
+  float: right;
+  // margin-top: 3.2em;
+  margin: .5em;
+}
+
+
+.detailCard-imageBlock {
+  @include span-columns(12);
+}
+
+.lightbox-detailImage {
+  @include clearfix;
+  @include span-columns(4);
+  @include omega(3n);
+  border-bottom: none;
+}
+
+.detailImage {
+  border: 2px solid $lighter-light;
+  box-shadow: 1px 2px 4px $dark;
+  max-width: 100%;
+}
+
+.detail-descriptionBlock {
+  @include span-columns(6);
+}
+
+.operatingHours-day {
+  float: left;
+  text-align: right;
+  width: 35%;
+}
+
+.operatingHours-hours {
+  float: right;
+  width: 60%;
+}
+
+.detail-reviewBlock {
+  @include span-columns(6);
+  @include omega();
+}
+
+.addReview-list {
+  list-style: none;
+}
+
+.rating-star {
+  color: transparent;
+}
+
+.rating-star:before {
+  content: "\2605";
+  color: $gold;
+  position: absolute;
+}
+
+@media screen and (max-width: 61.25em) {
+  .card-wrap {
+    @include span-columns(7);
+  }
+
+}
+
+
+@media screen and (max-width: 50em) {
+  .card-wrap {
+    @include span-columns(12);
+  }
+
+  .detail-descriptionBlock {
+    @include span-columns(12);
+  }
+
+  .detail-reviewBlock {
+    @include span-columns(12);
+  }
+}
+
+
+@media screen and (max-width: 34.375em) {
+
+  .card-image {
+    @include span-columns(12);
+  }
+
+  .card-description {
+    @include span-columns(12);
+  }
+
+}
+

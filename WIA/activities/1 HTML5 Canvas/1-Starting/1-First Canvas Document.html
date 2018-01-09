@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Our First Canvas</title>
+        <style>
+            .js__canvas {
+                border: 1px solid slategray;
+                background: oldlace;
+            }
+        </style>
+        <script>
+            window.onload = function () {
+                var theCanvas = document.getElementsByClassName('js__canvas')[0];
+                theCanvas.width = 400;
+                theCanvas.height = 300;
+                
+                if(theCanvas) {
+                    // get contenxt (2d)
+                    var context = theCanvas.getContext('2d');
+                    
+                    // draw below (in if statement), because we have 2d context
+                    if(context) {
+                        // stroked rectange
+                        context.strokeStyle = 'darkblue';
+                        context.lineWidth = 5;
+                        // strokeRect(posX, posY, Width, Height);
+                        context.strokeRect(25, 25, 100, 125);
+                        
+                        
+                        // filled rectange
+                        context.fillStyle = 'green';
+                        context.fillRect(150, 25, 100, 125);
+                        
+                        // filled and stroked rectange
+                        context.strokeStyle = 'red';
+                        context.fillStyle = 'yellow';
+                        context.lineWidth = 10;
+                        context.strokeRect(275, 25, 100, 125);
+                        context.fillRect(275, 25, 100, 125);
+                        
+                        // clear rectangle
+                        context.clearRect(15, 75, 450, 50);
+                    }
+                }
+                
+                
+            };
+            
+            
+        </script>
+	</head>
+	<body>
+		<h1>First Canvas Example</h1>
+		<p>This document contains our first canvas example</p>
+		
+        <canvas class="js__canvas canvas-1" width="100" height="100">
+            Your browser doesn't support canvas.
+            
+        </canvas>
+	</body>
+</html>

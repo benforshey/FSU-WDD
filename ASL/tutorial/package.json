@@ -1,0 +1,24 @@
+{
+  "name": "tutorial",
+  "version": "1.0.0",
+  "description": "Lynda.com Node.js tutorial",
+  "main": "hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benforshey/ASL.git"
+  },
+  "author": "Ben Forshey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benforshey/ASL/issues"
+  },
+  "homepage": "https://github.com/benforshey/ASL#readme",
+  "dependencies": {
+    "ejs": "^2.3.1",
+    "express": "^4.12.4",
+    "gulp": "^3.9.0"
+  }
+}

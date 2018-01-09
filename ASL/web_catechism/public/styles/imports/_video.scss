@@ -1,0 +1,51 @@
+.embedContainer {
+  height: 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.embedContainer iframe,
+.embedContainer object,
+.embedContainer embed {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.noJSVideo {
+  height: 100%;
+  left: 0;
+  padding: 0 10%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.noJSVideoLink {
+  background: #fff;
+  display: inline-block;
+  margin-top: 30%;
+  text-align: center;
+  width: 100%
+
+}
+
+.JSVideoLoad {
+  background: #000;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.JSVideoLoad > p {
+  color: #fff;
+  font-size: 1.266em;
+  text-align: center;
+  margin-top: 20%;
+}

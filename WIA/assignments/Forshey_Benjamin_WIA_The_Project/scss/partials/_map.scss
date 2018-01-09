@@ -1,0 +1,25 @@
+.map-container--position {
+    width: 100%;
+}
+
+.map-container--ratio {
+    height: 0;
+    padding-bottom: 75%; // sets a 4:3 ratio
+    position: relative;
+}
+
+.map-canvas {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.gmnoprint img {
+    max-width: none; // max-width: 100% distorts the controls on google maps
+}
+
+.js-map-init {
+    margin: 1em 0;
+}

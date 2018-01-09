@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <title>Login - Log In | Home Folio</title>
+    <meta name="description" content="Log into Home Folio and let us make your next Home Inspection easy.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="favicon-192x192.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Home Folio">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="mstile-144x144.png">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Home Folio">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://www.homefol.io/img/logo.png">
+    <meta property="og:url" content="http://www.homefol.io">
+    <meta property="og:description" content="You finally found your dream home. Let Home Folio make your next Home Inspection easy. Let us find the perfect Home Inspector.">
+</head>
+<body>
+    <nav class="offCanvasNav">
+        <span class="offCanvasNav-js-close">&#215;</span>
+        <h2 class="offCanvasNav-title">Site Nav</h2>
+        <ul class="offCanvasNav-linkList">
+            <li><a class="offCanvasNav-links" href="index.html">Home Page</a></li>
+            <li><a class="offCanvasNav-links" href="index-loggedin.html">Home Page (Logged In)</a></li>
+            <li><a class="offCanvasNav-links" href="search-overview.html">Search Overview</a></li>
+            <li><a class="offCanvasNav-links" href="search-details.html">Search Details</a></li>
+            <li><a class="offCanvasNav-links" href="saved-cards.html">Your Saved Cards</a></li>
+            <li><a class="offCanvasNav-links" href="login.html">Log In</a></li>
+            <li><a class="offCanvasNav-links" href="signup.html">Sign Up</a></li>
+        </ul>
+    </nav>
+    <header class="header-wrap">
+        <a class="offCanvasNav-js-open" href="#"><img class="header-logo" src="img/logo.svg" alt='Blue circular background with tan "HF" as a logo.' onerror='this.src="img/logo.png"; this.onerror="null";'></a>
+        <h1 class="header-masthead">Home Folio</h1>
+        <span class="header-userAccess"><a class="userAccess-links" href="login.html">Log In</a> | <a class="userAccess-links" href="signup.html">Sign Up</a></span>
+    </header>
+    <main class="main-wrap">
+        <section class="login-wrap">
+            <h2>Log In</h2>
+            <form class="loginForm-wrap" action="#">
+                <div class="form-block">
+                    <label class="label login-emailLabel" for="login-email">Email:</label>
+                    <input class="input login-emailInput" id="login-email" type="email" placeholder="email" required>
+                </div>
+                <div class="form-block">
+                    <label class="label login-passwordLabel" for="login-password">Password:</label>
+                    <input class="input login-passwordInput" id="login-password" type="password" placeholder="password" required>
+                </div>
+                <div class="form-block">
+                    <button class="button primary-button js-redirectToIndex">Login</button>
+                    <a class="login-signupInstead" href="signup.html">Sign Up Instead</a>
+                </div>
+            </form>
+        </section>
+        <section class="passwordRecovery-wrap">
+            <h3>Forgot Your Password?</h3>
+            <p>Don&rsquo;t Panic! We&rsquo;ll send you recovery information to the email address you used when you Signed Up.</p>
+            <a href="#">Recover My Information</a>
+        </section>
+    </main>
+    <footer class="footer-wrap">
+        <section class="footer-linkCategory">
+            <h4 class="linkCategory-header">&copy; ACME Corporation</h4>
+            <ul class="footer-linkList">
+                <li><a href="#" class="footer-link">About ACME</a></li>
+                <li><a href="#" class="footer-link">Contact Us</a></li>
+                <li><a href="#" class="footer-link">Job Openings</a></li>
+            </ul>
+        </section>
+        <section class="footer-linkCategory">
+            <h4 class="linkCategory-header">Developers</h4>
+            <ul class="footer-linkList">
+                <li><a href="#" class="footer-link">Documentation</a></li>
+                <li><a href="#" class="footer-link">API</a></li>
+                <li><a href="#" class="footer-link">Bug Report</a></li>
+            </ul>
+        </section>
+        <section class="footer-linkCategory">
+            <h4 class="linkCategory-header">Account Services</h4>
+            <ul class="footer-linkList">
+                <li><a href="#" class="footer-link">Technical Support</a></li>
+                <li><a href="#" class="footer-link">Contact Us</a></li>
+                <li><a href="#" class="footer-link">Account Recovery</a></li>
+            </ul>
+        </section>
+    </footer>
+    <!-- jQuery from CDN with local fallback -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+    <!-- My JavaScript -->
+    <script src="js/main-min.js"></script>
+</body>
+</html>

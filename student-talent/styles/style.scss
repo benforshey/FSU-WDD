@@ -1,0 +1,441 @@
+/***************************************************
+****************************************************
+TABLE OF CONTENTS
+	1) Normalize
+	2) Good Defaults, Site Styles (Typography, Color)
+	3) Header
+	4) Content
+	5) Footer
+	6) Interactions
+	7) Media Queries
+
+TYPOGRAPHY
+	Header			first font, second font, third font
+	Body
+
+COLOR GUIDE
+	#ffffff		rgb(255,255,255)
+
+***************************************************
+***************************************************/
+
+/*--------------------------------------------------
+----------------------------------------------------
+1) Normalize (normalize.css v3.0.1 | MIT License | git.io/normalize)
+I partially minified this; expanded version with comments available at source.
+Avoiding @import and combining a file reduces overall HTTP requests.
+----------------------------------------------------
+--------------------------------------------------*/
+
+
+/*--------------------------------------------------
+----------------------------------------------------
+2) Good Defaults, Site Styles (Typography, Color)
+A collection of my coding preferences and site-wide styles.
+----------------------------------------------------
+--------------------------------------------------*/
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('../fonts/firasans-bold-webfont.eot');
+  src: url('../fonts/firasans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/firasans-bold-webfont.woff2') format('woff2'),
+  url('../fonts/firasans-bold-webfont.woff') format('woff'),
+  url('../fonts/firasans-bold-webfont.ttf') format('truetype'),
+  url('../fonts/firasans-bold-webfont.svg#fira_sansbold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+//@font-face {
+//  font-family: 'Fira Sans';
+//  src: url('../fonts/firasans-bolditalic-webfont.eot');
+//  src: url('../fonts/firasans-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+//  url('../fonts/firasans-bolditalic-webfont.woff2') format('woff2'),
+//  url('../fonts/firasans-bolditalic-webfont.woff') format('woff'),
+//  url('../fonts/firasans-bolditalic-webfont.ttf') format('truetype'),
+//  url('../fonts/firasans-bolditalic-webfont.svg#fira_sansbold_italic') format('svg');
+//  font-weight: 700;
+//  font-style: italic;
+//}
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('../fonts/firasans-italic-webfont.eot');
+  src: url('../fonts/firasans-italic-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/firasans-italic-webfont.woff2') format('woff2'),
+  url('../fonts/firasans-italic-webfont.woff') format('woff'),
+  url('../fonts/firasans-italic-webfont.ttf') format('truetype'),
+  url('../fonts/firasans-italic-webfont.svg#fira_sansitalic') format('svg');
+  font-weight: 400;
+  font-style: italic;
+}
+
+//@font-face {
+//  font-family: 'Fira Sans';
+//  src: url('../fonts/firasans-light-webfont.eot');
+//  src: url('../fonts/firasans-light-webfont.eot?#iefix') format('embedded-opentype'),
+//  url('../fonts/firasans-light-webfont.woff2') format('woff2'),
+//  url('../fonts/firasans-light-webfont.woff') format('woff'),
+//  url('../fonts/firasans-light-webfont.ttf') format('truetype'),
+//  url('../fonts/firasans-light-webfont.svg#fira_sanslight') format('svg');
+//  font-weight: 300;
+//  font-style: normal;
+//}
+//
+//@font-face {
+//  font-family: 'Fira Sans';
+//  src: url('../fonts/firasans-lightitalic-webfont.eot');
+//  src: url('../fonts/firasans-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+//  url('../fonts/firasans-lightitalic-webfont.woff2') format('woff2'),
+//  url('../fonts/firasans-lightitalic-webfont.woff') format('woff'),
+//  url('../fonts/firasans-lightitalic-webfont.ttf') format('truetype'),
+//  url('../fonts/firasans-lightitalic-webfont.svg#fira_sanslight_italic') format('svg');
+//  font-weight: 300;
+//  font-style: italic;
+//}
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('../fonts/firasans-medium-webfont.eot');
+  src: url('../fonts/firasans-medium-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/firasans-medium-webfont.woff2') format('woff2'),
+  url('../fonts/firasans-medium-webfont.woff') format('woff'),
+  url('../fonts/firasans-medium-webfont.ttf') format('truetype'),
+  url('../fonts/firasans-medium-webfont.svg#fira_sansmedium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+//@font-face {
+//  font-family: 'Fira Sans';
+//  src: url('../fonts/firasans-mediumitalic-webfont.eot');
+//  src: url('../fonts/firasans-mediumitalic-webfont.eot?#iefix') format('embedded-opentype'),
+//  url('../fonts/firasans-mediumitalic-webfont.woff2') format('woff2'),
+//  url('../fonts/firasans-mediumitalic-webfont.woff') format('woff'),
+//  url('../fonts/firasans-mediumitalic-webfont.ttf') format('truetype'),
+//  url('../fonts/firasans-mediumitalic-webfont.svg#fira_sansmedium_italic') format('svg');
+//  font-weight: 500;
+//  font-style: italic;
+//}
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('../fonts/firasans-regular-webfont.eot');
+  src: url('../fonts/firasans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/firasans-regular-webfont.woff2') format('woff2'),
+  url('../fonts/firasans-regular-webfont.woff') format('woff'),
+  url('../fonts/firasans-regular-webfont.ttf') format('truetype'),
+  url('../fonts/firasans-regular-webfont.svg#fira_sansregular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+//@font-face {
+//  font-family: 'Playfair Display';
+//  src: url('../fonts/playfairdisplay-black-webfont.eot');
+//  src: url('../fonts/playfairdisplay-black-webfont.eot?#iefix') format('embedded-opentype'),
+//  url('../fonts/playfairdisplay-black-webfont.woff2') format('woff2'),
+//  url('../fonts/playfairdisplay-black-webfont.woff') format('woff'),
+//  url('../fonts/playfairdisplay-black-webfont.ttf') format('truetype'),
+//  url('../fonts/playfairdisplay-black-webfont.svg#playfair_displayblack') format('svg');
+//  font-weight: 900;
+//  font-style: normal;
+//}
+//
+//@font-face {
+//  font-family: 'Playfair Display';
+//  src: url('../fonts/playfairdisplay-blackitalic-webfont.eot');
+//  src: url('../fonts/playfairdisplay-blackitalic-webfont.eot?#iefix') format('embedded-opentype'),
+//  url('../fonts/playfairdisplay-blackitalic-webfont.woff2') format('woff2'),
+//  url('../fonts/playfairdisplay-blackitalic-webfont.woff') format('woff'),
+//  url('../fonts/playfairdisplay-blackitalic-webfont.ttf') format('truetype'),
+//  url('../fonts/playfairdisplay-blackitalic-webfont.svg#playfair_displayblack_italic') format('svg');
+//  font-weight: 900;
+//  font-style: italic;
+//}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/playfairdisplay-bold-webfont.eot');
+  src: url('../fonts/playfairdisplay-bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/playfairdisplay-bold-webfont.woff2') format('woff2'),
+  url('../fonts/playfairdisplay-bold-webfont.woff') format('woff'),
+  url('../fonts/playfairdisplay-bold-webfont.ttf') format('truetype'),
+  url('../fonts/playfairdisplay-bold-webfont.svg#playfair_displaybold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+//@font-face {
+//  font-family: 'Playfair Display';
+//  src: url('../fonts/playfairdisplay-bolditalic-webfont.eot');
+//  src: url('../fonts/playfairdisplay-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+//  url('../fonts/playfairdisplay-bolditalic-webfont.woff2') format('woff2'),
+//  url('../fonts/playfairdisplay-bolditalic-webfont.woff') format('woff'),
+//  url('../fonts/playfairdisplay-bolditalic-webfont.ttf') format('truetype'),
+//  url('../fonts/playfairdisplay-bolditalic-webfont.svg#playfair_displaybold_italic') format('svg');
+//  font-weight: 700;
+//  font-style: italic;
+//}
+//
+//@font-face {
+//  font-family: 'Playfair Display';
+//  src: url('../fonts/playfairdisplay-italic-webfont.eot');
+//  src: url('../fonts/playfairdisplay-italic-webfont.eot?#iefix') format('embedded-opentype'),
+//  url('../fonts/playfairdisplay-italic-webfont.woff2') format('woff2'),
+//  url('../fonts/playfairdisplay-italic-webfont.woff') format('woff'),
+//  url('../fonts/playfairdisplay-italic-webfont.ttf') format('truetype'),
+//  url('../fonts/playfairdisplay-italic-webfont.svg#playfair_displayitalic') format('svg');
+//  font-weight: 400;
+//  font-style: italic;
+//}
+//
+//@font-face {
+//  font-family: 'Playfair Display';
+//  src: url('../fonts/playfairdisplay-regular-webfont.eot');
+//  src: url('../fonts/playfairdisplay-regular-webfont.eot?#iefix') format('embedded-opentype'),
+//  url('../fonts/playfairdisplay-regular-webfont.woff2') format('woff2'),
+//  url('../fonts/playfairdisplay-regular-webfont.woff') format('woff'),
+//  url('../fonts/playfairdisplay-regular-webfont.ttf') format('truetype'),
+//  url('../fonts/playfairdisplay-regular-webfont.svg#playfair_displayregular') format('svg');
+//  font-weight: 400;
+//  font-style: normal;
+//}
+
+/* Clearfix, by Nicolas Gallagher. */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+html {
+  box-sizing: border-box;
+  color: rgb(33, 33, 33);
+  font: 400 1em / 1.5 "Fira Sans", sans-serif;
+  line-height: inherit;
+  word-wrap: break-word;
+  word-spacing: inherit;
+  overflow-wrap: break-word;
+}
+
+body {
+  max-width: 60em;
+  margin: 0 auto;
+}
+/* Use border-box, yet allow outside elements (plugins, modules) to inherit parent box-sizing (from CSS Tricks). */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* Minimum responsive image, video. */
+img, video {
+  max-width: 100%;
+}
+
+/* utility class to hyphenate when necessary */
+.hyphenate {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+/*--------------------------------------------------
+----------------------------------------------------
+3) Header
+----------------------------------------------------
+---------------------------------------------------*/
+h1,
+h2,
+h3 {
+  font: 700 3.998em / 1 "Playfair Display", "Palatino", "Lucida Bright", serif;
+}
+
+h2 {
+  font-size: 2.827em;
+}
+
+h3 {
+  font-size: 1.999em;
+}
+
+h4 {
+  font-size:1.414em;
+}
+
+.header {
+  background-color: rgb(255, 97, 43);
+  color: rgb(33, 33, 33);
+  //margin-bottom: 6em;
+  padding: .5em;
+  position: relative;
+  z-index: 1;
+}
+
+.header::after {
+  background: inherit;
+  border-bottom: 4px solid rgba(33, 33, 33, .5);
+  border-left: 4px solid rgba(33, 33, 33, .5);
+  border-right: 4px solid rgba(33, 33, 33, .5);
+  bottom: -2em;
+  content: '';
+  display: block;
+  height: 150%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(-1.5deg);
+  transform-origin: 10%;
+  z-index: -1;
+}
+
+.header_title {
+  text-align: center;
+}
+
+.header_tagline {
+  display: block;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+/*--------------------------------------------------
+----------------------------------------------------
+4) Content
+----------------------------------------------------
+---------------------------------------------------*/
+main {
+  margin: 0 auto;
+  max-width: 45em;
+  padding: 0 .5em;
+}
+
+.site_section {
+  padding: 1em;
+  position: relative;
+  margin: 5em 0;
+  z-index: 1;
+}
+
+.site_section:nth-child(odd) {
+  background-color: rgb(237, 234, 217);
+}
+
+.site_section:nth-child(even) {
+  background-color: rgb(61, 165, 255);
+}
+
+.site_section::after,
+.site_section::before {
+  background: inherit;
+  border-left: 4px solid rgba(33, 33, 33, .5);
+  border-right: 4px solid rgba(33, 33, 33, .5);
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+}
+
+.site_section:nth-child(odd)::before {
+  border-top: 4px solid rgba(33, 33, 33, .5);
+  top: -1.5em;
+  transform: skewY(-1.5deg);
+  transform-origin: 50%;
+}
+
+.site_section:nth-child(odd)::after {
+  bottom: -1.5em;
+  border-bottom: 4px solid rgba(33, 33, 33, .5);
+  transform: skewY(1.5deg);
+  transform-origin: 50%;
+}
+
+.site_section:nth-child(even)::before {
+  border-top: 4px solid rgba(33, 33, 33, .5);
+  top: -1.5em;
+  transform: skewY(1.5deg);
+  transform-origin: 50%;
+}
+
+.site_section:nth-child(even)::after {
+  bottom: -1.5em;
+  border-bottom: 4px solid rgba(33, 33, 33, .5);
+  transform: skewY(-1.5deg);
+  transform-origin: 50%;
+}
+
+.section_title {
+  margin-top: 0;
+}
+
+.section_link {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------
+----------------------------------------------------
+5) Footer
+----------------------------------------------------
+---------------------------------------------------*/
+.footer {
+  background-color: rgb(33, 33, 33);
+  color: rgb(237, 234, 217);
+  //margin-top: 6em;
+  padding: 1em .5em;
+}
+
+.footer_content {
+  text-align: center;
+}
+/*--------------------------------------------------
+----------------------------------------------------
+6) Interactions
+----------------------------------------------------
+---------------------------------------------------*/
+a {
+  border-bottom: 2px solid rgb(255, 249, 40);
+  color: rgb(33, 33, 33);
+  font-weight: 500;
+  text-decoration: none;
+  transition: .2s ease-in background, .2s ease-in color, .2s ease-in outline;
+  &:visited {
+    border-bottom: 2px dashed rgb(255, 249, 40);
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: rgb(255, 255, 255);
+    outline: 2px solid rgb(255, 249, 40);
+    border-bottom: none;
+  }
+}
+
+.footer_content a {
+  color: rgb(237, 234, 217);
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: rgb(237, 234, 217);
+    border-bottom: none;
+    color: rgb(33, 33, 33);
+    outline: 2px solid rgb(255, 249, 40);
+  }
+}
+/*--------------------------------------------------
+----------------------------------------------------
+7) Media Queries
+----------------------------------------------------
+---------------------------------------------------*/
+/* The absence of support for media queries is in fact the ﬁrst media query. -Bryan Rieger */
+/* Mobile styles are the default, then add media queries below. */
+
+@media screen and (min-width: 40em) {
+  html {
+    font: 400 1.125em / 1.5 "Fira Sans", sans-serif;
+  }
+
+}

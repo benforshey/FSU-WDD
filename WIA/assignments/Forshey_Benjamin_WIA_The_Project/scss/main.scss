@@ -1,0 +1,204 @@
+@import "vendor/normalize";
+
+@import "modules/fonts";
+@import "modules/color";
+@import "modules/utility";
+
+@import "partials/_header";
+@import "partials/_nav";
+@import "partials/_buttons";
+@import "partials/_photo-gallery";
+@import "partials/_map";
+@import "partials/_audio";
+@import "partials/_footer";
+
+@import "vendor/font-awesome/font-awesome";
+@import "vendor/lightbox";
+
+
+html {
+    background-color: $light-neutral;
+    background-image: linear-gradient(
+        to right,
+        $light-neutral 5%,
+        #fff 20%,
+        #fff 80%,
+        $light-neutral 95%
+    );
+    box-sizing: border-box;
+    font: 400 1em/1.6 "Open Sans", "Helvetica", sans-serif;
+    height: 100%; // Google Maps requirement
+    overflow-wrap: break-word;
+    width: 100%; // Google Maps requirement
+    word-wrap: break-word;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+
+    height: 100%; // Google Maps requirement
+    max-width: 60em;
+    margin: 0 auto;
+    padding: 0 1em;
+
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+// golden ratio-ish 1:1.618
+h1,
+h2,
+h3,
+h4 {
+    font: 400 4.236em / 1.6 "Tangerine", cursive;
+}
+
+h2 {
+    font-size: 2.618em;
+}
+
+h3 {
+    font-size: 1.618em;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+.main-content {
+    position: relative;
+    margin: 0 auto;
+    max-width: 35em;
+}
+
+.three-eight-two {
+    float: left;
+    padding-right: 1em;
+    position: relative;
+    width: 38.2%;
+}
+
+.six-one-eight {
+    float: right;
+    padding-left: 1em;
+    position: relative;
+    width: 61.8%;
+}
+
+.block {
+    clear: both;
+    border-bottom: 6px solid $base-blue;
+    display: block;
+    float: left;
+    margin: 1em auto;
+    position: relative;
+    width: 100%;
+}
+
+.block-border--bottom {
+    @extend %cf;
+    background-color: $base-gold;
+    display: block;
+    float: left;
+    height: 3px;
+    margin: 2.5em 0 6px 0;
+    width: 100%;
+}
+
+.contact {
+    border-bottom: 2px solid $light-gold;
+    color: $light-blue;
+    display: inline-block;
+    font-size: 1.618em;
+    margin-bottom: 1em;
+    text-decoration: none;
+    transition: .2s ease-out all;
+}
+
+.admission-list {
+    list-style: none;
+}
+
+@keyframes graph-scale {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(.98);
+    }
+}
+
+@keyframes graph-opacity {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .70
+    }
+}
+
+.bar-lessons-group:hover,
+.bar-lessons-group:focus,
+.bar-lessons-group:active {
+    animation: graph-scale 2s ease-out infinite;
+}
+
+.tuition-semester:hover,
+.tuition-semester:focus,
+.tuition-semester:active,
+.tuition-month:hover,
+.tuition-month:focus,
+.tuition-month:active,
+.tuition-lesson:hover,
+.tuition-lesson:focus,
+.tuition-lesson:active {
+    animation: graph-opacity 2s ease-out infinite;
+}
+
+.chart-container--position {
+    float: left;
+    height: 0;
+    margin: 0 auto 5em auto;
+    padding-top: 100%; // sets an overall ratio a bit greater than 4:4.2 (400 height x 420 width)—the same ratio as I drew the SVG
+    position: relative;
+    width: 100%;
+    overflow: contain;
+}
+
+.chart-container--bounding {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.chart-fallback {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+
+@media screen and (min-width: 28.125em) {
+    html {
+        font: 400 1.125em/1.6 "Open Sans", "Helvetica", sans-serif;
+    }
+}
+
+@media screen and (min-width: 60em) {
+    html {
+        font: 400 1.25em/1.6 "Open Sans", "Helvetica", sans-serif;
+    }
+}
+
+@media screen and (max-width: 32.8125em) {
+    .contact {
+        font-size: 1.125em;
+    }
+}
+

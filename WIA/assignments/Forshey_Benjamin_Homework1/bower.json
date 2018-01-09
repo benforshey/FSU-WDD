@@ -1,0 +1,20 @@
+{
+  "name": "Forshey_Benjamin_Homework1",
+  "version": "0.0.1",
+  "homepage": "https://github.com/benforshey/WIA",
+  "authors": [
+    "Ben Forshey <benforshey@gmail.com>"
+  ],
+  "description": "Week 1 Homework",
+  "main": "index.html",
+  "moduleType": [
+    "es6"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [],
+  "devDependencies": {
+    "canvas-5-polyfill": "~0.1.0",
+    "modernizr": "~2.8.3"
+  }
+}

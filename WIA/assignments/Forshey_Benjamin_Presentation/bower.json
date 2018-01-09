@@ -1,0 +1,23 @@
+{
+  "name": "Forshey_Benjamin_Presentation",
+  "version": "0.0.1",
+  "homepage": "https://github.com/benforshey/WIA",
+  "authors": [
+    "Ben Forshey <benforshey@gmail.com>"
+  ],
+  "description": "presentaiton using Reveal.js, demonstrating Chartist.js",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "chartist": "~0.4.3",
+    "reveal.js": "~2.6.2"
+  }
+}

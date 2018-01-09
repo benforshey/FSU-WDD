@@ -1,0 +1,27 @@
+// neutral-light
+$light: rgb(255, 248, 228);
+$lighter-light: lighten($light, 5%);
+$darker-light: darken($light, 5%);
+// neutral-dark
+$dark: rgb(74, 74, 74);
+$lighter-dark: lighten($dark, 5%);
+$darker-dark: darken($dark, 5%);
+
+
+$tan: rgb(219, 192, 144);
+
+// failure state
+$red: rgb(181, 74, 76);
+// success state
+$green: rgb(74, 181, 99);
+
+// primary button color
+$orange: rgb(255, 156, 96);
+$dark-orange: darken($orange, 5%);
+// secondary button color
+$blue: rgb(96, 138, 196);
+$dark-blue: darken($blue, 5%);
+
+// gold star color
+$gold: rgb(255, 215, 0);
+

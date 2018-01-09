@@ -1,0 +1,76 @@
+/*
+Project: jQuery FAQ (Week 2 Activity)
+Author: Ben Forshey (Adapted from Chris Converse's Lynda.com Course)
+*/
+
+body {
+  font-family: "Trebuchet MS", "Helvetica", sans-serif;
+}
+
+p {
+  margin: 0px;
+}
+
+a {
+  color: #bf572c;
+}
+
+a:hover {
+  color: #000;
+}
+
+.faq_container {
+  background: url(../img/corkboard_tile.jpg) top left;
+  margin: 0 auto;
+  padding: 0px 0px 5px 0px;
+  width: 700px;
+}
+
+.faq {
+  background: #fff url(../img/note_top.jpg) no-repeat 0px 0px;
+  margin: 0px 15px 35px 15px;
+  padding: 35px 15px 15px 70px;
+  position: relative;
+}
+
+.faq_question {
+  color: #1f4f71;
+  cursor: help;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px 0px 5px 0px;
+}
+
+.faq_answer_container {
+  color: #bf572c;
+  height: 0px;
+  overflow: hidden;
+  padding: 0px;
+}
+
+.faq_answer {
+  color: #bf572c;
+  font-weight: normal;
+  margin: 0px;
+  padding: 0px;
+}
+
+.faq .letter_q {
+  background: url(../img/q.png) 0px 0px;
+  height: 50px;
+  left: 25px;
+  position: absolute;
+  top: 20px;
+  width: 40px;
+}
+
+.faq .letter_a {
+  background: url(../img/a.png) 0px 0px;
+  display: none;
+  height: 40px;
+  left: 23px;
+  position: absolute;
+  top: 42px;
+  width: 43px;  
+}

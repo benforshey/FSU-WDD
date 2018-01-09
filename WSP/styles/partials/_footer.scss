@@ -1,0 +1,31 @@
+.footer-wrap {
+  @include outer-container();
+  @include linear-gradient($dark, $lighter-dark, $darker-dark);
+  margin-top: 4em;
+  padding: .5em;
+}
+
+.footer-linkCategory {
+  @include span-columns(4);
+  @include omega(3n);
+}
+
+.linkCategory-header {
+  color: $light;
+}
+
+.footer-linkList {
+  list-style: none;
+}
+
+.footer-link {
+  @extend %links-darkBackground;
+  font-size: 0.72222222222222em;
+}
+
+@media screen and (max-width: 34.375em) {
+  .footer-linkCategory {
+    @include span-columns(6);
+    @include omega(2n);
+  }
+}

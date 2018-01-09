@@ -1,0 +1,181 @@
+/**************/
+/* Typography */
+/**************/
+html {
+	font-size: 1.125em;
+	line-height: 1.5;
+	font-family: "Open Sans", Helvetica, sans-serif;
+	font-weight: 400;
+	color: #40332A;
+}
+h1 {
+	font-size: 2.618rem;
+}
+h2, caption {
+	font-size: 1.618rem;
+}
+h3 {
+	font-size: 1.125rem;
+}
+header p {
+	font-size: 1.618rem;
+}
+h1, h2, h3, caption {
+	font-family: Oswald, Impact, sans-serif;
+	font-weight: 700;
+	color: #BF5402;
+}
+a {
+	font-family: Inconsolata, "Courier New", monospace;
+	font-weight: 700;
+	text-shadow: rgba(112,128,144, 0.2) 1px 1px 2px;
+	color: #FF7003;
+}
+
+/**********/
+/* Layout */
+/**********/
+/* border-box sizing with vendor prefixing for last few generations*/
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.clear::after { /* a micro-clearfix (>=IE8) to prevent nasty parent element collapse */
+	content: "";
+	display: block;
+	clear: both;
+}
+/* max page width and background with fallback */
+html {
+	max-width: 940px;
+	margin: auto;
+	background: darkgrey url(../images/texture.png) repeat;
+}
+/* header and footer */
+header, footer {
+	float: left;
+	max-width: 100%;
+	clear: both;
+	background: rgba(255, 255, 255, 0.5);
+	border-radius: 0 0 4px 4px;
+	box-shadow: slategrey 0px 2px 3px;
+	width: 100%;
+	padding: 0.5rem;
+	margin: 0;
+}
+/* applying shadow and margin to top of footer */
+footer {
+	box-shadow: slategrey 0px -2px 3px;
+	margin-top: 2rem;
+	border-radius: 4px 4px 0 0;
+}
+/* cta image border, used universally (kept from media queries) */
+#cta img {
+	border: 2px solid slategrey;
+}
+/* content wrapper*/
+#cta, #tests {
+	float: left;
+	width: 100%;
+	clear: both;
+	padding: .5rem;
+	margin: 2rem 0 0 0;
+	border-radius: 4px;
+	background: rgba(255, 255, 255, 0.5);
+	box-shadow: slategrey 0px 2px 3px;
+}
+/* tables */
+table {
+	width: 100%;
+	padding: 1rem;
+	margin: 2rem 0;
+	border: 2px solid slategrey;
+	border-radius: 0 0 4px 4px;
+	background-color: white;
+	border-collapse: separate;
+	border-spacing: 0 1px;
+	empty-cells: hide;
+}
+caption {
+	background: #71CCFF;
+	border-radius: 4px 4px 0 0;
+}
+tr:nth-child(odd) {
+	background-color: rgba(217, 191, 171, 0.5);
+}
+tr:nth-child(even) {
+	background-color: rgba(223, 223, 223, 0.5);
+}
+th {
+	background: #71CCFF;
+}
+td {
+	border: 1px solid black;
+	padding: 1rem 0.5rem;
+}
+td > a {
+	margin-left: 10%
+}
+
+/***************/
+/* Interactions */
+/***************/
+a:hover, a:visited {
+	color: #803801;
+}
+a.inactive, a.inactive:hover {
+	color: black;
+	text-shadow: none;
+	text-decoration: none;
+}
+span.noun {
+	display: inline-block;
+}
+tr:hover {
+	background-color: #CFEDFF;
+}
+/*****************/
+/* Media Queries */
+/*****************/
+@media only screen and (min-width: 750px) {
+
+	#cta img {
+		float: left;
+		max-width: 45%;
+		border-radius: 100%;
+		margin: 2%;
+}
+	#text {
+		float: right;
+		max-width: 50%;
+		margin-top: 4%;
+	}
+	.nav {
+		margin: 1rem 1.5rem;
+		display: inline-block;
+	}
+
+}
+@media only screen and (max-width: 749px) {
+
+	#cta > img {
+		max-width: 80%;
+		clear: both;
+		float: left;
+		margin: .5rem 2.5rem;
+		border-radius: 4px;
+	}
+	#text {
+		width: 80%;
+		clear: both;
+		float: left;
+		margin: .5rem 2.5rem;
+	}
+	.nav {
+		float: left;
+		margin: 1rem;
+		display: block;
+	}
+
+}

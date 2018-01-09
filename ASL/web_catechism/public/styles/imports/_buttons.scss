@@ -1,0 +1,68 @@
+.button {
+  background: #333;
+  border: 3px solid #7DAB5E;
+  border-radius: 6px;
+  box-shadow: 0 4px 1px 2px #686C69;
+  color: #FFFFEE;
+  padding: .25em .5em;
+  transition: box-shadow .2s, border .2s, transform .3s;
+}
+
+.button:hover, .button:active, .button:focus {
+  border: 3px solid #33B5FF;
+  box-shadow: 0 3px 1px 3px #686C69;
+  outline: none;
+  transform: scale3d(1.01,1.01,1);
+}
+
+body.bodyTheme-one .button {
+  background: #333;
+  border: 3px solid #C97B42;
+  box-shadow: 0 3px 1px 2px #C97B42;
+
+  &:hover, &:active, &:focus {
+    border: 3px solid #33B5FF;
+  }
+  &:active {
+    box-shadow: none;
+  }
+}
+
+body.bodyTheme-two .button {
+  background: #333;
+  border: 3px solid #7DAB5E;
+  box-shadow: 0 3px 1px 2px #7DAB5E;
+
+  &:hover, &:active, &:focus {
+    border: 3px solid #33B5FF;
+  }
+  &:active {
+    box-shadow: none;
+  }
+}
+
+body.bodyTheme-three .button {
+  background: #333;
+  border: 3px solid #5FCDD9;
+  box-shadow: 0 4px 1px 2px #5FCDD9;
+
+  &:hover, &:active, &:focus {
+    border: 3px solid #33B5FF;
+  }
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.accordionController {
+  width: 100%;
+}
+
+.register {
+
+}
+
+.login {
+
+}
+

@@ -1,0 +1,182 @@
+/*
+Ben Forshey
+DWP Online
+19 Feb 2015
+Reusable Library
+*/
+
+@import "vendor/_normalize";
+@import "modules/_utility";
+@import "partials/_buttons";
+
+html {
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, .7),
+      rgba(255, 255, 255, .7)
+    ),
+    url(../img/swirl_pattern.png);
+  box-sizing: border-box;
+  font: 400 1em / 1.6 "Alegreya Sans", sans-serif;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  max-width: 40em;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+
+
+// perfect fourth @ 1:1.33
+h1,
+h2,
+h3,
+h4 {
+  color: #945252;
+  font: 700 3.157em / 1.5 "Alegreya", serif;
+}
+
+h2 {
+  font-size: 2.369em;
+}
+
+h3 {
+  font-size: 1.777em;
+}
+
+h4 {
+  font-size: 1.333em;
+}
+
+header {
+  border-bottom: 4px dashed #945252;
+  margin-bottom: 1em;
+}
+
+form {
+  background: #FFFEFC;
+  border: 2px solid #4F4F4F;
+  border-radius: 6px;
+  margin: 0 auto 2em auto;
+  max-width: 34em;
+  padding: .25em 0;
+}
+
+.form-block {
+  padding: .5em 1em;
+  width: 100%;
+}
+
+input {
+  border: 2px solid #8F8F8F;
+  border-radius: 4px;
+  display: block;
+  padding: .25em;
+  width: 80%;
+
+  &:focus, &:active {
+    border: 2px solid #945252;
+    outline: none;
+  }
+}
+
+textarea {
+  @extend input;
+  height: 8em;
+}
+
+.label-required {
+  float: right;
+  font-style: italic;
+  margin-top: 1.7em;
+  margin-right: 1em;
+}
+
+.helper-text {
+  clear: both;
+  display: block;
+  font-size: .75em;
+  width: 100%;
+}
+
+.label-block {
+  display: block;
+}
+
+.slider-block {
+  position: relative;
+}
+
+#range-math-total {
+  border-bottom: 2px solid #945252;
+  color: #945252;
+  font-size: 2em;
+  margin-left: .5em;
+}
+
+#range-math-subtotal--tens {
+  font-size: 2em;
+  position: absolute;
+  right: 1.5em;
+  top: 1em;
+}
+
+#range-math-subtotal--ones {
+  font-size: 2em;
+  position: absolute;
+  right: 1.5em;
+  top: 2em;
+}
+
+.results-container {
+  @extend form;
+}
+
+.wine-block {
+  @extend .form-block;
+  border-bottom: 2px dotted #8F8F8F;
+}
+
+.wine-block:last-of-type {
+  border-bottom: none;
+}
+
+.wine-block > h3 {
+  margin: .5em auto;
+}
+
+.wine-library-summary {
+  border-bottom: 2px solid #945252;
+}
+
+.label-category--header {
+  float: left;
+  font-weight: 700;
+  text-align: right;
+  width: 4em;
+}
+
+.label-category--body {
+  margin-left: 1em;
+}
+
+// 400px @ 16
+@media screen and (min-width: 25em){
+  html {
+    font: 400 1.125em / 1.6 "Alegreya Sans", sans-serif;
+  }
+}
+
+// 716px @16
+@media screen and (min-width: 44.75em){
+  html {
+    font: 400 1.25em / 1.6 "Alegreya Sans", sans-serif;
+  }
+}

@@ -1,0 +1,29 @@
+ben@lamp:~$ apt-cache show python-dev
+Package: python-dev
+Priority: optional
+Section: python
+Installed-Size: 45
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: amd64
+Source: python-defaults
+Version: 2.7.5-5ubuntu3
+Depends: python (= 2.7.5-5ubuntu3), libpython-dev (= 2.7.5-5ubuntu3), python2.7-dev (>= 2.7.5-1~)
+Filename: pool/main/p/python-defaults/python-dev_2.7.5-5ubuntu3_amd64.deb
+Size: 1166
+MD5sum: 0fb9dbd4067f94dc4cd894cefc50fe47
+SHA1: 13e6be388dae2131d3ac6c17242fe28f2d6b6b3d
+SHA256: 720d44efdab72371212fc4ee2f527b98dc84d80451e026942cf04eacc2cb2d98
+Description-en: header files and a static library for Python (default)
+ Header files, a static library and development tools for building
+ Python modules, extending the Python interpreter or embedding Python
+ in applications.
+ .
+ This package is a dependency package, which depends on Debian's default
+ Python version (currently v2.7).
+Description-md5: 93a1917c3f17606b40377d0b737c6c92
+Multi-Arch: allowed
+Homepage: http://www.python.org/
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y

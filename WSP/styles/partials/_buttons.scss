@@ -1,0 +1,40 @@
+.button {
+  border: 2px solid $dark;
+  border-radius: 4px;
+  box-shadow: 0 2px 0 $dark;
+  color: #fff;
+  font-weight: 700;
+  margin-right: 2em;
+  outline: none;
+  padding: .25em .5em;
+  text-shadow: 1px 1px 0 $dark;
+  transition: transform .3s ease;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 3px 0 $dark;
+    transform: scale3d(1.01, 1.01, 1);
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.primary-button {
+  @extend .button;
+  background: $orange;
+  &:hover,
+  &:focus {
+    background: $dark-orange;
+  }
+}
+
+.secondary-button {
+  @extend .button;
+  background: $blue;
+  &:hover,
+  &:focus {
+    background: $dark-blue;
+  }
+}

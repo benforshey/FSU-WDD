@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+.icons #twitter {
+	background-image:url(../images/socialIcons.png);
+	background-repeat:no-repeat;
+	background-position:0px 0px;
+	height:32px;
+	width:32px;
+	display:block;
+	float:left;
+	
+	}
+	
+.icons #twitter:hover {
+	background-position:0px -32px;
+	
+	}
+	
+.icons #facebook {
+	background-image:url(../images/socialIcons.png);
+	background-repeat:no-repeat;
+	background-position:-32px 0px;
+	height:32px;
+	width:32px;
+	display:block;
+	float:left;
+	
+	}
+	.icons #facebook:hover {
+	background-position:-32px -32px;
+	
+	}
+	
+	.icons #linkedIn {
+	background-image:url(../images/socialIcons.png);
+	background-repeat:no-repeat;
+	background-position:-96px 0px;
+	height:32px;
+	width:32px;
+	display:block;
+	float:left;
+	
+	}
+	.icons #linkedIn:hover {
+	background-position:-96px -32px;
+	
+	}

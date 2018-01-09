@@ -1,0 +1,56 @@
+.bio-container {
+    float: left;
+}
+
+.bio-photo {
+    border: 3px solid $dark-orange;
+    border-radius: 6px;
+    display: block;
+    float: left;
+    margin: .45em .75em 0 0;
+    max-width: 10em;
+    transition: .4s ease-out all;
+
+    &:focus,
+    &:hover,
+    &:active {
+        transform: scale(1.02);
+    }
+}
+
+.main-gallery {
+    float: left;
+    margin-top: 1em;
+}
+
+.performance-photo--left {
+    border: 3px solid $dark-orange;
+    border-radius: 6px;
+    float: left;
+    margin: .5em;
+    width: 45%;
+    transition: .4s ease-out all;
+
+    &:focus,
+    &:hover,
+    &:active {
+        transform: scale(1.02);
+    }
+}
+
+.performance-photo--right {
+    @extend .performance-photo--left;
+    float: right;
+}
+
+@media screen and (max-width: 25em) {
+    .performance-photo--left {
+        margin: .5em auto;
+        width: 100%;
+    }
+
+    .performance-photo--right {
+        margin: .5em auto;
+        width: 100%;
+    }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "student-talent.net",
+  "version": "0.1.0",
+  "description": "a showcase of Full Sail University student talent",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "critical": "^0.6.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-babel": "^6.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.4.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benforshey/student-talent.git"
+  },
+  "keywords": [
+    "full",
+    "sail",
+    "university",
+    "network"
+  ],
+  "author": "Ben Forshey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benforshey/student-talent/issues"
+  },
+  "homepage": "https://github.com/benforshey/student-talent#readme"
+}

@@ -1,0 +1,27 @@
+/* CSS Document                             */
+/* Written by Chris Converse for lynda.com  */
+
+@charset "UTF-8";
+
+body { font-family: Arial; font-size: 12px; }
+
+/* Option 1 */
+
+.chart-area .chart-bar { background-repeat: repeat; }
+.chart-area .chart-bar.sporting    { background-color: none; background-image: url(../images/ie_transparency.png); }
+.chart-area .chart-bar.hoursewares { background-color: none; background-image: url(../images/ie_transparency.png); }
+.chart-area .chart-bar.shipping    { background-color: none; background-image: url(../images/ie_transparency.png); }
+.chart-area .chart-bar.clothing    { background-color: none; background-image: url(../images/ie_transparency.png); }
+.chart-area .chart-bar.jewelry     { background-color: none; background-image: url(../images/ie_transparency.png); }
+
+/* Option 2 */
+
+
+/*
+.chart-area .chart-bar.sporting    { background-color: #12473d; }
+.chart-area .chart-bar.hoursewares { background-color: #12473d; }
+.chart-area .chart-bar.shipping    { background-color: #12473d; }
+.chart-area .chart-bar.clothing    { background-color: #12473d; }
+.chart-area .chart-bar.jewelry     { background-color: #12473d; }
+*/
+

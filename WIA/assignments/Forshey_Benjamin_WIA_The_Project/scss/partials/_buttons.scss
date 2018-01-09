@@ -1,0 +1,21 @@
+.button {
+    background: $light-blue;
+    border: 2px solid $dark-neutral;
+    border-radius: 3px;
+    box-shadow: 0 2px 0 $mid-dark-neutral;
+    color: #fff;
+    font-weight: 700;
+    outline: none;
+    padding: .25em .5em;
+    transition: transform .3s ease;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0 3px 0 $dark-neutral;
+        transform: scale(1.02);
+    }
+
+    &:active {
+        box-shadow: none;
+    }
+}

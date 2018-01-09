@@ -1,0 +1,17 @@
+ben@lamp:~$ apt-cache policy python
+python:
+  Installed: 2.7.5-5ubuntu3
+  Candidate: 2.7.5-5ubuntu3
+  Version table:
+ *** 2.7.5-5ubuntu3 0
+        500 http://us.archive.ubuntu.com/ubuntu/ trusty/main amd64 Packages
+        100 /var/lib/dpkg/status
+ben@lamp:~$ apt-cache policy python-dev
+python-dev:
+  Installed: 2.7.5-5ubuntu3
+  Candidate: 2.7.5-5ubuntu3
+  Version table:
+ *** 2.7.5-5ubuntu3 0
+        500 http://us.archive.ubuntu.com/ubuntu/ trusty/main amd64 Packages
+        100 /var/lib/dpkg/status
+ben@lamp:~$ 

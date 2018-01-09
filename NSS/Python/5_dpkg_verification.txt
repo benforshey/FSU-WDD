@@ -1,0 +1,90 @@
+ben@lamp:~$ dpkg -l *python*
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                     Version           Architecture      Description
++++-========================-=================-=================-=====================================================
+ii  dh-python                1.20140128-1ubunt all               Debian helper tools for packaging Python libraries an
+ii  libpython-dev:amd64      2.7.5-5ubuntu3    amd64             header files and a static library for Python (default
+ii  libpython-stdlib:amd64   2.7.5-5ubuntu3    amd64             interactive high-level object-oriented language (defa
+ii  libpython2.7:amd64       2.7.6-8           amd64             Shared Python runtime library (version 2.7)
+ii  libpython2.7-dev:amd64   2.7.6-8           amd64             Header files and a static library for Python (v2.7)
+ii  libpython2.7-minimal:amd 2.7.6-8           amd64             Minimal subset of the Python language (version 2.7)
+ii  libpython2.7-stdlib:amd6 2.7.6-8           amd64             Interactive high-level object-oriented language (stan
+ii  libpython3-stdlib:amd64  3.4.0-0ubuntu2    amd64             interactive high-level object-oriented language (defa
+ii  libpython3.4-minimal:amd 3.4.0-2ubuntu1    amd64             Minimal subset of the Python language (version 3.4)
+ii  libpython3.4-stdlib:amd6 3.4.0-2ubuntu1    amd64             Interactive high-level object-oriented language (stan
+ii  python                   2.7.5-5ubuntu3    amd64             interactive high-level object-oriented language (defa
+un  python-4suite            <none>            <none>            (no description available)
+un  python-all               <none>            <none>            (no description available)
+un  python-all-dbg           <none>            <none>            (no description available)
+un  python-all-dev           <none>            <none>            (no description available)
+ii  python-apt               0.9.3.5           amd64             Python interface to libapt-pkg
+ii  python-apt-common        0.9.3.5           all               Python interface to libapt-pkg (locales)
+un  python-apt-dbg           <none>            <none>            (no description available)
+un  python-apt-doc           <none>            <none>            (no description available)
+un  python-argparse          <none>            <none>            (no description available)
+un  python-bz2               <none>            <none>            (no description available)
+un  python-cdd               <none>            <none>            (no description available)
+un  python-central           <none>            <none>            (no description available)
+ii  python-chardet           2.0.1-2build2     all               universal character encoding detector
+un  python-csv               <none>            <none>            (no description available)
+un  python-ctypes            <none>            <none>            (no description available)
+un  python-dbg               <none>            <none>            (no description available)
+un  python-deb822            <none>            <none>            (no description available)
+ii  python-debian            0.1.21+nmu2ubuntu all               Python modules to work with Debian-related data forma
+ii  python-dev               2.7.5-5ubuntu3    amd64             header files and a static library for Python (default
+un  python-doc               <none>            <none>            (no description available)
+un  python-dogtail           <none>            <none>            (no description available)
+un  python-email             <none>            <none>            (no description available)
+un  python-examples          <none>            <none>            (no description available)
+un  python-gtk2              <none>            <none>            (no description available)
+un  python-importlib         <none>            <none>            (no description available)
+ii  python-minimal           2.7.5-5ubuntu3    amd64             minimal subset of the Python language (default versio
+un  python-profiler          <none>            <none>            (no description available)
+ii  python-requests          2.2.1-1ubuntu0.1  all               elegant and simple HTTP library for Python, built for
+ii  python-six               1.5.2-1           all               Python 2 and 3 compatibility library (Python 2 interf
+un  python-software-properti <none>            <none>            (no description available)
+un  python-support           <none>            <none>            (no description available)
+un  python-tk                <none>            <none>            (no description available)
+ii  python-urllib3           1.7.1-1build1     all               HTTP library with thread-safe connection pooling for 
+un  python-virtualenv        <none>            <none>            (no description available)
+un  python-vte               <none>            <none>            (no description available)
+un  python-wsgiref           <none>            <none>            (no description available)
+ii  python-xapian            1.2.16-2ubuntu1   amd64             Xapian search engine interface for Python
+un  python-xdg               <none>            <none>            (no description available)
+un  python2.5-minimal        <none>            <none>            (no description available)
+un  python2.6-minimal        <none>            <none>            (no description available)
+ii  python2.7                2.7.6-8           amd64             Interactive high-level object-oriented language (vers
+un  python2.7-apt            <none>            <none>            (no description available)
+un  python2.7-argparse       <none>            <none>            (no description available)
+un  python2.7-celementtree   <none>            <none>            (no description available)
+un  python2.7-cjkcodecs      <none>            <none>            (no description available)
+un  python2.7-ctypes         <none>            <none>            (no description available)
+ii  python2.7-dev            2.7.6-8           amd64             Header files and a static library for Python (v2.7)
+un  python2.7-doc            <none>            <none>            (no description available)
+un  python2.7-elementtree    <none>            <none>            (no description available)
+ii  python2.7-minimal        2.7.6-8           amd64             Minimal subset of the Python language (version 2.7)
+un  python2.7-profiler       <none>            <none>            (no description available)
+un  python2.7-wsgiref        <none>            <none>            (no description available)
+un  python2.7-xapian         <none>            <none>            (no description available)
+ii  python3                  3.4.0-0ubuntu2    amd64             interactive high-level object-oriented language (defa
+un  python3-all              <none>            <none>            (no description available)
+un  python3-all-dbg          <none>            <none>            (no description available)
+un  python3-all-dev          <none>            <none>            (no description available)
+ii  python3-apt              0.9.3.5           amd64             Python 3 interface to libapt-pkg
+un  python3-apt-dbg          <none>            <none>            (no description available)
+un  python3-dbg              <none>            <none>            (no description available)
+un  python3-dev              <none>            <none>            (no description available)
+un  python3-doc              <none>            <none>            (no description available)
+un  python3-examples         <none>            <none>            (no description available)
+ii  python3-minimal          3.4.0-0ubuntu2    amd64             minimal subset of the Python language (default python
+un  python3-profiler         <none>            <none>            (no description available)
+un  python3-tk               <none>            <none>            (no description available)
+un  python3.1                <none>            <none>            (no description available)
+un  python3.1-minimal        <none>            <none>            (no description available)
+ii  python3.4                3.4.0-2ubuntu1    amd64             Interactive high-level object-oriented language (vers
+un  python3.4-apt            <none>            <none>            (no description available)
+un  python3.4-doc            <none>            <none>            (no description available)
+ii  python3.4-minimal        3.4.0-2ubuntu1    amd64             Minimal subset of the Python language (version 3.4)
+ben@lamp:~$ 

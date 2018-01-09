@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:700|Quattrocento+Sans:400,400italic,700' rel='stylesheet'>
+  <title>Board Better | Projects</title>
+  <!-- Viewport Settings -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/author-styles.css" charset="utf-8">
+</head>
+<body>
+
+  <header class="clearfix">
+    <a href="dashboard.html"><img src="images/logo.png" alt="Board Better Logo"></a>
+    <h1>Projects Page</h1>
+    <div class="menu">
+      <button class="secondary" id="logoutSubmit">Log Out</button>
+      <button class="primary" id="dashboardButton">To Dashboard</button>
+    </div>
+    <!-- end login     -->
+  </header>
+
+  <div class="warning" id="jSCheck">
+      <h4>JavaSript is not Enabled</h4>
+      <p>You do not have JavaScript enabled. This is a web application that requres JavaScript. Please <a href="http://www.enable-javascript.com/">enable JavaScript</a> in your web browser so that this web application will function.</p>
+  </div>
+  <!-- end warning -->
+  <script charset="utf-8">
+    document.getElementById( "jSCheck" ).classList.add( "removed" );
+  </script>
+  <!-- inline JavaScript to prevent flash of warning that sometimes happens when page renders before jQuery is called -->
+
+  <main>
+    <h2>Welcome, <span id="userName"></span></h2>
+    <div id="appMenu">
+      <button id="addProject" class="primary">Add Project</button>
+    </div>
+    <div id="sortable" class="projectContainer">
+
+    </div>
+  </main>
+
+  <footer>
+    <div>
+      <p>Icons made by Freepik, Icons8 from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></p>
+      </div>
+  </footer>
+
+  <div class="modalContainer">
+    <div id="resizable" class="modal ui-widget-content" class="modal">
+      <button class="closeModal" title="Close the window.">X</button>
+      <h3>Add Project</h3>
+      <form id="addProjectForm">
+        <div class="formBlock">
+          <label for="projectName">Project Name (required)</label>
+          <span class="statusMessage hidden"></span>
+          <input type="text" name="projectName" id="projectName" title="Enter your project name." required>
+        </div>
+        <div class="formBlock">
+          <label for="projectDescription">Description (required)</label>
+          <span class="statusMessage"></span>
+          <input type="text" name="topYenoh-2" id="topYenoh-2" class="removed">
+          <textarea name="projectDescription" id="projectDescription" title="Enter a project description." required></textarea>
+        </div>
+        <div class="formBlock">
+          <label for="projectDueDate">Due Date (required)</label>
+          <span class="statusMessage hidden"></span>
+          <input type="text" name="projectDueDate" id="projectDueDate" title="Enter the due-by date." required>
+        </div>
+        <div class="formBlock">
+          <label for="projectStatus">Status (required)</label>
+          <span class="statusMessage"></span>
+          <input type="radio" name="projectStatus" id="statusUrgent" value="urgent" required>
+          <label for="statusUrgent"><span><img src="images/icons/urgent.png" alt="exclamation mark"  title="Urgent" class="statusImage">Urgent</span></label>
+          <input type="radio" name="projectStatus" id="statusNormal" value="normal">
+          <label for="statusNormal"><span><img src="images/icons/normal.png" alt="smiling face"  title="Normal" class="statusImage">Normal</span></label>
+          <input type="radio" name="projectStatus" id="statusDelayed" value="delayed">
+          <label for="statusDelayed"><span><img src="images/icons/delayed.png" alt="clock rewinding"  title="Delayed" class="statusImage">Delayed</span></label>
+          <input type="radio" name="projectStatus" id="statusComplete" value="complete">
+          <label for="statusComplete"><span><img src="images/icons/complete.png" alt="check mark"  title="Complete" class="statusImage">Complete</span></label>
+        </div>
+        <div class="formBlock">
+          <button type="submit" form="addProjectForm" class="primary" id="submitAddProjectForm" title="Press to add your project.">Add Project</button>
+          <span class="statusMessage"></span>
+        </div>
+      </form>
+    </div>
+    <!-- end modal -->
+  </div>
+  <!-- end modal container -->
+
+  <!-- Loads jQuery from Google CDN -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- Provides local fallback file for jQuery -->
+  <script charset="utf-8">window.jQuery || document.write('<script src="js\/jquery-1.11.1.min.js"><\/script>')</script>
+  <!-- jQuery Ui -->
+  <script src="js/jquery-ui.min.js"></script>
+  <!-- Load my Script -->
+  <script charset="utf-8" src="js/main.js"></script>
+</body>
+</html>

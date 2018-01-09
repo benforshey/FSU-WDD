@@ -1,0 +1,68 @@
+.formBlock {
+  margin: 0 auto;
+  padding-bottom: 1em;
+  max-width: 20em;
+  meter {
+    width: 100%;
+  }
+}
+
+input {
+  border: .125em solid #333;
+  border-radius: 6px;
+  display: block;
+  height: 2em;
+  margin: .125em 0;
+  outline: none;
+  padding: .225em;
+  width: 100%;
+}
+
+input:hover, input:active, input:active, input:focus {
+  border: .125em solid #33B5FF;
+  outline: none;
+}
+
+label {
+  display: block;
+  width: 100%;
+}
+
+button[type="submit"] {
+}
+
+ul.error {  // todo: additional styles for application consistency
+  border-left: .5em double #E14D33;
+  color: #E14D33;
+  list-style: none;
+
+}
+
+ul.success {  // todo: additional styles for application consistency
+  border-left: .5em double #46E146;
+  color: #46E146;
+  list-style: none;
+
+}
+
+.label.required {
+  float: right;
+}
+
+.label.helper {
+  display: block;
+  font-size: .75em;
+}
+
+.formHeader {
+  border-bottom: 6px double #333;
+  margin-bottom: 2em;
+  a {
+    color: #33B5FF;
+    &:hover, &:active, &:focus {
+      border: 3px solid #33B5FF;
+      outline: none;
+    }
+  }
+}
+

@@ -1,0 +1,93 @@
+@import 'vendor/normalize';
+@import 'bourbon', 'neat';
+@import 'modules/_colors';
+@import 'modules/_utility';
+@import 'partials/_typography';
+@import 'partials/_buttons';
+@import 'partials/_offCanvasNav';
+@import 'partials/_admin';
+@import 'partials/_header';
+@import 'partials/_card';
+@import 'partials/_ads';
+@import 'partials/_forms';
+@import 'partials/_footer';
+@import 'partials/_print';
+
+
+
+
+body {
+  @include linear-gradient($light, $lighter-light, $darker-light);
+  font: 400 1.125em / 1.5 "Open Sans", "Helvetica", sans-serif;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+// 2:3 (perfect fifth)
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $dark;
+  font-family: "Roboto Slab", "Rockwell", "Times New Roman", serif;
+  font-size: 3.375em;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.25em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+a {
+  @extend %links-lightBackground;
+}
+
+.main-wrap {
+  @include outer-container();
+  @include clearfix;
+  margin: 0 auto;
+  max-width: 58.22222222222222em;
+  padding: 0 .5em;
+}
+
+@media screen and (max-width: 61.25em) {
+
+
+}
+
+@media screen and (max-width: 50em) {
+  .search-filter {
+    @include span-columns(12);
+  }
+
+  .searchAgain-form {
+    @include span-columns(12);
+    @include omega();
+  }
+
+  .search-wrap {
+    @include span-columns(8);
+    @include shift(2);
+   }
+}
+
+@media screen and (max-width: 34.375em) {
+  body {
+    font-size: 1em;
+  }
+
+  .search-wrap {
+    @include span-columns(12);
+    @include shift(0);
+  }
+}

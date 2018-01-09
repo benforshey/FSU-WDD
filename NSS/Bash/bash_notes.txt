@@ -1,0 +1,61 @@
+# links (hard and symbolic)
+	# hardlinks don't break; they reference the storage space, not the file
+ln file_to_link name_of_hardlink
+
+	# symbolic links will break; they reference the path to the ln -s file
+ln -s file_to_link name_of_symlink
+
+# searching files
+	# find path_to_search expression_to_find
+	# * = 0 or more characters
+	# ? = 1 or more characters
+	# [] = any char in the brackets (much like regex syntax)
+	# can also: -and -not -path *2014* (for example)
+	# very powerful tool! man find
+find ~/Documents -name "mydoc[_-1234].*"
+
+# recreation of alpha notation table
+|-----------------------------------------------------------------------|
+|			user (u)	group (g)	other (o)	|
+|-----------------------------------------------------------------------|
+| read (r)		yes		yes		yes		|
+| write (w)		yes		yes		no		|
+| execute (x)		yes		no		no		|
+|-----------------------------------------------------------------------|
+|			rwx		rw-		r--		|	
+|-----------------------------------------------------------------------|
+
+# ownership alpha notation syntax
+chown user:group file_to_be_changed
+
+# permissions alpha notation syntax
+chmod ugo=rwx file_to_be_changed		# everybody gets all permissions
+chmod u=rwx file_to_be_changed			# user gets all permissions
+chmod g=rw file_to_be_changed			# group gets read + write
+chmod o=r file_to_be_changed			# other gets read
+chmod u=rwx, g=rw, o=r file_to_be_changed	# shorter form of above commands
+chmod ug+w file_to_be_changed			# shortest form (adds write to user and group)
+chmod ug-w file_to_be_changed			# shortest form (removes write to user and group)
+chmod a+r file_to_be_changed			# shortest form (adds read to u and g and o)
+
+# recreation of octal notation table
+|-----------------------------------------------------------------------|
+|                       user (u)        group (g)       other (o)       |
+|-----------------------------------------------------------------------|
+| read (r)              4		4		4		|
+| write (w)             2		2		0		|
+| execute (x)           1		0		0		|
+|-----------------------------------------------------------------------|
+|                       7		6		4		|
+|-----------------------------------------------------------------------|
+
+# permissions using octal notation
+chmod 777 file_to_be_changed			# rwxrwxrwx
+chmod 764 file_to_be_changed			# rwxrw-r--
+chmod 755 file_to_be_changed			# rwxr-xr-x
+chmod 000 file_to_be_changed			# ---------
+
+# substitute user do (sudo) and sudoers
+sudo -u username command_to_be_executed		# allows me to substitute a specific user
+
+/etc/sudoers 					# contains the sudo configuration

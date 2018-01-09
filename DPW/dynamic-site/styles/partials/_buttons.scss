@@ -1,0 +1,23 @@
+button {
+  background: #3E423A;
+  border: 4px solid #AA7070;
+  border-radius: 8px;
+  box-shadow: 0 2px 0 #6F6F6F;
+  color: #FFFFFF;
+  font-weight: 700;
+  margin-top: 1em;
+  outline: none;
+  padding: .25em .5em;
+  transition: all .3s ease;
+
+  &:hover,
+  &:focus {
+    border: 4px solid #4F4F4F;
+    box-shadow: 0 3px 0 #8F8F8F;
+    transform: scale3d(1.02, 1.02, 1);
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}

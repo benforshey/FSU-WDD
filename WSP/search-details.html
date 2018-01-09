@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <title>Search Details - Search Results Details | Home Folio</title>
+    <meta name="description" content="View Inspector detailed information and reviews with Home Folio.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/vendor/lightbox.css">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="favicon-192x192.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Home Folio">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="mstile-144x144.png">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Home Folio">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://www.homefol.io/img/logo.png">
+    <meta property="og:url" content="http://www.homefol.io">
+    <meta property="og:description" content="You finally found your dream home. Let Home Folio make your next Home Inspection easy. Let us find the perfect Home Inspector.">
+</head>
+<body>
+    <nav class="offCanvasNav">
+        <span class="offCanvasNav-js-close">&#215;</span>
+        <h2 class="offCanvasNav-title">Site Nav</h2>
+        <ul class="offCanvasNav-linkList">
+            <li><a class="offCanvasNav-links" href="index.html">Home Page</a></li>
+            <li><a class="offCanvasNav-links" href="index-loggedin.html">Home Page (Logged In)</a></li>
+            <li><a class="offCanvasNav-links" href="search-overview.html">Search Overview</a></li>
+            <li><a class="offCanvasNav-links" href="search-details.html">Search Details</a></li>
+            <li><a class="offCanvasNav-links" href="saved-cards.html">Your Saved Cards</a></li>
+            <li><a class="offCanvasNav-links" href="login.html">Log In</a></li>
+            <li><a class="offCanvasNav-links" href="signup.html">Sign Up</a></li>
+        </ul>
+    </nav>
+    <header class="header-wrap">
+        <a class="offCanvasNav-js-open" href="#"><img class="header-logo" src="img/logo.svg" alt='Blue circular background with tan "HF" as a logo.' onerror='this.src="img/logo.png"; this.onerror="null";'></a>
+        <h1 class="header-masthead">Home Folio</h1>
+        <span class="header-userAccess"><a class="userAccess-links" href="login.html">Log In</a> | <a class="userAccess-links" href="signup.html">Sign Up</a></span>
+        <span class="header-breadcrumbs"><a class="header-breadcrumb" href="index.html">Search</a> &gt; <a class="header-breadcrumb" href="search-overview.html">Search Results</a> &gt; <a class="header-breadcrumb" href="search-details.html">Card Details</a></span>
+    </header>
+    <main class="main-wrap">
+        <section class="detailCard-wrap">
+            <div class="detailCard-header">
+                <h2 itemscope itemtype="http://schema.org/LocalBusiness" class="detailCard-title">Pillar to Post</h2>
+                <a class="detailCard-actionLink save" href="login.html">Save this Card</a>
+            </div>
+            <!-- need to put a modal on click / touch here -->
+            <div class="detailCard-imageBlock">
+                <a class="lightbox-detailImage" href="img/house--old.jpg" data-lightbox="image-1" data-title="Older home inspected from pillar to post."><img itemprop="image" class="detailImage" src="img/house--old.jpg" alt="picture of a home."></a>
+                <a class="lightbox-detailImage" href="img/wiring--knobAndTube.jpg" data-lightbox="image-2" data-title="Knob and tube wiring, soon to be replaced."><img itemprop="image" class="detailImage" src="img/wiring--knobAndTube.jpg" alt="image of knob-and-tube wiring"></a>
+                <a class="lightbox-detailImage" href="img/furnace--dirtyFilter.jpg" data-lightbox="image-3" data-title="Dirty filters cause premature failure for whole-house ventilation systems."><img itemprop="image" class="detailImage" src="img/furnace--dirtyFilter.jpg" alt="image of a dirty furnace air filter"></a>
+            </div>
+            <div class="detail-descriptionBlock">
+                <h3 itemprop="description" class="card-detailJobTitle">General Home Inspector</h3>
+                <p class="card-detailDescription">Home inspection services offered throughout the US and Canada. Professional and detailed home inspection done by your local home inspector at your convenience. Tips on home or property inspection.</p>
+                <div class="card-detailRating">
+                <!-- Each span should have this class IOT programmatically add ratings later. In the mean time, some will not have the class IOT give the appearance of an varied rating.-->
+                    <span class="rating-star">&#9734;</span>
+                    <span class="rating-star">&#9734;</span>
+                    <span class="rating-star">&#9734;</span>
+                    <span class="rating-star">&#9734;</span>
+                    <span>&#9734;</span>
+                </div>
+                <div class="operatingHours">
+                    <h3>Hours of Operation</h3>
+                    <span class="operatingHours-day">Monday:</span><span class="operatingHours-hours"><meta itemprop="openingHours" datetime="Mo 08:00-18:00">8:00AM&ndash;6:00PM</span><br>
+                    <span class="operatingHours-day">Tuesday:</span><span class="operatingHours-hours"><meta itemprop="openingHours" datetime="Tu 08:00-18:00">8:00AM&ndash;6:00PM</span><br>
+                    <span class="operatingHours-day">Wednedsday:</span><span class="operatingHours-hours"><meta itemprop="openingHours" datetime="We 09:00-17:00">9:00AM&ndash;5:00PM</span><br>
+                    <span class="operatingHours-day">Thurdsay:</span><span class="operatingHours-hours"><meta itemprop="openingHours" datetime="Th 08:00-18:00">8:00AM&ndash;6:00PM</span><br>
+                    <span class="operatingHours-day">Friday:</span><span class="operatingHours-hours"><meta itemprop="openingHours" datetime="Fr 08:00-18:00">8:00AM&ndash;6:00PM</span><br>
+                    <span class="operatingHours-day">Saturday:</span><span class="operatingHours-hours"><meta itemprop="openingHours" datetime="Sa 10:00-17:00">10:00AM&ndash;5:00PM</span><br>
+                    <span class="operatingHours-day">Sunday:</span><span class="operatingHours-hours"><meta itemprop="openingHours" datetime="">Closed</span>
+
+                </div>
+                <div class="detail-contactBlock">
+                    <h3>Contact Information</h3>
+                    <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="mailingAddress">
+                        <h4>Mailing Address</h4>
+                        <span itemprop="streetAddress">5384 Jade Circle</span><br>
+                        <span itemprop="addressLocality">Orlando</span>,<span itemprop="addressRegion">FL</span><span itemprop="postalCode">32812</span>
+                    </div>
+                    <div class="telephoneNumbers">
+                        <h4>Telephone</h4>
+                        <span itemprop="telephone">office: (407) 582-9009</span><br>
+                        <span itemprop="telephone">fax: (407) 982-7499</span>
+                    </div>
+                    <div class="emailAddresses">
+                        <h4>Email</h4>
+                        <span itemprop="emial">Jeff.Mackey@PillarToPost.com</span>
+                    </div>
+                </div>
+                <div class="detail-adWrap">
+                    <h2 class="ad-placeholder">Ad Space: 300px(w) x 250px(h)</h2>
+                </div>
+            </div>
+            <div class="detail-reviewBlock">
+                <h3>Reviews</h3>
+                <div class="reviewBlock">
+                    <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" class="card-rating">
+                    <!-- Each span should have this class IOT programmatically add ratings later. In the mean time, some will not have the class IOT give the appearance of an varied rating.-->
+                        <span class="rating-star">&#9734;</span>
+                        <span class="rating-star">&#9734;</span>
+                        <span class="rating-star">&#9734;</span>
+                        <span class="rating-star">&#9734;</span>
+                        <span>&#9734;</span>
+                        <!-- This would be where I would programmatically add a hidden (via CSS) numerical value for the microdata markup -->
+                        <span itemprop="ratingValue" class="totalRating"></span>
+                    </div>
+                    <h4>by Stuart Herberson</h4>
+                    <p itemprop="review">Jeff is a fantastic home inspector&mdash;somebody you really want on your side when you&rsquo;re in a process that&rsquo;s so time consuming and confusing. He&rsquo;s punctual, and I found him to have reasonable prices. He was really polite when explaining our report over the phone, really good at explaining things. I&rsquo;ll definitely be contacting Jeff again for my next home inspection!</p>
+                </div>
+                <div class="reviewBlock">
+                    <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" class="card-rating">
+                    <!-- Each span should have this class IOT programmatically add ratings later. In the mean time, some will not have the class IOT give the appearance of an varied rating.-->
+                        <span class="rating-star">&#9734;</span>
+                        <span class="rating-star">&#9734;</span>
+                        <span class="rating-star">&#9734;</span>
+                        <span class="rating-star">&#9734;</span>
+                        <span>&#9734;</span>
+                        <!-- This would be where I would programmatically add a hidden (via CSS) numerical value for the microdata markup -->
+                        <span itemprop="ratingValue" class="totalRating"></span>
+                    </div>
+                    <h4>by Sabrine Rhine-McAllester</h4>
+                    <p itemprop="review">I wouldn&rsquo;t hesitate to recommend Jeff Mackey to anyone who needs a home inspector! He was on time and really thorough. I loved that he took such care in thoroughly explaining what he was doing. I even went under the crawlspace with him (not without a flashlight!). He let me use one of his overall suits and face mask. Great home inspector, great price!</p>
+                </div>
+                <div class="detail-addReview">
+                    <h3>Add Your Review</h3>
+                    <p>To add your own review, click any of the links below:</p>
+                    <ul class="addReview-list">
+                        <li>
+                            <a href="#">Bing Places for Business</a>
+                        </li>
+                        <li>
+                            <a href="#">Google Business Reviews</a>
+                        </li>
+                        <li>
+                            <a href="#">Yelp</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="detail-socialShare">
+                    <h3>Share this Card</h3>
+                    <a href="#"><img src="img/icons/facebook.png" alt="facebook share icon"></a>
+                    <a href="#"><img src="img/icons/twitter.png" alt="twitter share icon"></a>
+                    <a href="#"><img src="img/icons/google.png" alt="google plus share icon"></a>
+                    <a href="#"><img src="img/icons/pinterest.png" alt="pinterest share icon"></a>
+                    <p>This Card's Link: <a href="#">http://www.home-fol.io/cards/
+    florida/orlando/1045.html</a></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer-wrap">
+        <section class="footer-linkCategory">
+            <h4 class="linkCategory-header">&copy; ACME Corporation</h4>
+            <ul class="footer-linkList">
+                <li><a href="#" class="footer-link">About ACME</a></li>
+                <li><a href="#" class="footer-link">Contact Us</a></li>
+                <li><a href="#" class="footer-link">Job Openings</a></li>
+            </ul>
+        </section>
+        <section class="footer-linkCategory">
+            <h4 class="linkCategory-header">Developers</h4>
+            <ul class="footer-linkList">
+                <li><a href="#" class="footer-link">Documentation</a></li>
+                <li><a href="#" class="footer-link">API</a></li>
+                <li><a href="#" class="footer-link">Bug Report</a></li>
+            </ul>
+        </section>
+        <section class="footer-linkCategory">
+            <h4 class="linkCategory-header">Account Services</h4>
+            <ul class="footer-linkList">
+                <li><a href="#" class="footer-link">Technical Support</a></li>
+                <li><a href="#" class="footer-link">Contact Us</a></li>
+                <li><a href="#" class="footer-link">Account Recovery</a></li>
+            </ul>
+        </section>
+    </footer>
+    <!-- jQuery from CDN with local fallback -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+    <!-- My JavaScript -->
+    <script src="js/main-min.js"></script>
+    <!-- Lightbox Popup -->
+    <script src="js/vendor/lightbox.min.js"></script>
+</body>
+</html>

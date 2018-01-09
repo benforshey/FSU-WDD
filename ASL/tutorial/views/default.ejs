@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/headContent.ejs %>  <!-- the principle is here; use includes as you please -->
+</head>
+<body class="<%= sectionTheme %>">
+<div class="container">
+    <h1><%= banner %></h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi consectetur delectus, distinctio eveniet, hic incidunt iure, libero non nulla repellendus similique. Assumenda blanditiis dolore molestiae quibusdam quis similique, vitae?</p>
+    <% if(typeof(users) !== 'undefined') { %> <!-- conditional templating -->
+        <h2>Users of our System</h2>
+        <ul>
+            <% for(var i = 0, j = users.length; i < j; i += 1) { %>
+            <li><%= users[i] %></li>
+            <% } %>
+        </ul>
+    <% } %>
+    <h2>Catechism Content</h2>
+    <%- content.segments[currentIndex].q %> <!-- notice the unescaped ejs tag and reference to another variable for array index -->
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>
+</html>

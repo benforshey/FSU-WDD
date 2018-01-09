@@ -1,0 +1,14 @@
+main {
+    width: 37.5em;
+    margin: 0 auto;
+}
+.logo--main {
+    width: 37.5em;
+    margin: 0 auto;
+}
+canvas {
+    border: 1px solid #221F1C;
+    border: 1px solid rgba(34, 31, 28, 0.5);
+    margin-bottom: 2em;
+
+}

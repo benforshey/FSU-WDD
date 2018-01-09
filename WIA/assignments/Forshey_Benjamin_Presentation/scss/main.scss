@@ -1,0 +1,82 @@
+/*
+     Name: Ben Forshey
+     Date: 20141208
+     Class & Section:  WIA-01
+     Comments: "Presentation"
+ */
+
+@import 'partials/_chartist-settings';
+@import 'vendor/chartist';
+
+
+body {
+    background: oldlace;
+    font: 400 1.125em/1.5 'Verdana', 'Tahoma', sans-serif;
+    width: 100%;
+}
+
+figure {
+    margin: 0 auto;
+    margin-bottom: 10em;
+    max-width: 52.22222222222222em; //940px @ 18px
+    padding: 1em;
+}
+
+figcaption {
+    text-align: center;
+}
+
+.bar-chart {
+    margin: 0 auto;
+    max-width: 35.55555555555556em;
+}
+
+.pie-chart {
+    @extend .bar-chart;
+}
+
+.year-2013 {
+    background: #F05B4F;
+    color: white;
+    padding: .25em;
+}
+
+.year-2014 {
+    @extend .year-2013;
+    background: #F4C63D;
+}
+
+// fallback
+.no-svg .ct-chart {
+
+    &.bar-chart {
+        background-image: url(../images/bar.png);
+        background-position: top left; // no ltIE9 support
+        background-repeat: no-repeat; // no ltIE9 support
+        background-size: contain; // no ltIE9 support
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( // ltIE9 support
+            src='../images/bar.png',
+            sizingMethod='scale'
+        );
+    }
+
+    &.pie-chart {
+        background-image: url(../images/pie.png);
+        background-position: top left; // no ltIE9 support
+        background-repeat: no-repeat; // no ltIE9 support
+        background-size: contain; // no ltIE9 support
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( // ltIE9 support
+            src='../images/pie.png',
+            sizingMethod='scale'
+        );
+    }
+}
+
+// animation
+.ct-series {
+    transition: .2s ease-in-out all;
+
+    &:hover {
+        transform: translate(0, -.25em);
+    }
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Modernizr - Example #2  Yep Nope</title>
+		<style type="text/css">
+			#Canvas1 {
+				border: dotted 1px black;
+			}
+		</style>
+		<script src="includes/modernizr.js"></script>
+	</head>
+	<body>
+		<h1>Modernizr</h1>
+		<p>This example will use Modernizr to check if your browser is compatable and load other solutions if not</p>
+	
+	<form>
+		<label for="thedate">Date Selector</label>
+		<input type="date" name="thedate" id="thedate" value="" />
+		<span id="message"></span>
+	</form>
+	<script>window.jQuery || document.write('<script src="includes/jquery.1.7.1.min.js"><\/script>')</script>
+	<script>window.jQuery.ui || document.write('<script src="includes/jquery.ui.1.8.18.js"><\/script>')</script>
+	
+	<script src="js/example2.js">	</script>
+	
+	</body>
+</html>

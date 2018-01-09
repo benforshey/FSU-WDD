@@ -1,0 +1,54 @@
+/* CSS Document                             */
+/* Written by Chris Converse for lynda.com  */
+
+@charset "UTF-8";
+
+body { font-family: Arial; font-size: 12px; }
+
+.chart-container { width: 500px; border: 1px solid #888; }
+
+.chart-title { background-color: #888; padding: 5px 0px 10px 15px; margin: 0px; }
+.chart-title h2 { margin: 0px; color: #fff; font-family: Georgia; }
+.chart-title p { margin: 0px; color: #222; }
+
+.chart-content { height: 340px; position: relative; overflow: hidden; margin: 5px 0px 0px 0px; }
+
+.chart-y-axis { width: 50px; height: 300px; position: absolute; top: 0px; left: 0px; }
+.chart-y-axis p { margin: 0px 0px 0px 10px; padding: 0px 0px 0px 5px; width: 35px; position: absolute; border-bottom: 1px solid #ccc; }
+
+.chart-x-axis { height: 50px; position: absolute; top: 300px; left: 50px; }
+.chart-x-axis p { position: absolute; top: 0px; width: 100px; color: #888; text-align: center; }
+.chart-area {
+	width: 600px;
+	height: 300px;
+	position: absolute;
+	top: 0px;
+	left: 50px;
+	background: #fff url(../images/background.jpg) no-repeat 0px 0px;
+}
+
+.chart-area .chart-bar {
+	position: absolute;
+	bottom: 0px;
+	width: 50px;
+	height: 0px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	background-repeat: no-repeat;
+	background-position: 50% bottom;
+}
+
+.chart-area .chart-bar.sporting    { background-color: rgba(12,38,32,.6); background-image: url(../images/icon_sporting.png); }
+.chart-area .chart-bar.hoursewares { background-color: rgba(65,12,137,.6); background-image: url(../images/icon_housewares.png); }
+.chart-area .chart-bar.shipping    { background-color: rgba(4,11,83,.6); background-image: url(../images/icon_shipping.png); }
+.chart-area .chart-bar.clothing    { background-color: rgba(140,6,6,.6); background-image: url(../images/icon_clothing.png); }
+.chart-area .chart-bar.jewelry     { background-color: rgba(144,8,152,.6); background-image: url(../images/icon_jewelry.png); }
+
+.chart-area .chart-bar p { margin: 5px 0px 0px 0px; text-align: center; color: #fff; display: none; }
+
+
+

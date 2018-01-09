@@ -1,0 +1,40 @@
+footer {
+  background: #686C69;
+  color: #FFFFEE;
+  font-size: .75em;
+  margin-top: 10em;
+  padding: .5em;
+  position: relative;
+}
+
+.footerSection {
+  margin: 1em 0;
+}
+
+.footerSection.half {
+  float: left;
+  padding: 0 .5em;
+  width: 50%;
+}
+
+.footerSection.full {
+  clear: both;
+  width: 100%;
+}
+
+.footerSection > h1 {
+  color: #FFFFEE;
+  font-size: 1.333em;
+}
+
+.footerSection a {
+  color: #33B5FF;
+}
+
+.footerSection a:hover, .footerSection a:active, .footerSection a:focus {
+  outline: .125em solid #FFFFEE;
+}
+
+.footerSection a:visited {
+  color: #33B5FF;
+}

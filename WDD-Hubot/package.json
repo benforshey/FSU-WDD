@@ -1,0 +1,115 @@
+{
+  "name": "wdd-hubot",
+  "version": "3.2.2",
+  "private": true,
+  "author": "Chris Chapman",
+  "contributors": [
+    {
+      "name": "Anthony Kluba",
+      "github": "https://github.com/Akluba"
+    },
+    {
+      "name": "Austin Mayer",
+      "github": "https://github.com/austinemayer"
+    },
+    {
+      "name": "Bryan Erickson",
+      "github": "https://github.com/bkerickson"
+    },
+    {
+      "name": "Clayton Allen",
+      "github": "https://github.com/callen5914",
+      "email": "clayton.allen.us@gmail.com "
+    },
+    {
+      "name": "Jairo Jurado",
+      "github": "https://github.com/jjairo92"
+    },
+    {
+      "name": "Mike Taatgen",
+      "github": "https://github.com/bogoroh"
+    },
+    {
+      "name": "Nate Dickison",
+      "github": "https://github.com/ndickiso"
+    },
+    {
+      "name": "Russell Schlup",
+      "github": "https://github.com/Russ93"
+    },
+    {
+      "name": "Holly Springsteen",
+      "github": "https://github.com/demondesigner",
+      "email": "hhspringsteen@gmail.com"
+    },
+    {
+      "name": "Arturo Alquicira",
+      "github": "https://github.com/arturoalquicira",
+      "email": "arturoalquicira@me.com"
+    },
+    {
+      "name": "Eddie Gemayel",
+      "github": "https://github.com/eddiegemayel",
+      "email": "eddiegem16@gmail.com"
+    },
+    {
+      "name": "Lyteia Kitchen",
+      "github": "https://github.com/LyteiaHF1",
+      "email": "Lytehighfashion@gmail.com"
+    },
+    {
+      "name": "Damasio ELi Gerena",
+      "github": "https://github.com/dgerena"
+    },
+    {
+      "name": "Matthew Beyer",
+      "github": "https://github.com/matthewbeyer"
+    },
+    {
+      "name": "Bobby Newland",
+      "github": "https://github.com/bmoney974"
+    },
+    {
+      "name": "Jose L. Lupianez",
+      "github": "https://github.com/joselupianez"
+    },
+    {
+      "name": "Kareem Beazer",
+      "github": "https://github.com/kbeazer"
+    }
+  ],
+  "keywords": [
+    "github",
+    "hubot",
+    "slack",
+    "bot"
+  ],
+  "description": "Full Sail's First AI Bot.",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/github/hubot/raw/master/LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reactivepixel/WDD-Hubot.git"
+  },
+  "dependencies": {
+    "MD5": "^1.2.1",
+    "async": "^0.9.0",
+    "cheerio": "~0.15.0",
+    "cleverbot.io": "^1.0.4",
+    "ent": "~2.0.0",
+    "hubot": ">= 2.6.0 < 3.0.0",
+    "hubot-scripts": ">= 2.5.0 < 3.0.0",
+    "hubot-slack": "~2.0.4",
+    "mathjs": "^1.0.1",
+    "numeral": "^1.5.3",
+    "request": "~2.34.0"
+  },
+  "engines": {
+    "node": ">= 0.8.x",
+    "npm": ">= 1.1.x"
+  }
+}

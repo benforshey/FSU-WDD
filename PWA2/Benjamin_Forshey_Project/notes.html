@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:700|Quattrocento+Sans:400,400italic,700' rel='stylesheet'>
+  <title>Board Better | Notes</title>
+  <!-- Viewport Settings -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/author-styles.css" charset="utf-8">
+</head>
+<body>
+
+  <header class="clearfix">
+    <a href="dashboard.html"><img src="images/logo.png" alt="Board Better Logo"></a>
+    <h1>Notes Page</h1>
+    <div class="menu">
+      <button class="secondary" id="logoutSubmit">Log Out</button>
+      <button class="primary" id="dashboardButton">To Dashboard</button>
+    </div>
+    <!-- end login     -->
+  </header>
+
+  <div class="warning" id="jSCheck">
+      <h4>JavaSript is not Enabled</h4>
+      <p>You do not have JavaScript enabled. This is a web application that requres JavaScript. Please <a href="http://www.enable-javascript.com/">enable JavaScript</a> in your web browser so that this web application will function.</p>
+  </div>
+  <!-- end warning -->
+  <script charset="utf-8">
+    document.getElementById("jSCheck").classList.add("removed");
+  </script>
+  <!-- inline JavaScript to prevent flash of warning that sometimes happens when page renders before jQuery is called -->
+
+  <main>
+    <h2>Welcome, <span id="userName"></span></h2>
+    <div id="appMenu">
+      <button id="addNote" class="primary">Add Note</button>
+    </div>
+    <div id="sortable" class="noteContainer">
+
+    </div>
+  </main>
+  
+  <footer>
+    <div>
+      <p>Icons made by Freepik, Icons8 from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></p>
+      </div>
+  </footer>
+
+  <div class="modalContainer">
+    <div id="resizable" class="modal ui-widget-content">
+      <button class="closeModal" title="Close the window.">X</button>
+      <h3>Add Note</h3>
+      <form id="addNoteForm">
+        <div class="formBlock">
+          <label for="noteName">Note Name (required)</label>
+          <span class="statusMessage hidden"></span>
+          <input type="text" name="noteName" id="noteName" title="Enter your note name." required>
+        </div>
+        <div class="formBlock">
+          <label for="noteBody">Note Body (required)</label>
+          <span class="statusMessage"></span>
+          <input type="text" name="topYenoh-2" id="topYenoh-2" class="removed">
+          <textarea name="noteBody" id="noteBody" title="Enter a note description." required></textarea>
+        </div>
+        <div class="formBlock">
+          <label for="associatedProject">Associated Project (required)</label>
+          <span class="statusMessage hidden"></span>
+          <select name="associatedProject" id="associatedProject" title="Select the project to which your note links.">
+              <option>&mdash;Select Associated Project&mdash;</option>
+          </select>
+        </div>
+
+        <div class="formBlock">
+          <button type="submit" form="addNoteForm" class="primary" id="submitAddNoteForm" title="Press to add your note.">Add Note</button>
+          <span class="statusMessage"></span>
+        </div>
+      </form>
+    </div>
+    <!-- end modal -->
+  </div>
+  <!-- end modal container -->
+
+  <!-- Loads jQuery from Google CDN -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- Provides local fallback file for jQuery -->
+  <script charset="utf-8">window.jQuery || document.write('<script src="js\/jquery-1.11.1.min.js"><\/script>')</script>
+  <!-- jQuery Ui -->
+  <script src="js/jquery-ui.min.js"></script>
+  <!-- Load my Script -->
+  <script charset="utf-8" src="js/main.js"></script>
+</body>
+</html>
