@@ -1,0 +1,1 @@
+This week contains a duplicate of Week 3, because the FSO Connect instructions said to upload submit under Week 2. We are in the third week, however.

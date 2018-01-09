@@ -1,0 +1,80 @@
+/* Border-Box Sizing */
+* {
+  box-sizing: border-box; }
+
+/* Global Settings */
+html {
+	background: rgb(251, 251, 251);
+	font-size: 1.125em;
+	line-height: 1.5;
+}
+img {
+	max-width: 100%;
+}
+h1, h2, h3 {
+	font-family: serif;
+}
+body {
+	font-family: sans-serif;
+}
+a {
+	color: rgb(224, 65, 40);
+}
+
+/* Layout and Content */
+header, footer {
+	background: rgb(242, 182, 25);
+}
+body {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 1rem;;
+}
+header h1, footer h1 {
+	color: black;
+	width: 35%;
+	float: left;
+	background: rgb(251, 251, 251);
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+header nav, footer nav {
+	width: 65%;
+	float: left;
+}
+header nav li, footer nav li {
+	list-style-type: none;
+	display: inline;
+	margin-right: 2rem;
+}
+header nav li:last-child, footer nav li:last-child {
+	margin-right: 0;
+}
+header nav a, footer nav a {
+	text-decoration: none;
+	font-size: 1.5rem;
+	font-family: serif;
+	display: inline-block;
+	margin-top: .5rem;
+	padding: .1rem .5rem;
+	border: 1px solid black;
+	background: white;
+	box-shadow: 1px 3px 2px -1px #17355A;
+}
+header::after, section::after, footer::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+blockquote {
+	border: 1px dashed black;
+	padding: 0 1rem;
+}
+/* Text Styling */
+dt {
+	font-style: italic;
+}
+abbr {
+	background: rgba(242, 182, 25, 0.2);
+}

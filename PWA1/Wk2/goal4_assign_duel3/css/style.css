@@ -1,0 +1,100 @@
+/*border-box from CSS-Tricks*/
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/* micro clearfix from CSS-Tricks*/
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+html {
+  background: url(../images/agincourt.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body{
+	font-family: serif;
+}
+div.scores, div.action {
+	width: 100%;
+	height: 100%;
+}
+div.scores p, div.action p{
+	font-family: serif;
+	color: white;
+	font-size: 2em;
+	padding: 0 1em;
+}
+#french{
+	background: rgba(148, 82, 66, .9);
+	position: fixed;
+	top: 0;
+	left: 0;
+	border: 1px solid #152838;
+	moz-box-shadow: inset 0px 0px 1px #152838;
+	webkit-box-shadow: inset 0px 0px 1px #152838;
+	box-shadow: inset 0px 0px 1px #152838;
+}
+#english{
+	background: rgba(61, 111, 149, .9);
+	position: fixed;
+	top: 0;
+	right: 0;
+	border: 1px solid #152838;
+	moz-box-shadow: inset 0px 0px 1px #152838;
+	webkit-box-shadow: inset 0px 0px 1px #152838;
+	box-shadow: inset 0px 0px 1px #152838;
+}
+#fight-report{
+	background: rgba(186, 173, 156, .9);
+	position: fixed;
+	top: 40%;
+	margin: 0 25%;
+	color: black;
+	moz-box-shadow: 0px 0px 3px #152838;
+	webkit-box-shadow: 0px 0px 3px #152838;
+	box-shadow: 0px 0px 3px #152838;
+}
+#round-report{
+	background: rgba(186, 173, 156, .9);
+	position: fixed;
+	top: 30%;
+	margin: 0 25%;
+	color: black;
+	moz-box-shadow: 0px 0px 3px #152838;
+	webkit-box-shadow: 0px 0px 3px #152838;
+	box-shadow: 0px 0px 3px #152838;
+}
+#fight-button{
+	background: rgba(218, 117, 27, 1.0);
+	position: fixed;
+	bottom: 10%;
+	left: 50%;
+	margin-left: -2.2em;
+	font-size: 2em;
+	color: white;
+	padding: .4em 1em;
+	text-decoration: none;
+	border: 1px solid #152838;
+	-moz-border-radius: 4px;
+	webkit-border-radius: 4px;
+	border-radius: 4px;
+	moz-box-shadow: 1px 2px 3px #152838;
+	webkit-box-shadow: 1px 2px 3px #152838;
+	box-shadow: 1px 2px 3px #152838;
+
+}
+#fight-button:hover{
+	background: #F2811D;
+}
+#fight-button:active{
+	background: #BF6517;
+}
+#fight-button:visited{
+	color: white;
+}

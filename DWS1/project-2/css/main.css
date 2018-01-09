@@ -1,0 +1,126 @@
+/**************************/
+/*  Setting Good Defaults */
+/**************************/
+/* border box sizing */
+* {
+	box-sizing: border-box; 
+}
+/* for flexible/responsive images */
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+body {
+    max-width: 1040px;
+    margin: 0 auto; /* margin auto (left/right) centers content */
+    padding: 0 1rem; /* keeps content away from page edge */
+}
+header::after, section::after, footer::after { /* a micro-clearfix (>=IE8) to prevent nasty parent element collapse */
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/*************************/
+/*  Typography and Color */
+/*************************/
+html {
+	background: rgb(251, 251, 251);
+	font-size: 1em;
+	line-height: 1.5;
+}
+/* font stack, with web font, web safe font, and generic fallback */
+h1, h2, h3, p.title a {
+	font-family: "Playfair Display", "Times New Roman", serif;
+	font-weight: 700;
+}
+body {
+	font-family: "Open Sans", "Helvetica", sans-serif;
+	font-weight: 400;
+}
+abbr {
+	font-family: "Source Code Pro", "Andale Mono", monospace;
+	font-weight: 400;
+}
+/* font sizing based on golden ratio, base size 16px */
+h1 {
+	font-size: 2.618rem;
+}
+h2 {
+	font-size: 1.618rem;
+}
+h3 {
+	font-size: 1.125rem; /* just slightly larger than body copy; needs it for legibility (otherwise would be 1rem) */
+}
+dt {
+	font-style: italic; 
+}
+a:link {
+	color: rgb(224, 65, 40); /* red link color goes better with the scheme */
+}
+header, footer {
+	background: rgba(242, 182, 25, 0.7);
+}
+
+/*************************/
+/*  Layout */
+/*************************/
+header h1, footer p.title {
+	margin: 0.5rem 0;
+	float: left;
+}
+header a, p.title a {
+	padding: 0.25rem 1rem;
+	background: #fff;
+	font-size: 2.618rem; /* added specifically for p.title a, to make it sized as h1 */
+	text-decoration: none;
+	text-shadow: 1px 3px 2px rgba(23, 53, 90, 0.3);
+	border: solid black;
+	border-width: 1px 1px 1px 0px;
+	border-radius: 0 8px 8px 0;
+	box-shadow: 3px 2px 2px 1px rgba(23, 53, 90, 0.3);
+}
+nav ul, div.nav ul {
+	list-style-type: none;
+	float: right;
+}
+nav li, div.nav li {
+	display: inline-block;
+	margin: .5rem 1rem;
+}
+nav li:last-child, nav li:last-child {
+	margin-right: .5rem;
+}
+nav a, div.nav a {
+	background: #fff;
+	text-decoration: none;
+	text-shadow: 1px 3px 2px rgba(23, 53, 90, 0.3);
+	font-size: 1.5rem;
+	padding: .1rem .5rem;
+	border: 1px solid black;
+	border-radius: 4px;
+	box-shadow: 1px 3px 2px -1px rgba(23, 53, 90, 0.3);
+}
+blockquote {
+	display: inline-block;
+	width: 40%; /* looks unpleasant on smaller screens; media queries would fix that */
+	border: 1px dashed black;
+	padding: 0 1rem;
+}
+blockquote p:last-child {
+	text-align: right;
+}
+
+/*****************/
+/*  Interactions */
+/*****************/
+a:visited {
+	color: rgb(175, 53, 35);
+}
+a:hover, a:focus {
+	color: rgb(255, 34, 0);
+	background: rgb(230, 230, 230) !important; /* given priority because it is a utility class (only used for hover) that didn't have the specificty to overcome default background color of footer p.title */
+}
+a:active {
+	color: rgb(175, 53, 35);
+}

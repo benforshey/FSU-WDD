@@ -1,0 +1,1 @@
+This is my Programming for Web Applications 1 repository. The content is divided by weeks, labeled as "Wk1", "Wk2", "Wk3", and "Wk4". You can reach me at benforshey@fullsail.edu if you have any questions.

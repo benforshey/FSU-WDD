@@ -1,0 +1,319 @@
+/**************************/
+/*  Setting Good Defaults */
+/**************************/
+/* border box sizing */
+* {
+	box-sizing: border-box; 
+}
+/* for flexible/responsive images */
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+body {
+    max-width: 1040px;
+    margin: 0 auto; /* margin auto (left/right) centers content */
+}
+
+/***************/
+/*  Typography */
+/***************/
+html {
+	font-size: 1em;
+	line-height: 1.5;
+}
+/* font stack, with web font, web safe font, and generic fallback */
+h1, h2, h3, p.title a {
+	font-family: "Playfair Display", "Times New Roman", serif;
+	font-weight: 700;
+}
+body {
+	font-family: "Open Sans", "Helvetica", sans-serif;
+	font-weight: 400;
+}
+abbr, table, form, button {
+	font-family: "Source Code Pro", "Andale Mono", monospace;
+	font-weight: 400;
+}
+/* font sizing based on golden ratio, base size 16px */
+h1 {
+	font-size: 2.618rem;
+}
+h2 {
+	font-size: 1.618rem;
+}
+h3 {
+	font-size: 1.125rem; /* just slightly larger than body copy; needs it for legibility (otherwise would be 1rem) */
+}
+dt {
+	font-style: italic; 
+}
+button {
+	font-size: 0.75rem;
+}
+
+/***********/
+/*  Layout */
+/***********/
+.clear::after { /* a micro-clearfix (>=IE8) to prevent nasty parent element collapse */
+	content: "";
+	display: block;
+	clear: both;
+}
+header, footer {
+	float: left; /* not convinced that this is necessary, but wanted to make sure that I demonstrated understanding floats and clearing */ 
+	width: 100%;
+	clear: both;
+}
+main {
+	width: 64%;
+	float: left;
+	margin-right: 1%;
+	padding: 1%;
+}
+aside {
+	width: 35%;
+	float: left;
+	padding: 1%;
+	overflow: auto;
+}
+#references {
+	width: 100%;
+	float: left;
+	clear: both;
+	padding: 1%;
+}
+#contact {
+	width: 100%;
+	float: left;
+	clear: both;
+	padding: 1%;
+	margin-bottom: 2rem;
+}
+header h1, footer p.title {
+	margin: 0.5rem 0;
+	float: inherit; /* inherited from header, footer rule above */
+}
+header a, p.title a {
+	padding: 0.25rem 1rem;
+	background: #fff;
+	font-size: 2.618rem; /* added specifically for p.title a, to make it sized as h1 */
+	text-decoration: none;
+	text-shadow: 1px 3px 2px rgba(23, 53, 90, 0.3);
+	border: solid black;
+	border-width: 1px 1px 1px 0px;
+	border-radius: 0 8px 8px 0;
+	box-shadow: 3px 2px 2px 1px rgba(23, 53, 90, 0.3);
+}
+nav ul, div.nav ul {
+	list-style-type: none;
+	float: right;
+}
+nav li, div.nav li {
+	display: inline-block;
+	margin: .5rem 1rem;
+}
+nav li:last-child, nav li:last-child {
+	margin-right: .5rem;
+}
+nav a, div.nav a {
+	background: #fff;
+	text-decoration: none;
+	text-shadow: 1px 3px 2px rgba(23, 53, 90, 0.3);
+	font-size: 1.5rem;
+	padding: .1rem .5rem;
+	border: 1px solid black;
+	border-radius: 4px;
+	box-shadow: 1px 3px 2px -1px rgba(23, 53, 90, 0.3);
+}
+blockquote {
+	display: block;
+	border: 1px dashed black;
+	padding: 0 1rem;
+}
+blockquote p:last-child {
+	text-align: right;
+}
+figure a {
+	display: inline-block;
+}
+
+/* tables */
+table {
+	width: 100%;
+	padding: 1rem;
+	margin-bottom: 2rem;
+	font-size: .75rem;
+	border: 1px solid black;
+	border-radius: 4px;
+	box-shadow: 1px 3px 2px -1px rgba(23, 53, 90, 0.3);
+	background-color: white;
+	border-collapse: separate;
+	border-spacing: 0px;
+	empty-cells: hide;
+}
+caption {
+	font-size: 1rem;
+}
+thead {
+	text-transform: uppercase;
+	text-align: left;
+	background-color: #EBBE7C;
+}
+td {
+	padding: .5rem 0 0 1rem;
+}
+tr:hover, tr:focus {
+	background-color: #FF4E33;
+}
+col.odd {
+	background-color: #F5F5F5;
+}
+col.even {
+	background-color: #FFF7E0;
+}
+
+/* forms */
+fieldset {
+	border: 1px solid black; 
+	background: #F5F5F5;
+	border-radius: 4px;
+}
+legend {
+	border: 1px solid black;
+	background: #FFF7E0;
+	border-radius: 4px;
+}
+.required {
+	color: rgb(224, 65, 40);	
+}
+input, textarea, select {
+	width: 90%;
+	height: 2em;
+	padding: .5rem;
+}
+fieldset > div {
+	margin: 1rem 0;
+	float: left;
+	width: 100%;
+	clear: both;
+}
+textarea {
+	height: 6em;
+}
+label {
+	float: right;
+	clear: both;
+	text-align: left;
+	margin-right: 1rem;
+	width: 90%;
+}
+#newsletter input {
+	width: 1rem; 
+}
+#alt-comment, #alt-comment-label { /* hidden for honeypot */
+	display: none;
+}
+/*****************/
+/*  Interactions */
+/*****************/
+a:visited, a:active {
+	color: rgb(175, 53, 35);
+}
+a:hover, a:focus, footer a:hover, footer a:focus {
+	color: rgb(255, 34, 0);
+	background: rgb(230, 230, 230);
+	border: 1px solid rgb(255, 34, 0);
+}
+a:link {
+	color: rgb(224, 65, 40); /* red link color goes better with the scheme */
+}
+input:focus, textarea:focus, select:focus, button:focus {
+	border: none;
+	outline: 1px solid rgb(255, 34, 0);
+}
+button:hover, button:focus {
+	border: 1px solid rgb(255, 34, 0);
+}
+
+/************************/
+/*  Backgrounds & Icons */
+/************************/
+html {
+	/* fallback to color if image not supported */
+	background: rgb(251, 251, 251) url(../images/backgrounds/treebark.png) repeat top left fixed;
+}
+body {
+	background: rgb(251, 251, 251);
+}
+header, footer {
+	/* vendor prefixes with fallback built in */
+	/* being shown as a warning in CSS3 validation "unknown vendor extension", so currently commented out 
+	background: #F2CE5A -moz-linear-gradient(rgba(242, 206, 90, 0.6), rgba(232, 184, 29, 1.0));
+	background: #F2CE5A -webkit-linear-gradient(rgba(242, 206, 90, 0.6), rgba(232, 184, 29, 1.0)); 
+	*/ 
+	
+	/* unprefixed with fallback built in */
+	background: #F2CE5A linear-gradient(rgba(242, 206, 90, 0.6), rgba(232, 184, 29, 1.0));
+}
+/* I used individual images instead of sprites, knowing that it increased HTTP requests and file size. I didn't like that the .png images looked so pixelated at their correct size, so I took a 64px x 64px and made it display as 32px x 32px. Couldn't do that with sprites. Maybe a happy middle-ground is .svg sprites? */
+.go-to-top {
+	background: url(../images/icons/up.png) no-repeat bottom left / 2rem 2rem;
+	padding: 0 1rem;
+}
+#hobby-headline {
+	background: url(../images/icons/me.png) no-repeat left center;
+	background-size: 2rem;
+	padding: 0 0 0 3rem;
+
+}
+#categories-headline {
+	background: url(../images/icons/list.png) no-repeat left center;
+	background-size: 2rem;
+	padding: 0 0 0 3rem;
+}
+#recent-headline {
+	background: url(../images/icons/mark.png) no-repeat left center;
+	background-size: 2rem;
+	padding: 0 0 0 3rem;
+}
+#valid-headline {
+	background: url(../images/icons/screen-check.png) no-repeat left center;
+	background-size: 2rem;
+	padding: 0 0 0 3rem;
+}
+#links-headline {
+	background: url(../images/icons/world.png) no-repeat left center;
+	background-size: 2rem;
+	padding: 0 0 0 3rem;
+}
+#contact-headline {
+	background: url(../images/icons/contact.png) no-repeat left center;
+	background-size: 2rem;
+	padding: 0 0 0 3rem;
+}
+#reference-headline {
+	background: url(../images/icons/table.png) no-repeat left center;
+	background-size: 2rem;
+	padding: 0 0 0 3rem;
+}
+#send-message {
+	background: url(../images/icons/send-white.png) no-repeat 4px center;
+	background-color: green;
+	color: white;
+	background-size: 1rem;
+	padding: .5rem 1.5rem;
+	margin: 1rem 0;
+	border-radius: 4px;
+	box-shadow: 1px 1px 1px 1px rgba(23, 53, 90, 0.3);
+}
+#reset {
+	background: url(../images/icons/clear-white.png) no-repeat 4px center;
+	background-color: #E8B81D;
+	color: white;
+	background-size: 1rem;
+	padding: .5rem 1.5rem;
+	margin: 1rem 0;
+	border-radius: 4px;
+	box-shadow: 1px 1px 1px 1px rgba(23, 53, 90, 0.3);
+}

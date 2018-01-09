@@ -1,0 +1,1 @@
+These are my Week 1 assignments: The Duel (Part I & II); JavaScript Practice.

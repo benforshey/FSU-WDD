@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head> <!-- begin head -->
+		<!-- unless required, I will not close HTML5 void elements with '/' character -->
+		<!-- http://www.w3.org/TR/html5/syntax.html#void-elements -->
+		<meta charset='UTF-8'/>
+		<!-- https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<!-- https://support.google.com/webmasters/answer/79812?hl=en -->
+		<meta name="description" content="GH-Pages website created in my 'Designing for Web Standards' class at Full Sail University."/>
+		<!-- my Google Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet'/>
+		<link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400' rel='stylesheet'/>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet'/>
+		<!-- my stylesheet -->
+		<link rel="stylesheet" href="css/main.css"/>
+		<!-- page title -->
+		<title>Full&ndash;Stack Folly</title>
+		<!-- javascript, loaded asynchronously -->
+		<script async src='scripts/main.js'></script>
+	</head> <!-- end head -->
+	<body> <!-- begin body -->
+		<header id='top' class='clear'> <!-- begin body-level header -->
+			<h1><a href='https://benforshey.github.io/dws1/project-4/'>Full&ndash;Stack Folly</a></h1>
+			<nav> <!-- begin global nav -->
+				<ul>
+					<li><a href='#categories'>Categories</a></li>
+					<li><a href='#recent'>Recent Work</a></li>
+					<li><a href='#valid'>Validation</a></li>
+					<li><a href='#references'>Reference</a></li>
+				</ul>
+			</nav> <!-- end global nav -->
+		</header> <!-- end body-level header -->
+		<div class='clear'>	<!-- begin content clearfix -->
+			<main role='main'> <!-- begin main content -->
+				<section> <!-- begin thematic grouping of content -->
+					<h2 id='hobby-headline'>My Hobby</h2>
+					<blockquote cite='https://www.goodreads.com/author/quotes/109082.Fran_ois_La_Rochefoucauld'>
+						<p>&ldquo;He who lives without folly isn&rsquo;t so wise as he thinks.&rdquo;</p>
+						<p>&mdash;Fran&ccedil;ois La Rochefoucauld</p>
+					</blockquote>
+					<blockquote cite='https://www.brainyquote.com/quotes/quotes/l/laurencest138870.html'>
+						<p>&ldquo;The desire of knowledge, like the thirst of riches, increases ever with the acquisition of it.&rdquo;</p>
+						<p>&mdash;Laurence Sterne</p>
+					</blockquote>
+					<p>Full&ndash;Stack Folly is about my hobby&mdash;learning <em>both</em> ends of web development. Suspend disbelief, gentle reader; I really do enjoy learning both sides of this amazing craft. Let me explain what I mean in (<a href='#categories'>Categories</a>) or jump right into what I&rsquo;ve been working on in (<a href='#recent'>Recent Work</a>).</p>
+				</section> <!-- end thematic grouping of content -->
+				<section id='categories'> <!-- begin thematic grouping of content -->
+					<h2 id='categories-headline'>Categories of Web Development (<a href='#top'>Go to the Top</a><span class='go-to-top'></span>)</h2>
+					<p>There's no hard and fast definition for these terms, but I loosely define the categories of web development as follows: </p>
+					<dl> <!-- begin definition list -->
+						<dt>Front End</dt>
+						<dd>A developer who primarily works with <abbr title='Hyper Text Markup Language'>HTML</abbr>, <abbr title='Cascading Style Sheets'>CSS</abbr>, and JavaScript.</dd>
+						<dt>Back End</dt>
+						<dd>A developer who primarily works with server&ndash;side languages like <abbr title='PHP: Hypertext Preprocessor'>PHP</abbr>, <abbr title='Cascading Style Sheets'>CSS</abbr>, Ruby, Python, or Node.js.</dd>
+						<dt>Full Stack</dt>
+						<dd>A developer who is knowledgeable in both areas, equally balanced and skillful in both.</dd>
+					</dl> <!-- end definition list -->
+					<p>I have the blessing of being able to go to college for a new career, and though I'm not yet skilled in either the front end or the back end of web development, I&rsquo;m immensely enjoying the study of both.</p>
+				</section> <!-- end thematic grouping of content -->
+				<section id='recent'> <!-- begin thematic grouping of content -->
+					<h2 id='recent-headline'>My Recent Work (<a href='#top'>Go to the Top</a><span class='go-to-top'></span>)</h2>
+					<h3>Front End</h3>
+					<figure>
+						<a href='images/portfolio.jpg'><img src='images/thumbnail/portfolio-thumb.jpg' alt='screenshot of benforshey.com'/></a>
+						<figcaption>My Newly Redesigned Portfolio</figcaption>
+					</figure>
+					<p>This was how I spent my free time over spring break. I&rsquo;m pretty proud of it (work in progress that it is), because it represents a first step. It&rsquo;s not a masterpiece, but I finally did it. I made a portfolio! I&rsquo;m especially proud that I kept the <abbr title='Hyper Text Markup Language'>HTML</abbr> semantic and free from classes only related to styling. Check it out at <a href='http://benforshey.com'>benforshey.com</a>. Your feedback is always welcome.</p>
+					<p>The basic order of the design was as follows:</p>
+					<ol>
+						<li>chose my typographic styling</li>
+						<li>decided what to write</li>
+						<li>decided how to format (although the 2<sup>nd</sup> and 3<sup>rd</sup> step sometimes swapped)</li>
+						<li>learn about <a href='http://bourbon.io/'>Bourbon</a>, <a href='http://neat.bourbon.io/'>Bourbon Neat</a>, and <a href='http://gulpjs.com/'>Gulp</a></li>
+						<li>code, refine, code</li>
+					</ol>
+					<h3>Back End</h3>
+					<figure>
+						<a href='images/terminal.png'><img src='images/thumbnail/terminal-thumb.png' alt='screenshot of a terminal window ssh'/></a>
+						<figcaption>Nginx Using Few System Resources</figcaption>
+					</figure>
+					<p>I migrated my server from Apache to Nginx a few days ago. In my previous setup I was running a <abbr title='Linux, Apache, MySQL, and PHP'>LAMP</abbr> stack on a <abbr title='Virtual Private Server'>VPS</abbr>. I wasn&rsquo;t happy with my theoretical &ldquo;simultaneous users&rdquo; limit I was running into under stress testing (something to do with a thread&ndash;driven architecture).</p>
+					<p>I switched to Nginx, which took a bit of configuring to get working. I&rsquo;m really satisfied with the event&ndash;based reactor pattern that the program uses. I don&rsquo;t understand too much of the computer science stuff, but I do understand that I'm doing much better serving <abbr title='HyperText Transfer Protocol'>HTTP</abbr> requests under heavy load. Not only that, but it's pretty easy to configure for gzip and static resource caching!</p>
+					<p>I think the best part about running my own server is the experience gained. There&lsquo;s nothing like learning by doing! It&lsquo;s pretty wild to think that I can host webpages from a remote computer&mdash;all configured through the command line.</p>
+				</section> <!-- end thematic grouping of content -->
+			</main> <!-- end main content -->
+			<aside> <!-- begin content related to, but not the main point of the page -->
+				<section> <!-- begin thematic grouping of content -->
+					<h2 id='links-headline'>Links of Interest</h2>
+					<p>There are a few sites that I regularly reference. I hope that you find them very useful.</p>
+					<ul>
+						<li><a href='http://developers.google.com/speed/pagespeed/insights/'>Google Page Speed Insights</a></li>
+						<li><a href='http://www.google.com/fonts'>Google Fonts</a></li>
+						<li><a href='http://html5doctor.com/'>HTML5 Doctor</a></li>
+					</ul>
+				</section> <!-- end thematic grouping of content -->
+				<section id='valid'> <!-- begin thematic grouping of content -->
+					<h2 id='valid-headline'>Am I valid? (<a href='#top'>Go to the Top</a><span class='go-to-top'></span>)</h2>
+					<p>Check this page with the <abbr title='World Wide Web Consortium'>W3C</abbr> <abbr title='HyperText Markup Language'>HTML</abbr> and <abbr title='Cascasding Style Sheets'>CSS</abbr> validation service. Ironically, I couldn&rsquo;t link directly to the validation results, because the W3C&rsquo;s own URL had several &ldquo;&amp;&rdquo; signs, which caused <em>my</em> markup to become invalid (with the error that those characters should have been escaped). For your convenience, please copy the following <abbr title='Uniform Resource Locator'>URL</abbr> for validation:</p>
+					<p>https://benforshey.github.io/dws1/project-4/</p>
+					<ul>
+						<li><a href='http://validator.w3.org/'>HTML5 Validation</a></li>
+						<li><a href='http://jigsaw.w3.org/css-validator/'>CSS Validation</a></li>
+					</ul>
+				</section> <!-- end thematic grouping of content -->
+				<div id='contact'> <!-- begin contact form -->
+					<h2 id='contact-headline'>Contact Me (<a href='#top'>Go to the Top</a><span class='go-to-top'></span>)</h2>
+					<p>Feel free to contact me just to leave a comment or to inquire about a project that you'd like to work together on.</p>
+					<form id='contact-form' name='contact-form' action='http://www.example.com/form.php' method='post'>
+						<!-- javascript to clear out placeholder text? -->
+						<fieldset>
+							<legend>Send Me a Message<br><span class='required'>* denotes required field</span></legend>
+							<div>
+								<label for='full-name'>Your Name:</label>
+								<span class='required'>*</span>
+								<input type='text' id='full-name' name='full-name' placeholder='First Last' required/>
+							</div>
+							<div>	
+								<label for='email-address'>Your Email Address:</label>
+								<span class='required'>*</span>
+								<input type='email' id='email-address' name='email-address' placeholder='email@example.com' required/>
+							</div>
+							<div>
+								<label for='contact-reason'>Reason for contacting me?</label>
+								<select id='contact-reason' name='contact-reason'>
+									<option value='comment'>Leave a Comment</option>
+									<option value='quote'>Discuss a Project</option>
+								</select>
+							</div>							
+							<div>
+								<label for='message'>Your Message:</label>
+								<span class='required'>*</span>								
+								<textarea id='message' name='message' placeholder='What would you like to talk about?' required></textarea>	
+								<label for='alt-comment' id='alt-comment-label'>Additional Comments: </label>
+								<input type='text' id='alt-comment' name='alt-comment'>
+							</div>
+
+							<div>					
+								<button type='submit' id='send-message' name='send-message'>Send Message</button>
+								<button type='reset' id='reset' name='reset'>Clear Form</button>
+							</div>	
+							<div id='newsletter'>	
+								<input type='checkbox' id='subscribe' name='subscribe' value='no'>
+								<label for='subscribe'>Check to receive my monthly newsletter.</label>
+							</div>	
+						</fieldset>	
+					</form>
+				</div> <!-- end contact form -->
+			</aside> <!-- end content related to, but not the main point of the page -->
+			<div id='references'> <!-- begin references -->
+				<h2 id='reference-headline'>HTML5 Element Index (<a href='#top'>Go to the Top</a><span class='go-to-top'></span>)</h2>
+				<p>I recreated parts of the HTML5 Element Index table found on <a href="http://html5doctor.com/">HTML5Doctor.com</a>. The site is a fantastic reference, and really clears up a lot of the element usage ambiguity that the W3C's spec can leave you with.</p>
+				<table>
+					<caption>HTML5 Partial Element Index</caption>
+					<colgroup>
+						<col class='odd'/>
+						<col class='even'/>
+						<col class='odd'/>
+						<col class='even'/>
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope='col'>Head</th>
+							<th scope='col'>Sections</th>
+							<th scope='col'>Grouping</th>
+							<th scope='col'>Tables</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr> <!-- row 1 -->
+							<td class='head'>doctype</td>
+							<td class ='sections'>body</td>
+							<td class='grouping'>p</td>
+							<td class='tables'>table</td>
+						</tr>
+						<tr> <!-- row 2 -->
+							<td class='head'>html</td>
+							<td class ='sections'>article</td>
+							<td class='grouping'>hr</td>
+							<td class='tables'>caption</td>
+						</tr>
+						<tr> <!-- row 3 -->
+							<td class='head'>head</td>
+							<td class ='sections'>nav</td>
+							<td class='grouping'>pre</td>
+							<td class='tables'>thead</td>
+						</tr>
+						<tr> <!-- row 4 -->
+							<td class='head'>title</td>
+							<td class ='sections'>aside</td>
+							<td class='grouping'>blockquote</td>
+							<td class='tables'>tbody</td>
+						</tr>
+						<tr> <!-- row 5 -->
+							<td class='head'>base</td>
+							<td class ='sections'>section</td>
+							<td class='grouping'>ol</td>
+							<td class='tables'>tfoot</td>
+						</tr>
+						<tr> <!-- row 6 -->
+							<td class='head'>link</td>
+							<td class ='sections'>header</td>
+							<td class='grouping'>ul</td>
+							<td class='tables'>tr</td>
+						</tr>
+						<tr> <!-- row 7 -->
+							<td class='head'>meta</td>
+							<td class ='sections'>footer</td>
+							<td class='grouping'>li</td>
+							<td class='tables'>th</td>
+						</tr>
+						<tr> <!-- row 8 -->
+							<td class='head'>style</td>
+							<td class ='sections'>h1&ndash;h6</td>
+							<td class='grouping'>dl, dt, dd</td>
+							<td class='tables'>td</td>
+						</tr>
+						<tr> <!-- row 9 -->
+							<td class='head'>script</td>
+							<td class ='sections'>main</td>
+							<td class='grouping'>figure</td>
+							<td class='tables'>col</td>
+						</tr>
+						<tr> <!-- row 10 -->
+							<td class='head'>noscript</td>
+							<td class ='sections'>address</td>
+							<td class='grouping'>figcaption</td>
+							<td class='tables'>colgroup</td>
+						</tr>
+						<tr> <!-- row 11 -->
+							<td colspan="2"></td>
+							<td class='grouping'>div</td>
+							<td></td>
+						</tr>
+					</tbody>	
+				</table>
+			</div><!-- end references -->
+
+		</div> <!-- end content clearfix -->
+		<footer class='clear'> <!-- begin body-level footer -->
+			<p class='title'><a href='https://benforshey.github.io/dws1/project-4/'>Full&ndash;Stack Folly</a></p>
+			<div class='nav'> <!-- begin utility navigation -->
+				<ul>
+					<li><a href='#contact'>Contact Me</a></li>
+					<li><a href='#top'>Go to the Top</a></li>
+				</ul>
+			</div> <!-- end utility navigation -->
+		</footer> <!-- end body-level footer -->
+	</body>
+</html>

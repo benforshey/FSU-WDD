@@ -1,0 +1,59 @@
+/*border-box from CSS-Tricks*/
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/* micro clearfix from CSS-Tricks*/
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+html {
+  background: url(../images/agincourt.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+div.scores, div.action {
+	width: 100%;
+	height: 100%;
+}
+div.scores p, div.action p{
+	font-family: serif;
+	font-size: 3em;
+	padding: 0 1em;
+}
+#french{
+	background: rgba(250, 250, 250, .8);
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+#english{
+	background: rgba(250, 250, 250, .8);
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+#fight-report{
+	background: rgba(250, 250, 250, .8);
+	position: fixed;
+	top: 15%;
+	left: 50%;
+	margin-left: -4.08em;
+}
+
+#fight-button{
+	background: rgba(250, 250, 250, .8);
+	position: fixed;
+	top: 70%;
+	left: 50%;
+	margin-left: -2.2em;
+	font-family: serif;
+	font-size: 2em;
+	padding: .5em 1em;
+}
