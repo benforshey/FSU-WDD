@@ -1,0 +1,144 @@
+Ben Forshey
+04 March 2014
+WPF 01 Online
+Problem Solving
+
+
+Problem 1: A Cat, A Parrot, and a Bag of Seed
+	1) Define the problem
+		A man needs to cross a river and bring a cat, a parrot, and a bag of seed. The man only has room in his boat for one of those three at a time (which indicates an unacceptable level of forethought in river-crossing technique). He's willing to make multiple trips, but some of the passengers cannot be left without supervision. If the cat and the parrot are left unattended (taking the seed bag), the cat might eat the parrot. If the man takes the cat and leaves parrot with the seed bag, the parrot is likely to eat the seeds.
+	2) Break the problem apart
+		The man has constraints as to what he can leave on the bank. This isn't insurmountable, but he must make the right decision as to which combination he should leave unsupervised. The man's subgoals are to bring all three items with him, without any of those items being harmed or consumed. The man probably doesn't like crossing the river without reason (either time consuming or manual-labor intensive), so he'd like to eliminate unnecessary trips.
+	3) Identify potential solutions
+		The man has 3 options:
+			A) Take the cat first
+			B) Take the parrot first
+			C) Take the seed first
+		I cannot see any other potential solutions, as the man must take at least one passenger to make his trip worthwhile, and cannot take more than one passenger due to the limitations of his boat.
+	4) Evaluate each potential solution
+		In option "A", the man would take the cat, leaving the parrot with the seed. The parrot would definitely eat the bag of seed, which would be unacceptable to the man.
+		In option "B", the man would take the parrot, leaving the bag of seed and the cat. The cat is not likely to eat the seed, and the parrot is taken safely across. Since we have not failed one of our objectives yet, the man comes back across the river and picks up either the cat or the bag of seed. Once either of those is safely across, he can return and pick up the last passenger.
+		In option "C", the man would take the seed first, leaving the cat with the parrot. The cat may eat the parrot, which is unacceptable to the man.
+	5) Choose a solution and develop a plan to implement it
+		Only solution "B" gives the man his full objective: get the cat, parrot, and bag of seed across the river. The solution has been mentally simulated and will accomplish the man's goals in full. Therefore, the plan follows:
+		1) Safely load the parrot into the boat
+		2) Cross the river and unload the parrot
+		3) Return to the side of the river that has the cat and the bag of seed
+		*Note* The man may choose either the following "a" or "b" steps, but not both.
+		4a) Load the cat safely into the boat
+		4b) Load the bag of seed into the boat
+		5) Travel to the side of the river that has the parrot
+		6) Unload the passenger (chosen in either step "4a" or "4b")
+		7) Return to the side of the river that has only one remaining item
+		8) Load remaining item safely into boat
+		9) Cross the river and unload the last passenger
+
+Problem 2: Socks in the Dark
+	1) Define the problem
+		You can't see which socks you are about to grab, but you need to grab matching pairs of socks, then put everything back and grab a matching pair of socks from each of three colors. There are 10 black socks (5 pair), 6 brown socks (3 pair), and 4 white socks (2 pair).
+	2) Break the problem apart
+		You are constrained by your lack of sight. You will be blindly grabbing socks from a drawer. Once you have grabbed the minimum number, you will be able to check your pairs, but not before then. The socks are not in pairs already, so you have no idea what combination of colors you will be grabbing. Your subgoals are to get a pair of socks while performing the minimum amount of work needed. 
+	3) Identify potential solutions
+		/* Each grab nets one sock of unknown color. Remaining colors are listed after the grab. */
+		Black === a: 10a; 
+		Brown === b: 6b;
+		White === c: 4c;
+		
+		Potential solution for finding 1 matching pair {
+			1st grab is a: 9a, 6b, 4c; /* 1st grab could be any color "a" was only used as an example. */
+			2nd grab is b: 9a, 5b, 4c; /* 2nd grab could be any color, but we need to understand that it might not be "a", and could instead be "b" or "c". */
+			3rd grab is c: 9a, 5b, 3c; /* 3rd grab could be any color, but we need to understand that (at worst) it isn't a match and could be the last color, "c" */
+			4th grab could be a, b, or c: It wouldn't really matter, as a matching pair would be found once the light was turned on;
+		}
+		Potential solution for finding 1 matching pair of each color {
+			1st grab is a: 9a, 6b, 4c;
+			2nd grab is a: 8a, 6b, 4c;
+			3rd grab is a: 7a, 6b, 4c;
+			4th grab is a: 6a, 6b, 4c;
+			5th grab is a: 5a, 6b, 4c;
+			6th grab is a: 4a, 6b, 4c;
+			7th grab is a: 3a, 6b, 4c;
+			8th grab is a: 2a, 6b, 4c;
+			9th grab is a: 1a, 6b, 4c;
+			10th grab is a: 0a, 6b, 4c;
+			11th grab is b: 0a, 5b, 4c;
+			12th grab is b: 0a, 4b, 4c;
+			13th grab is b: 0a, 3b, 4c;
+			14th grab is b: 0a, 2b, 4c;
+			15th grab is b: 0a, 1b, 4c;
+			16th grab is b: 0a, 0b, 4c;
+			17th grab is c: 0a, 0b, 3c;
+			18th grab is c: 0a, 0b, 2c;
+			/* This represents the worst-case scenario for sock draws. As such, it answers the question as to the minimum number of socks we would need to draw in order to get 1 matching pair of each color. The order of sock grabs doesn't matter (18th could be 1st, etc). */
+		}
+	4) Evaluate each potential solution
+		As I see it, there is only one solution for each problem (one matching pair, and one matching pair of each color), because the problem's requirement is framed as needing to satisfy the minimum number of sock draws (minimum being a word that forces one to prepare for the worst-case scenario).
+		Solution 1 satisfies the requirements of the problem as laid out. It will work in all situations, although it could take far fewer draws to satisfy the requirements (as few as 2 draws).
+		Solution 2 satisfies the requirements of the problem as laid out. It will work in all situations, though it could take far fewer draws to satisfy the requirements (as few as 6 draws).
+	5) Choose a solution and develop a plan to implement it
+		Because only one solution exists for each problem as defined, there's very little choice in which to implement. Implementing them would be as simple as following the instructions as listed in the "potential solutions". All test cases were mental simulations.
+
+Problem 3: Predicting Fingers
+	1) Define the problem
+		A little girl has an interesting way of counting, and would like to know which finger she will end up as the last finger counted upon, if she counts as follows: 1 on the thumb, 2 on the index finger, 3 on the middle finger, 4 on the ring finger, 5 on the pinkie, then 6 back on the ring finger, 7 on the middle finger, 8 on the index finger, 9 on the thumb, and 10 back on the index finger. She will continue this method of counting regardless of how high you ask her to count. It doesn't matter which hand she uses, as each hand has the same pattern of fingers. The overall goal is to determine which finger the little girl will end up using last, given the task to count to 10, 100, or 1000.
+	2) Break apart the problem
+		There is a pattern in her counting (yet to be determined, which is my constraint). The subgoal is the find that pattern so that it can be exploited for a mathematically sound solution, without having to physically count on my hands to simulate the little girl's efforts.
+	3) Identify potential solutions
+		Thumb 	=== f1;
+		Index 	=== f2;
+		Middle 	=== f3;
+		Ring 	=== f4;
+		Pinkie 	=== f5;
+
+		1 is on f1;	2 is on f2;	3 is on f3;	4 is on f4;	5 is on f5; 	
+		9 is on f1;	8 is on f2;	7 is on f3;	6 is on f4;
+				10 is on f2;	11 is on f3;	12 is on f4;	13 is on f5;	
+		17 is on f1;	16 is on f2;	15 is on f3;	14 is on f4;
+				18 is on f2;	19 is on f3;	20 is on f4;	21 is on f5;	
+		25 is on f1;	24 is on f2;	23 is on f3;	22 is on f4;
+		/*		/* 		/*		/*		/*
+		Increments at 	Increments at 	Increments at 	Increments at 	Increments at
+		+8		+6, +2 		+4 		+2, +6 		+8
+		*/		*/		*/		*/		*/
+		
+		To understand the pattern I see here, I have to take away the first set that isn't like all the others (what I call my "zero set"). 1 through 5 will be an anomaly, because they are the only set to use all 5 fingers. After that, each set alternates direction (on the hand) in a series of 4.
+		6 through 9 ends on f1;		/* towards f1 */
+		10 through 13 ends on f5;	/* towards f5 */
+		14 through 17 ends on f1;	/* towards f1 */
+		18 through 21 ends on f5;	/* towards f5 */
+		Every odd alternating set (1st set, 3rd set, 5th set, etc) is heading toward f1;
+		Every even alternating set (2nd set, 4th set, 6th set, etc) is heading towards f5;
+
+		There are 4 numbers in an alternating set, so if I wanted to figure out what alternating set 23 ended up on, I could take away my zero set (23 - 5 = 18) and divide the result by my alternating set (18 / 4 = 4.5). 4.5 needs to be rounded up to the next whole number (as does any rational number), because it is part of the alternating set headed towards 25 on f1. For example:
+		(22 - 5) / 4 = 4.25;
+		(23 - 5) / 4 = 4.50;
+		(24 - 5) / 4 = 4.75;
+		(25 - 5) / 4 = 5.00;
+		These are all on the 5th alternating set (so the lower rational numbers of 4.xx will need to be counted as being part of the 5th alternating set). Hence, round up all rational numbers to the nearest whole number when counting which alternating set in which they belong.
+
+		Now that I know which alternating set any given number will end up in, I'll figure out which finger it will end up on. If I know the direction of "travel" (towards f1 or towards f5), then the decimal (4.xx) has significance.
+		This set above set is (as previously established) heading towards f1.
+		All "odd" alternating sets headed toward f1 start on f4.
+		(22 - 5) / 4 = 4.25;	/* f4 */
+		(23 - 5) / 4 = 4.50;	/* f3 */
+		(24 - 5) / 4 = 4.75;	/* f2 */
+		(25 - 5) / 4 = 5.00;	/* f1 */
+		An "even" set headed in the reverse direction (toward f5) starts on f2, and looks like this:
+		(18 - 5) / 4 = 3.25;	/* f2 */
+		(19 - 5) / 4 = 3.50;	/* f3 */
+		(20 - 5) / 4 = 3.75;	/* f4 */
+		(21 - 5) / 4 = 4.00;	/* f5 */
+
+		With that information, I can pick any number and figure out which finger it will end up on.
+		Solve for 10: (10 - 5) / 4 = 1.25; This number (rounded up to the nearest whole number) is in the second set (even), so it will be headed towards f5, starting on f2. This number would be on f2 (Index Finger). 
+		Solve for 100: (100 - 5) / 4 = 23.75; 24 is an even number, so this set starts on f2 and ends on f5. This number would be on f4 (Ring Finger).
+		Solve for 1000: (1000 - 5) / 4 = 248.75; 249 is an odd number, so this set starts on f4 and ends on f1. This number would be on f2 (Index Finger).
+
+	4) Evaluate potential solutions
+		Since this is the only solution I was able to come up with, I can only evaluate this one solution. I suspect that there's a really streamlined way to explain this solution, but I'm pretty elated that I actually solved the problem. It was no easy task, but the solution can be used to figure out any number (past the first set, the "zero set", which can be easily counted in a few seconds) with this little girl's counting system.
+	5) Choose a solution and develop a plan to implement it
+		I'd choose the one solution that I came up with, and I'd implement it by using the same formula as listed above. I'll solve a few more that are easily checkable with fingers, so that the solution is trustworthy.
+		Solve for 7: (7 - 5) / 4 = 0.50; 1st set (odd); start on f4, end on f1; is on f3;
+		Solve for 16: (16 - 5) / 4 = 2.75; 3rd set (odd); start on f4, end on f1; is on f2;
+		Solve for 20: (20 - 5) / 4 = 3.75; 4th set (even); start on f2, end on f5; is on f4;
+
