@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{title}}</title>
+    {{>loadCSS}}
+    {{>favicon}}
+</head>
+<body>
+<header role="banner">
+    <div class="header_logoContainer">
+        <svg class="logoContainer_logo" width="100%" height="100%" viewBox="0 0 59 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.41421;"><path d="M55.885,23.65c-2.052,11.307 -1.854,22.075 0,32.446l-3.57,3.471c-14.101,-1.915 -29.62,-1.875 -46.469,0l-3.574,-3.475c1.917,-10.826 1.97,-21.639 0,-32.438l26.806,-21.313l26.807,21.309Z" style="fill:#fffbf3;stroke-width:2.5px;stroke:#fffbf3;"/></svg>
+    </div>
+    <h1 class="header_pageTitle">{{report.company.name}} Inspection Report</h1>
+</header>
+<main role="main">
+    <div class="main_row">
+        <section class="report_section section__companyInfo">
+            <div class="companyInfo_company">
+                <div class="company_textual">
+                    <h2 class="company_name">{{report.company.name}}</h2>
+                    <span class="company_tagline">&ldquo;{{{report.company.tagline}}}&rdquo;</span>
+                    <a class="company_url" href="{{{report.company.url}}}">{{report.company.url}}</a>
+                </div>
+                <div class="company_graphical">
+                    <img class="company_logo" src="{{{report.company.logo}}}" alt="{{report.company.name}} logo">
+                </div>
+            </div>
+            <div class="companyInfo_inspector">
+                <p class="inspector_name"><span class="contactInfo_label">Inspector: </span><span class="inline_text">{{report.inspector.name}}</span></p>
+                <p class="inspector_phone"><span class="contactInfo_label">Phone: </span><span class="inline_text">{{report.inspector.phone}}</span></p>
+                <p class="inspector_email"><span class="contactInfo_label">Email: </span><span class="inline_text">{{report.inspector.email}}</span></p>
+            </div>
+        </section>
+        <section class="report_section section__customerInfo">
+            <h2 class="customer_inspectionType">{{report.customer.inspectionType}}</h2>
+            <span class="customer_inspectionDate">{{report.customer.inspectionDate}}</span>
+            <p class="customer_site"><span class="contactInfo_label">Inspection Site: </span><span class="inline_text">{{{report.customer.inspectionSite}}}</span></p>
+            <p class="customer_name"><span class="contactInfo_label">Customer: </span><span class="inline_text">{{report.customer.name}}</span></p>
+            <p class="customer_agent"><span class="contactInfo_label">Agent: </span><span class="inline_text">{{report.customer.agent}}</span></p>
+        </section>
+    </div>
+    <div class="main_row">
+        <section class="report_section section__summary">
+            <h2 class="summary_title sectionEmphasis">Inspection Summary</h2>
+            <h3>Composition</h3>
+            <p class="summary_paragraph">{{report.summary.[0]}}</p>
+            <h3>Abnormalities</h3>
+            <p class="summary_paragraph">{{report.summary.[1]}}</p>
+            <h3>Recommendations</h3>
+            <p class="summary_paragraph">{{report.summary.[2]}}</p>
+        </section>
+        <section class="report_section section__invoice">
+            <h2 class="invoice_title sectionEmphasis">Invoice</h2>
+            <table class="invoice_table">
+                <thead>
+                <tr>
+                    <th>Quantity</th>
+                    <th>Item</th>
+                    <th>Price</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="table_quantity">{{report.invoice.quantity}}</td>
+                    <td class="table_item">{{report.invoice.item}}</td>
+                    <td class="table_price">{{report.invoice.price}}</td>
+                </tr>
+                </tbody>
+            </table>
+            <button class="primaryAction">Pay Invoice</button>
+        </section>
+    </div>
+    <section class=" report_section section__composition">
+        <h2 class="report_sectionTitle">Composition</h2>
+        <span class="compositionStatusMessage">
+        </span>
+        <div class="report_formBlock">
+            <span class="formBlock__inline">distance<input size="15" class="js_inputWidth js_generateNew formBlock_input input__inline" id="distanceComp0" name="distanceComp0" type="text" placeholder="at x ft"></span>
+            <span class="formBlock__inline">event<input size="15" class="js_description js_inputWidth formBlock_input input__inline" id="eventComp0" list="eventCompDL" name="eventComp0" type="text" placeholder="&darr; choose an event"></span>
+            <label class="formBlock_label">description<textarea class="js_inputHeight formBlock_textarea" id="descriptionComp0" name="descriptionComp0" placeholder="description"></textarea></label>
+        </div>
+    </section>
+    <section class="report_section section__abnormalities">
+        <h2 class="report_sectionTitle">Abnormalities</h2>
+        <div class="report_formBlock">
+            <span class="formBlock__inline">distance<input class="formBlock_input input__inline" readonly></span>
+            <span class="formBlock__inline">event<input class="formBlock_input input__inline" readonly></span>
+            <span class="formBlock__inline">grade<input class="formBlock_input input__inline" readonly></span>
+            <label class="formBlock_label">description<textarea class="formBlock_textarea" readonly></textarea></label>
+        </div>
+    </section>
+    <section class="report_section section__legal">
+        <h2 class="report_sectionTitle">Legal Notice</h2>
+        <p class="legal_paragraph">Receipt of this inspection report provided by {{report.company.name}} constitutes an agreement to hold harmless {{report.company.name}} against all damages. {{report.company.name}} agrees to perform all services in a professional and workmanlike manner. However, {{report.company.name}} cannot guarantee the accuracy of their findings. The sole remedy for dissatisfaction with the service provided by {{report.company.name}} is a refund of the price paid for that service.</p>
+    </section>
+</main>
+<footer class="footer" role="contentinfo">
+    <div class="footer_copyright">
+        <ul class="footer_list">
+            <li>Site Content and Design is &copy; 2015 Ben Forshey</li>
+            <li>User Data is &copy 2015 {{report.company.name}}</li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>
+
+

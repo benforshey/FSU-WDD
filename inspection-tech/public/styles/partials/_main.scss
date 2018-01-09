@@ -1,0 +1,142 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 60em;
+  padding: 0 .5em;
+}
+
+main {
+
+}
+
+.main_row {
+  @extend .cf;
+}
+
+[contenteditable="true"] {
+  background: 1px rgba(getColor(green, 10), .2);
+  min-width: 1em;
+  &:active,
+  &:focus {
+    outline: 2px solid getColor(blue, 10);;
+  }
+}
+
+.main_reportActions {
+  @extend .cf;
+  margin: 0 0 1em 0;
+}
+
+.reportActions__create {
+
+}
+
+.reportActions__delete {
+  float: right;
+}
+
+.main_reportFilter {
+  @extend .cf;
+  margin: 0 0 1em 0;
+}
+
+.reportFilter__search {
+  float: left;
+  margin: .5em 0;
+}
+
+.reportFilter__select {
+  float: right;
+  margin: .5em 0;
+}
+
+.report_section {
+  margin-bottom: 2em;
+}
+
+.section__companyInfo,
+.section__summary {
+  margin: 0 0 2em 0;
+}
+
+.section__customerInfo,
+.section__invoice {
+  margin: 0 0 2em 0;
+}
+
+.companyInfo_company {
+  @extend .cf;
+  clear: both;
+}
+
+.company_textual {
+  float: right;
+  width: 83%;
+}
+
+.company_graphical {
+  float: left;
+  margin-right: 2%;
+  width: 15%;
+}
+
+.company_name {
+  margin: 0 0 .5em 0;
+}
+
+.company_tagline {
+  display: block;
+  font-style: italic;
+  margin: 0 0 .5em 0;
+}
+
+.company_url {
+  display: inline-block;
+}
+
+.company_logo {
+  width: 100%;
+}
+
+.companyInfo_inspector {
+  clear: both;
+}
+
+.customer_inspectionType {
+  margin: 0 0 .5em 0;
+}
+
+.customer_inspectionDate {
+  font-style: italic;
+}
+
+.contactInfo_label {
+  font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
+  font-weight: 700;
+  display: inline-block;
+  margin-right: 1em;
+  text-align: right;
+  width: 5em;
+}
+
+.inline_text {
+  display: inline-block;
+}
+
+.report_sectionTitle {
+  border-bottom: 4px solid getColor(blue, 30);
+  margin: 0;
+  padding-bottom: .125em;
+}
+
+.legal_paragraph {
+  font-size: .825em;
+}
+

@@ -1,0 +1,50 @@
+a {
+  border-bottom: 2px solid getColor(blue, 20);
+  color: getColor(blue, 20);
+  text-decoration: none;
+  transition: background .15s ease-in, color .15s ease-in;
+
+  &:visited {
+
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    background: getColor(blue, 20);
+    color: getColor(neutral, 10);
+    outline: none;
+  }
+}
+
+.form_formNav {
+  font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
+  font-weight: 400;
+}
+
+.formNav__secondary {
+  float: right;
+  font-size: .875em;
+  margin-top: .5em;
+}
+
+.link__disguised {
+  color: inherit;
+  border-bottom: inherit;
+  text-decoration: inherit;
+  transition: none;
+
+  &:visited,
+  &:hover,
+  &:active,
+  &:focus {
+    background: inherit;
+    color: inherit;
+    outline: none;
+  }
+}
+
+.link__disabled {
+  border-bottom: 2px solid getColor(blue, 10);
+  color: getColor(blue, 10);
+  text-decoration: line-through;
+}

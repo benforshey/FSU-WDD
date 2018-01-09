@@ -1,0 +1,53 @@
+header {
+  @extend .cf;
+  background: getColor(green, 10);
+  clear: both;
+  margin: 0 0 1em 0;
+  padding: .125em .5em;
+}
+
+header:hover > .header_logoContainer {
+  transform: rotate3D(0, 0, 1, 90deg);
+}
+
+.header_pageTitle {
+  color: getColor(neutral, 10);
+  display: inline-block;
+  font-size: 1em;
+}
+
+.header_admin {
+  float: right;
+  font-size: .875em;
+  margin-top: .5em;
+}
+
+.header_logoContainer {
+  float: left;
+  height: 0;
+  margin-right: .5em;
+  padding-top: 2.3em;
+  position: relative;
+  transition: transform .3s ease-in;
+  width: 1.25em;
+}
+
+.logoContainer_logo {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.main_connectionInfo {
+  @extend .cf;
+  background: getColor(neutral, 10);
+  border: 1px solid getColor(neutral, 20);
+  margin: 1em 0;
+  padding: .125em .5em;
+}
+
+.connectionInfo__databaseStatus {
+  float: right;
+}

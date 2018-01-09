@@ -1,0 +1,13 @@
+.footer {
+  color: getColor(neutral, 10);
+  background-color: getColor(neutral, 20);
+  font-size: .875em;
+  padding: .125em .5em;
+}
+
+.footer_list {
+
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}

@@ -1,0 +1,142 @@
+.form_businessPortal {
+  background: getColor(neutral, 10);
+  border: 2px solid getColor(neutral, 20);
+  border-radius: 2px;
+  margin: 10% auto 0 auto;
+  max-width: 30em;
+  padding: 1em;
+}
+
+
+.form_centeringDiv {
+  margin: 0 auto;
+  max-width: 25em;
+  position: relative;  // for loading animation
+}
+
+.loading::after {
+
+  bottom: -.5em;
+  content: "";
+  height: .5em;
+  left: 0;
+  position: absolute;
+  width: 10%;
+}
+
+.form_formBlock,
+.report_formBlock {
+  clear: both;
+  padding: 1em 0;
+}
+
+.formBlock__inline {
+  display: inline-block;
+  font: 700 .875em / 1.25 "Roboto Condensed", "Arial Narrow", sans-serif;
+  padding: 0 .5em .5em 0;
+}
+
+.formBlock_label {
+  display: block;
+  font: 700 .875em / 1.25 "Roboto Condensed", "Arial Narrow", sans-serif;
+}
+
+.label__secondary {
+  float: right;
+}
+
+.label__inline {
+  display: inline;
+}
+
+.formBlock_input {
+  border: 2px solid getColor(blue, 20);
+  border-radius: 2px;
+  display: block;
+  font-family: "Roboto", sans-serif;  // declare to specifically override inherited styles from '.formBlock__inline'
+  font-size: 1rem;  // using this instead of 'font' shorthand because IE9 doesn't support rem in 'font' declaration
+  font-weight: 400;
+  height: 1.875em;
+  width: 100%;
+
+  &:focus {
+    border: 2px solid getColor(blue, 10);
+    box-shadow: 0 0 1px 1px getColor(blue, 30);
+    outline: none;
+  }
+
+  &:focus[type='checkbox'] {
+    outline: 2px solid getColor(blue, 10);
+    box-shadow: 0 0 1px 1px getColor(blue, 30);
+  }
+}
+
+.formBlock_textarea {
+  border: 2px solid getColor(blue, 20);
+  border-radius: 2px;
+  display: block;
+  font: 400 1.125em / 1.5 "Roboto", sans-serif;
+  margin: .125em 0;
+  max-width: 100%;
+  min-width: 100%;
+
+  &:focus {
+    border: 2px solid getColor(blue, 10);
+    box-shadow: 0 0 1px 1px getColor(blue, 30);
+    outline: none;
+  }
+}
+
+.input__inline {
+  display: inline;
+}
+
+.input__checkbox {
+  display: inline;
+  height: auto;
+  width: auto;
+}
+
+.formBlock_meter {
+  @extend .formBlock_input;
+  height: .875em;
+}
+
+.status__valid {
+  color: getColor(green, 10);
+}
+
+.status__invalid {
+  color: getColor(red, 10);
+}
+
+.input__disabled {
+  border: 2px solid getColor(neutral, 15) !important;  // set to override any other pseudo class or state
+}
+
+.input__invalid {
+  border: 2px solid getColor(red, 10) !important;  // set to override any other pseudo class or state
+}
+
+.input__valid {
+  border: 2px solid getColor(green, 10) !important;  // set to override any other pseudo class or state
+}
+
+.passwordRequirements {
+  font: 400 .875em / 1.25 "Roboto Condensed", "Arial Narrow", sans-serif;
+}
+
+.passwordRequirements_list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.requirement_notSatisfied {
+  color: getColor(red, 10);
+}
+
+.requirement_satisfied {
+  color: getColor(green, 10);
+  text-decoration: line-through;
+}
+

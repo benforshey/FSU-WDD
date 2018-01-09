@@ -1,0 +1,80 @@
+button,
+.button {
+  background: getColor(blue, 10);
+  border: 2px solid getColor(blue, 30);
+  border-radius: 3px;
+  box-shadow: 0 2px 1px 0 getColor(neutral, 20);
+  color: getColor(neutral, 10);
+  font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
+  margin: .5em 0;
+  padding: .125em .5em;
+  transition: transform .15s;
+}
+
+.primaryAction {
+  &:hover,
+  &:focus {
+    background: getColor(blue, 30);
+    border: 2px solid getColor(blue, 10);
+    box-shadow: 0 0 1px 1px getColor(blue, 30);
+    outline: none;
+    transform: scale3d(1.01,1.01,1);
+  }
+  &:active {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+.secondaryAction {
+  background: getColor(red, 10);
+  border: 2px solid getColor(red, 30);
+
+  &:hover,
+  &:focus {
+    background: getColor(red, 30);
+    border: 2px solid getColor(red, 10);
+    outline: none;
+    transform: scale3d(1.01,1.01,1);
+  }
+  &:active {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+.tertiaryAction {
+  background: getColor(green, 10);
+  border: 2px solid getColor(green, 30);
+
+  &:hover,
+  &:focus {
+    background: getColor(green, 30);
+    border: 2px solid getColor(green, 10);
+    outline: none;
+    transform: scale3d(1.01,1.01,1);
+  }
+  &:active {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+.disabled {
+  box-shadow: none;
+  color: getColor(neutral, 20);
+  text-decoration: line-through;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    transform: none;
+  }
+}
+
+.cloneButton {
+  font-size: .777777778em;
+  &:first-of-type {
+    margin-right: 2em;
+  }
+}

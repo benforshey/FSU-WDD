@@ -1,0 +1,33 @@
+CACHE MANIFEST
+# v0.1.0.1 on 15334
+
+CACHE
+/integrous-web/reports
+/integrous-web/reports/generator
+
+/styles/style.css
+
+/scripts/main.min.js
+/scripts/pouchdb.min.js
+/scripts/pouchdb.upsert.min.js
+
+/fonts/roboto-regular-webfont.woff2
+/fonts/robotocondensed-bold-webfont.woff2
+/fonts/robotocondensed-regular-webfont.woff2
+/fonts/robotoslab-regular-webfont.woff2
+/fonts/roboto-italic-webfont.woff2
+/fonts/roboto-regular-webfont.woff
+/fonts/robotocondensed-bold-webfont.woff
+/fonts/robotocondensed-regular-webfont.woff
+/fonts/robotoslab-regular-webfont.woff
+/fonts/roboto-italic-webfont.woff
+
+/favicon-16x16.png
+/favicon-96x96.png
+
+# https://storage.googleapis.com/integrous-web/public/images/logo.png
+/images/integrous-web/logo.png
+
+NETWORK
+*
+

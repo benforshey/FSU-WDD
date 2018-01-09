@@ -1,0 +1,36 @@
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes loadingBar {
+  from {
+    background-color: getColor(green, 10);
+  }
+  to {
+    background-color: getColor(blue, 10);
+    left: 90%;
+
+  }
+}
+
+.cf {
+  &:after {  // clearfix hack
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+.fadeIn {
+  animation: fade .2s ease-in 1 forwards;
+}
+
+.loading::after {
+  animation: loadingBar 2s ease-in-out infinite alternate;
+}
+

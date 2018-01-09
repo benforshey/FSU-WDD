@@ -1,0 +1,28 @@
+// map for color where lighter color is represented by smaller number
+
+$palette: (
+  blue: (
+    10: rgb(71, 132, 179),
+    20: rgb(51, 95, 128),
+    30: rgb(31, 57, 77)
+  ),
+  green: (
+    10: rgb(71, 179, 107),
+    20: rgb(51, 128, 77),
+    30: rgb(31, 77, 46)
+  ),
+  red: (
+    10: rgb(179, 75, 72),
+    20: rgb(128, 54, 51),
+    30: rgb(77, 32, 31)
+  ),
+  neutral: (
+    10: rgb(255, 251, 243),
+    15: rgb(130, 130, 124),
+    20: rgb(62, 62, 59)
+  )
+);
+
+@function getColor($colorName, $number: 10) {
+  @return map-get(map-get($palette, $colorName), $number);
+}

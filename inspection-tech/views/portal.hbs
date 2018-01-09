@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{title}}</title>
+    {{>loadCSS}}
+    {{>favicon}}
+</head>
+<body>
+<header role="banner">
+    <div class="header_logoContainer">
+        <svg class="logoContainer_logo" width="100%" height="100%" viewBox="0 0 59 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.41421;"><path d="M55.885,23.65c-2.052,11.307 -1.854,22.075 0,32.446l-3.57,3.471c-14.101,-1.915 -29.62,-1.875 -46.469,0l-3.574,-3.475c1.917,-10.826 1.97,-21.639 0,-32.438l26.806,-21.313l26.807,21.309Z" style="fill:#fffbf3;stroke-width:2.5px;stroke:#fffbf3;"/></svg>
+    </div>
+    <h1 class="header_pageTitle">Business Portal</h1>
+</header>
+<main role="main">
+    <form class="form_businessPortal" role="form" action="/portal" method="POST">
+        <div class="form_centeringDiv">
+            <h2>Business Portal Login</h2>
+            <p>Log in to access your account and reports.</p>
+            <div class="form_statusMessage {{messageClass}}">
+                {{#each statusMessage}}
+                    <p>{{this}}</p>
+                {{/each}}
+            </div>
+            <div class="form_formBlock">
+                <label class="formBlock_label label__inline" for="emailAddress">email address</label>
+                <span class="formBlock_label label__secondary"><a class="form_formNav" href="/portal/email-recovery">can't remember?</a></span>
+                <input class="formBlock_input {{emailClass}}" id="emailAddress" name="emailAddress" type="email" tabindex="1" value="{{values.emailAddress}}"  aria-required="true" autofocus>
+            </div>
+            <div class="form_formBlock">
+                <label class="formBlock_label label__inline" for="password">password</label>
+                <span class="formBlock_label label__secondary"><a class="form_formNav" href="/portal/password-recovery">can't remember?</a></span>
+                <input class="formBlock_input {{passwordClass}}" id="password" name="password" type="password" tabindex="2" value="{{values.password}}" required aria-required="true">
+            </div>
+            <div class="form_formBlock">
+                <button class="primaryAction" role="button" type="submit" tabindex="3">Log In</button>
+            </div>
+        </div>
+    </form>
+</main>
+{{>loadingAnimation}}
+</body>
+</html>
+
+

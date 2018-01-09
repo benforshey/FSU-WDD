@@ -1,0 +1,13 @@
+<script>
+    var form = document.querySelector('.form_businessPortal');
+    if (form) {
+        form.addEventListener('submit', function() {
+            var animationTarget = document.querySelector('.form_centeringDiv');
+            if (animationTarget) {
+                return animationTarget.className += ' loading';
+            } else {
+                return false;
+            }
+        });
+    }
+</script>

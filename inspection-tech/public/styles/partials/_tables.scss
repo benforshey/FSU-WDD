@@ -1,0 +1,29 @@
+.reportDisplay_table,
+.invoice_table {
+  font: 400 .875em / 1.25 "Roboto Condensed", "Arial Narrow", sans-serif;
+  margin-bottom: 2em;
+  width: 100%;
+}
+
+th {
+  background: getColor(neutral, 20);
+  border: 1px solid getColor(neutral, 20);
+  color: getColor(neutral, 10);
+  font-weight: 700;
+}
+
+td {
+  background: getColor(neutral, 10);
+  border: 1px solid getColor(neutral, 20);
+  padding: .5em;
+}
+
+tr > td:first-of-type {  // the button
+  text-align: center;
+  vertical-align: middle;
+}
+
+tr > td:last-of-type {  // the checkbox
+  text-align: center;
+  vertical-align: middle;
+}

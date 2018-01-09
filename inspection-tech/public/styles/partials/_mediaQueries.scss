@@ -1,0 +1,51 @@
+@media screen and (min-width: 25em) {
+
+  //button,
+  //.button {
+  //  margin: 0;
+  //}
+}
+
+@media screen and (min-width: 32.5em) {  // base is 16px
+  html {
+    font-size: 1.125em;
+  }
+
+  .passwordRequirements > ul:nth-child(odd) {
+    float: left;
+  }
+
+  .passwordRequirements > ul:nth-child(even) {
+    float: right;
+  }
+
+}
+
+@media screen and (min-width: 37.5em){  // base changes to 18px
+  .header_pageTitle {
+    font-size: 1.333em;
+  }
+
+  .header_logoContainer {
+    padding-top: 3em;
+    width: 1.5em;
+  }
+
+  .section__companyInfo,
+  .section__summary {
+    float: left;
+    padding-right: .5em;
+    width: 50%;
+  }
+
+  .section__customerInfo,
+  .section__invoice {
+    float: right;
+    padding-left: .5em;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 50em) {
+
+}
